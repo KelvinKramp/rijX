@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 , maximum-scale=1"
+    />
+
+<!--    <link rel="stylesheet" href="../assets/css/index.css" />-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations_master.css') }}">
+    <!-- gsap link -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+    <!-- animate.css cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+
+    <!-- Maseter Animation css  -->
+<!--    <link rel="stylesheet" href="../assets/css/animations_master.css" />-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations_master.css') }}">
+
+    <title>RijRotterdam</title>
+  </head>
+ <body>
+    <nav class="nav_side">
+      <a href="/" class="logo"> RijRotterdam </a>
+      <nav>
+        <li class="active">
+          <a href="#"> Home </a>
+        </li>
+        <li>
+          <a href="#"> Contact </a>
+        </li>5
+        <li>
+          <a href="#"> About </a>
+        </li>
+      </nav>
+    </nav>
+
+    <div class="header-container">
+      <header>
+        <a href="/index" class="logo"> RijRotterdam </a>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        {% for nav_bar_item in nav_bar_items %}
+                            {% if page == nav_bar_item.title %}
+                                <li class="active"><a href={{url_for(nav_bar_item.url)}}>{{nav_bar_item.title}}</a></li>
+                            {% else %}
+                              <li><a href="{{nav_bar_item.url}}">{{nav_bar_item.title}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+      </header>
+    </div>
+    <!-- mobile responsive header -->
+    <div class="mobile-responsive-header">
+      <a href="/" class="logo"> RijRotterdam </a>
+      <span class="burger-menu testing">
+        <img src="assets/img/buger_icon_black.svg" alt="" />
+      </span>
+    </div>
+
+
+    {% block content %}{% endblock %}
+
+     <!-- Footer Area -->
+    <footer class="patient-peachy-footer">
+      <img
+        src="assets/img/footer-shape-1.svg"
+        alt=""
+        class="footer-shape-1"
+      />
+      <img
+        src="assets/img/footer-shape-2.svg"
+        alt=""
+        class="footer-shape-2"
+      />
+      <img
+        src="assets/img/footer-shape-3.svg"
+        alt=""
+        class="footer-shape-3"
+      />
+      <h1 class="footer-main-heading">Eperience Peachy Patient Today!</h1>
+      <div class="footer-links">
+        <div class="first-col footer-col footer-presentation">
+          <h2>Peachy Patient</h2>
+          <small
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            voluptatibus quod nam accusantium voluptate ab dolorem! Ad inventore
+            repellat odio.</small
+          >
+        </div>
+        <nav class="second-col footer-col">
+          <li>Peachy Patient for Patients</li>
+          <li><a href="/patient/home">Patient Home</a></li>
+          <li><a href="/patient/registration">Patient Registration</a></li>
+          <li><a href="/patient/contact">Patient Support</a></li>
+          <li><a href="/patient/faq">Patient FAQ</a></li>
+        </nav>
+        <nav class="third-col footer-col">
+          <li>Peachy Patient for Practice</li>
+          <li><a href="/practice/home">Practice Home</a></li>
+          <li><a href="/practice/registration">Practice Registration</a></li>
+          <li><a href="/practice/contact">Practice Support</a></li>
+          <li><a href="/practice/faq">Practice FAQ</a></li>
+        </nav>
+        <nav class="fourth-col footer-col">
+          <li>Company</li>
+          <li><a href="#">Term & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="/static/js/home.js"></script>
+
+    <!-- waypoint CDN for animatioins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="/static/js/animation-master/animation-master.js"></script>
+  </body>
+</html>

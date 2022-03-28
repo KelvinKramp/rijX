@@ -1,0 +1,293 @@
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/*Practise Home CSS for Animation on Scroll Start  */
+
+.animated__image,
+.animated__description,
+.animated__lady,
+.animated__leftdiv,
+.animated__rightdiv,
+.animated__leftdiv2,
+.animated__rightdiv2 {
+  opacity: 0;
+}
+.animated__image.animated,
+.animated__description.animated,
+.animated__lady.animated,
+.animated__leftdiv.animated,
+.animated__rightdiv.animated,
+.animated__leftdiv2.animated,
+.animated__rightdiv2.animated {
+  opacity: 1;
+}
+
+/*Practise Home CSS for Animation on Scroll End  ***********************************************************************/
+
+/*How it works CSS for Animation on Scroll Start  */
+
+.animated__picture,
+.animated__picformob,
+.animated__eventfeedsec,
+.animated__bannerimg,
+.animated__mainimg,
+.animated__itsdesc {
+  opacity: 0;
+}
+.animated__picture.animated,
+.animated__picformob.animated,
+.animated__eventfeedsec.animated,
+.animated__bannerimg.animated,
+.animated__mainimg.animated,
+.animated__itsdesc.animated {
+  opacity: 1;
+}
+
+/* card zoom at hover  */
+.zoomCard {
+  transition: all 1s ease;
+}
+.zoomCard:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+/*How it works CSS for Animation on Scroll End  ***********************************************************************/
+
+/*Peachy Patient Home CSS for Animation on Scroll Start  */
+
+.animated__femaledoc,
+.animated__fadeimg1,
+.animated__fadeimg2,
+.animated__fadeimg3,
+.animated__fadeimg4,
+.animated__fadeimglady,
+.animated__aboutussec,
+.animated__itsmain {
+  opacity: 0;
+}
+.animated__femaledoc.animated,
+.animated__fadeimg1.animated,
+.animated__fadeimg2.animated,
+.animated__fadeimg3.animated,
+.animated__fadeimg4.animated,
+.animated__fadeimglady.animated,
+.animated__aboutussec.animated,
+.animated__itsmain.animated {
+  opacity: 1;
+}
+
+/*Peachy Patient Home CSS for Animation on Scroll End  ****************************************************************/
+
+/*Peachy Credit CSS for Animation on Scroll Start  */
+
+.animated__Rimg,
+.animated__Rimg2,
+.animated__Limg,
+.animated__descmain,
+.animated__descmain2,
+.animated__descmain3,
+.animated__descmain4,
+.animated__creditcard {
+  opacity: 0;
+}
+.animated__Rimg.animated,
+.animated__Rimg2.animated,
+.animated__Limg.animated,
+.animated__descmain.animated,
+.animated__descmain2.animated,
+.animated__descmain3.animated,
+.animated__descmain4.animated,
+.animated__creditcard.animated {
+  opacity: 1;
+}
+
+/*Peachy Credit CSS for Animation on Scroll End  ***********************************************************************/
+
+/*Patient Home CSS for Animation on Scroll Start  */
+
+.animated__allmain,
+.animated__medicine,
+.animated__fadepic1,
+.animated__fadepic2,
+.animated__fadepic3,
+.animated__fadepic4,
+.animated__platedesc,
+.animated__workimage,
+.animated__workimage1,
+.animated__workimage2,
+.animated__workimage3,
+.animated__workimage4,
+.animated__workdesc,
+.animated__workdesc1,
+.animated__workdesc2,
+.animated__workdesc3,
+.animated__workdesc4,
+.animated__masi {
+  opacity: 0;
+}
+
+.animated__allmain.animated,
+.animated__medicine.animated,
+.animated__fadepic1.animated,
+.animated__fadepic2.animated,
+.animated__fadepic3.animated,
+.animated__fadepic4.animated,
+.animated__platedesc.animated,
+.animated__workimage.animated,
+.animated__workimage1.animated,
+.animated__workimage2.animated,
+.animated__workimage3.animated,
+.animated__workimage4.animated,
+.animated__workdesc.animated,
+.animated__workdesc1.animated,
+.animated__workdesc2.animated,
+.animated__workdesc3.animated,
+.animated__workdesc4.animated,
+.animated__masi.animated {
+  opacity: 1;
+}
+
+/*Patient Home CSS for Animation on Scroll End  ************************************************************************/
+
+/*Patient Registration CSS for Animation on Scroll Start  */
+
+.animated__stepform,
+.animated__rb1,
+.animated__rb2,
+.animated__rb3,
+.animated__rb4,
+.animated__opt1,
+.animated__opt2,
+.animated__opt3,
+.animated__opt4,
+.animated__opt5,
+.animated__opt6,
+.animated__opt7,
+.animated__poplogin {
+  opacity: 0;
+}
+
+.animated__stepform.animated,
+.animated__rb1.animated,
+.animated__rb2.animated,
+.animated__rb3.animated,
+.animated__rb4.animated,
+.animated__opt1.animated,
+.animated__opt2.animated,
+.animated__opt3.animated,
+.animated__opt4.animated,
+.animated__opt5.animated,
+.animated__opt6.animated,
+.animated__opt7.animated,
+.animated__poplogin.animated {
+  opacity: 1;
+}
+
+/*Patient Registration CSS for Animation on Scroll End  ************************************************************************/
+
+/*Patient contact CSS for Animation on Scroll Start  */
+
+.animated__contact,
+.animated__t,
+.animated__d,
+.animated__ask,
+.animated__mail {
+  opacity: 0;
+}
+
+.animated__contact.animated,
+.animated__t.animated,
+.animated__d.animated,
+.animated__ask.animated,
+.animated__mail.animated {
+  opacity: 1;
+}
+
+/*Patient contact CSS for Animation on Scroll End  ************************************************************************/
+
+/*Practice pricing CSS for Animation on Scroll Start  */
+
+.animated__hero,
+.animated__lite,
+.animated__basic,
+.animated__plus,
+.animated__accordian1,
+.animated__accordian2,
+.animated__accordian3,
+.animated__accordian4,
+.animated__accordian5 {
+  opacity: 0;
+}
+
+.animated__hero.animated,
+.animated__lite.animated,
+.animated__basic.animated,
+.animated__plus.animated,
+.animated__accordian1.animated,
+.animated__accordian2.animated,
+.animated__accordian3.animated,
+.animated__accordian4.animated,
+.animated__accordian5.animated {
+  opacity: 1;
+}
+
+/*Practice pricing CSS for Animation on Scroll End  ************************************************************************/
+
+/*Practice contact CSS for Animation on Scroll Start  */
+
+.animated__ppic,
+.animated__pdes,
+.animated__farea,
+.animated__img11,
+.animated__img12,
+.animated__level1,
+.animated__level2,
+.animated__level3,
+.animated__serarea {
+  opacity: 0;
+}
+
+.animated__ppic.animated,
+.animated__des.animated,
+.animated__farea.animated,
+.animated__img11.animated,
+.animated__img12.animated,
+.animated__level1.animated,
+.animated__level2.animated,
+.animated__level3.animated,
+.animated__serarea.animated {
+  opacity: 1;
+}
+
+/*Practice contact CSS for Animation on Scroll End  ************************************************************************/
+
+/*Practice Registration CSS for Animation on Scroll Start  */
+
+.animated__regstepform,
+.animated__regrb1,
+.animated__regrb2,
+.animated__regrb3,
+.animated__regrb4,
+.animated__cardplan1,
+.animated__cardplan2,
+.animated__cardplan3,
+.animated__regpoplogin {
+  opacity: 0;
+}
+
+.animated__regstepform.animated,
+.animated__regrb1.animated,
+.animated__regrb2.animated,
+.animated__regrb3.animated,
+.animated__regrb4.animated,
+.animated__cardplan1.animated,
+.animated__cardplan2.animated,
+.animated__cardplan3.animated,
+.animated__regpoplogin.animated {
+  opacity: 1;
+}
+
+/*Practice Registration CSS for Animation on Scroll End  ************************************************************************/

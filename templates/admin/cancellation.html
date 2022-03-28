@@ -1,0 +1,57 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+        <div><br></div>
+        <h2 style="text-align: center"> Cancel appointments or open slots </h2>
+        <div><br></div>
+        <form method="POST" action="{{url_for('cancellation.index')}}">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <div class="form-group">
+                    <select name="appointment" method="POST" action="/">
+                        <option value="{{form.l_appointments[0]}}" SELECTED>{{form.l_appointments[0]}}</option>
+                        {% for a in form.l_appointments[1:] %}
+                            <option value="{{a}}" SELECTED>{{a}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </fieldset>
+            <div class="row">
+                <div class="column">
+                        <div class="form-group">
+                            {{ form.del_appointment(class="btn btn-outline-info") }}
+                        </div>
+                </div>
+            </div>
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <div class="form-group">
+                    <select name="openslot" method="POST" action="/">
+                        <option value="{{form.l_openslots[0]}}" SELECTED>{{form.l_openslots[0]}}</option>"
+                        {% for o in form.l_openslots[1:] %}
+                            <option value="{{o}}" SELECTED>{{o}}</option>"
+                        {% endfor %}
+                    </select>
+                </div>
+            </fieldset>
+            <div class="row">
+                <div class="column">
+                        <div class="form-group">
+                            {{ form.del_openslot(class="btn btn-outline-info") }}
+                        </div>
+                </div>
+                <div class="column">
+                        <div class="form-group">
+                            {{ form.del_all_openslots(class="btn btn-outline-info") }}
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                <div class="form-group">
+                    <a href="schedule2" class="previous">&laquo; Back</a>
+                </div>
+                </div>
+            </div>
+        </form>
+{% endblock %}

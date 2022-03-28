@@ -1,0 +1,41 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+<style>
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: black;
+  font-size: 18px;
+   font-family: Roboto;
+}
+
+table th {
+  color: #fff;
+  background-color: #3e3f3a;
+}
+
+table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #e3e6f0;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+</style>
+    <div class="content-section">
+        <div>
+            {% for table in tables_ninja %}
+            {% if table.heading == "Open slots" %}
+            <hr>
+                <h2 style="text-align: center">{{ table.heading }}</h2>
+                <hr>
+                {{ table.table|safe }}
+            <hr>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

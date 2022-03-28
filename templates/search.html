@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+       <div class="hero-text" style="padding-top:100px">
+            <div class="hero-text" style="padding-top:65px, width: 100%, max-width: 100%, display:inline-block;">
+                <h1>Stel uw vraag</h1>
+                <br>
+                {% from "_formhelpers.html" import render_field %}
+                <form method="post">
+                  <dl>
+                    <div>
+                    {{ render_field(form.search) }}
+                  </div></dl>
+                  <p><input type="submit" value="Zoeken"  class="btn btn-border">
+                </p></form>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul class="flashes">
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+                {% if answers %}
+                  {% for answer in answers %}
+                        <div>
+                          <h4>{{ answer.meta.query }}</h4>
+                          <cite>{{ answer.answer }}</cite>
+                          <div>{{ answer.score }}</div>
+                          <a href="{{ answer.meta.link }}" target="_blank">Klik hier voor meer info</a>
+                        </div>
+                  {% endfor %}
+                {% endif %}
+                <br>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+{% endblock content %}

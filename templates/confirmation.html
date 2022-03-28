@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="hero" class="hero overlay">
+        <div class="hero-content">
+            <div class="hero-text" style="margin-top: 50px;max-width: 80%;">
+    <div class="container text-center">
+        <div class="row pt-5 mt-5">
+            <div class="col-sm-12 text-white">
+                <form action="{{ url_for('confirmation') }}" method="POST">
+
+                        <html>
+                        <body>
+                        <h2>Bevestiging</h2>
+                        <p>De afspraak is ingepland!<p>
+                        <p>Er is een afspraak voor u gepland op {{ data.date }} </p>
+                        <p>Arts: {{ data.worker }}, BIG: {{data.BIG}}, lokatie: {{ data.address }} </p>
+                        <p>Er is een bevestigings mail met betaallink verzonden naar {{data.email}}</p>
+                        <p>Open deze mail en betaal het bedrag om de afspraak te bevestigen. </p>
+                        </body>
+                        </html>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+                    </div>
+    </div>
+{% endblock content %}

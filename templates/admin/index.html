@@ -1,0 +1,24 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+  {{ super() }}
+  <div class='container'>
+      <div>
+          <div>
+              {% if not current_user.is_authenticated %}
+              <h3>Please log in to continue</h3>
+              <p>
+                  <a class='btn btn-primary' href="{{ url_for('security.login') }}">login</a>
+              </p>
+              <br>
+              {% endif %}
+              {% if current_user.is_authenticated %}
+              <h3>Successfully logged in as admin.</h3>
+              <br>
+              <p>You now have access to the admin view.</p>
+              {% endif %}
+          </div>
+      </div>
+  </div>
+{% endblock body %}
+

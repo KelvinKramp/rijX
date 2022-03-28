@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="hero" class="hero overlay">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="input-wrapper-new">
+
+                            <input type="text" name="practiceName" id="step3fname" style="border-color: red;">
+                              <label for="" style="color: red;">
+
+                            Practice Name
+                          </label>
+                        </div>
+            <div class="hero-text" style="margin-top: 50px;max-width: 80%;">
+                    <h1>Maak een afspraak</h1>
+                </div>
+                <div class="description-title-booking">
+                    <h4>Kies een locatie en datum in Rotterdam</h4>
+                </div>
+                <form action="{{ url_for('booking') }}" method="POST">
+                                <div class="content-section">
+                                    <form method="POST" action="">
+                                    {{ form.hidden_tag() }}
+                                        <fieldset class="form-group">
+                                            <div class="form-group">
+                                                {{ form.location.label(class="form-control-label") }}
+                                                {% if form.location.errors %}
+                                                    {{ form.location(class="form-control form-control-lg is-invalid") }}
+                                                    <div class="invalid-feedback">
+                                                        {% for error in form.location.errors %}
+                                                            <span>{{ error }}</span>
+                                                        {% endfor %}
+                                                    </div>
+                                                {% else %}
+                                                    {{ form.location(class="form-control form-control-lg") }}
+                                                {% endif %}
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <div class="form-group">
+                                                {{ form.type_service.label(class="form-control-label") }}
+                                                {% if form.type_service.errors %}
+                                                    {{ form.type_service(class="form-control form-control-lg is-invalid") }}
+                                                    <div class="invalid-feedback">
+                                                        {% for error in form.type_service.errors %}
+                                                            <span>{{ error }}</span>
+                                                        {% endfor %}
+                                                    </div>
+                                                {% else %}
+                                                    {{ form.type_service(class="form-control form-control-lg") }}
+                                                {% endif %}
+                                            </div>
+                                        </fieldset>
+                                        <div><br></div>
+                                        <div class="btn btn-border">
+                                            {{ form.submit(class="btn btn-outline-info") }}
+                                        </div>
+                                    </form>
+                                </div>
+                    </div>
+    </div>
+               </div>    </div>
+
+{% endblock %}

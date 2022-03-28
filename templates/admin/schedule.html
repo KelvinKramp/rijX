@@ -1,0 +1,103 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+        <div><br></div>
+        <h2 style="text-align: center"> Create free slots </h2>
+        <div><br></div>
+        <form method="POST" action="{{url_for('schedule.index')}}">
+            {{ form.hidden_tag() }}
+            {{ form.csrf_token }}
+            <fieldset class="form-group">
+                <div class="form-group">
+                    {{ form.location.label(class="form-control-label") }}
+                    {% if form.location.errors %}
+                        {{ form.location(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.location.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.location(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.date.label(class="form-control-label") }}
+                    {% if form.date.errors %}
+                        {{ form.date(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.date.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.date(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.starttime.label(class="form-control-label") }}
+                    {% if form.starttime.errors %}
+                        {{ form.starttime(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.starttime.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.starttime(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                                <div class="form-group">
+                    {{ form.endtime.label(class="form-control-label") }}
+                    {% if form.endtime.errors %}
+                        {{ form.endtime(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.endtime.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.endtime(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                                <div class="form-group">
+                    {{ form.timeduration.label(class="form-control-label") }}
+                    {% if form.timeduration.errors %}
+                        {{ form.timeduration(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.timeduration.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.timeduration(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.worker.label(class="form-control-label") }}
+                    {% if form.worker.errors %}
+                        {{ form.worker(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.worker.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.worker(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="row">
+                <div class="column">
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-outline-info") }}
+                        </div>
+                </div>
+                <div class="column">
+                <div class="form-group">
+                    <a href="schedule2" class="previous">&laquo; Back</a>
+                </div>
+                </div>
+            </div>
+        </form>
+{% endblock %}
