@@ -16,7 +16,7 @@ from datetime import timezone
 from planningOS import create_slots, create_appointment, get_ninja_tables
 import requests
 import numpy as np
-from definitions import nav_bar_items
+from definitions import nav_bar_items, landingpage_items
 from texts import texts_landingpage
 
 # Create a ModelView to add to our administrative interface
@@ -150,7 +150,7 @@ def security_context_processor():
 @secureApp.route('/')
 @secureApp.route('/index')
 def index():
-    return render_template('index.html', nav_bar_items=nav_bar_items, page="Home", text=texts_landingpage)
+    return render_template('index.html', nav_bar_items=nav_bar_items, page="Home", text=texts_landingpage, landingpage_items=landingpage_items)
 
 
 @secureApp.route('/zoekkeuring')

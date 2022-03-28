@@ -7,12 +7,12 @@
       <section class="container home-section flex">
         <div class="home-section-left">
           <div>
-                    <h1>Rijbewijskeuringen in Rotterdam</h1>
+            <h1 class="animated__aboutussec animated fadeInUp">Rijbewijskeuringen in RijRotterdam</h1>
                 <ul class="list-nobull">
-                <li>BIG geregistreerde artsen. </li>
-                <li>Inzage in uw keuringsverslag.</li>
-                <li>Formulieren direct opgestuurd naar het CBR via Zorgdomein. </li>
-                <li>Prijzen vanaf 35 euro. </li>
+                {% for i in landingpage_items %}
+                <li><h2 class="stagger animated__itsmain animated fadeInUp">- {{i.item}} </h2></li>
+                    {% endfor %}
+
                 </ul>
                 <br>
           </div>
@@ -45,8 +45,8 @@
       <section class="about-section">
         <div class="about-section-right">
           <div>
-            <h1 class="animated__aboutussec">Waarom RijRotterdam.</h1>
-            <p class="animated__aboutussec">
+            <h1>Waarom RijRotterdam.</h1>
+            <p>
 Tijdens mijn werk als arts binnen verschillende organisaties heb ik gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als Rotterdamse arts voel ik mij verantwoordelijk voor de gezondheid van mijn medemens. Het is naar mijn mening onverantwoord om een relatief groot bedrag te vragen voor een keuring die gemiddeld 5 tot 10 minuten duurt. Bij RijRotterdam komt u goedkoper uit dan bij concurrenten. Hiervan kan u een lekkere gezonde maaltijd voor uzelf kopen en dit draagt weer bij aan uw welzijn en gezondheid.
 
             </p>
@@ -72,8 +72,8 @@ Tijdens mijn werk als arts binnen verschillende organisaties heb ik gemerkt dat 
         </div>
         <div class="about-section-right">
           <div>
-            <h1 class="animated__aboutussec">Een rijbewijskeuring voorbereiden kan ingewikkeld zijn.</h1>
-            <p class="animated__aboutussec">
+            <h1>Een rijbewijskeuring voorbereiden kan ingewikkeld zijn.</h1>
+            <p>
 RijRotterdam is opgezet om u zo goed mogelijk voor een lage prijs door een rijbewijskeuring te begeleiden. Communicatie met ons betekent contact met een kundige keuringsarts. Er zijn geen secretaresses en managers. Door regelzaken te automatiseren en de management lagen eruit te halen kunnen we de prijs van een rijbewijskeuring voor u zo laag mogelijk maken en rompslomp voorkomen.
 
             </p>
@@ -86,8 +86,8 @@ RijRotterdam is opgezet om u zo goed mogelijk voor een lage prijs door een rijbe
       <section class="about-section">
         <div class="about-section-right">
           <div>
-            <h1 class="animated__aboutussec">Hoe bereid ik mij voor?</h1>
-            <p class="animated__aboutussec">
+            <h1>Hoe bereid ik mij voor?</h1>
+            <p>
 U kan u gezondheidsverklaring invullen via deze link. Binnen uiterlijk 10 dagen ontvangt u bericht van het CBR met uw verwijzing en het keurverslag. Op het keurverslag staat een ZD-code. Deze neemt u mee naar de keuring bij RijRotterdam.
 
             </p>
@@ -96,8 +96,8 @@ U kan u gezondheidsverklaring invullen via deze link. Binnen uiterlijk 10 dagen 
         </div>
         <div class="about-section-right">
           <div>
-            <h1 class="animated__aboutussec">Hoe maak ik een afspraak?</h1>
-            <p class="animated__aboutussec">
+            <h1>Hoe maak ik een afspraak?</h1>
+            <p>
 U kan u gezondheidsverklaring invullen via deze link. Binnen uiterlijk 10 dagen ontvangt u bericht van het CBR met uw verwijzing en het keurverslag. Op het keurverslag staat een ZD-code. Deze neemt u mee naar de keuring bij RijRotterdam.
 
             </p>

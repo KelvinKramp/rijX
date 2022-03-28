@@ -13,3 +13,9 @@ list_services = [("medisch","Medische keuring €35,00"),
                  ('groot', 'Rijbewijskeuring groot €35,00'),
                  ('taxipas', 'Rijbewijskeuring taxipas €35,00'),
                  ('touring', 'Rijbewijskeuring touringscarchauffeurs €35,00')]
+
+landingpage_items = [{"item":"BIG geregistreerde artsen"},
+                    {"item":"Inzage in uw keuringsverslag"},
+                    {"item":"Verbonden met Zorgdomein"},
+                    {"item":"Prijzen vanaf 35 euro"},
+                     ]
