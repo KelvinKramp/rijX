@@ -1,13 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="home-section-outer">
-      <section class="container home-section flex">
-                                              <h1>Maak een afspraak</h1>
-                                </div>
-          </section>
-    </section>
-                <form action="{{ url_for('booking2') }}" method="POST">
     <section class="home-section-outer">
       <section class="container home-section flex">
         <div class="home-section-left">
@@ -20,9 +13,8 @@
                                     <form method="POST" action="">
                                     {{ form.hidden_tag() }}
 <!--                                        <fieldset class="form-group">-->
-                                        <div class="inputs-wrapper-new floating_input_wrapper">
-                                        <div class="input-wrapper-new">
-                                        {{ form.last_name.label(for="fname") }}
+                                        <div>
+                                        {{ form.last_name.label(class="") }}
                                         {% if form.last_name.errors %}
                                             {{ form.last_name(class="") }}
                                             <div class="invalid-feedback">
@@ -34,7 +26,6 @@
                                             {{ form.last_name(class="") }}
                                         {% endif %}
                                     </div>
-                                            </div>
                                     <div class="form-group">
                                         {{ form.first_name.label(class="form-control-label") }}
                                         {% if form.first_name.errors %}
