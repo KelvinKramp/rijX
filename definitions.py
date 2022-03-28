@@ -1,5 +1,6 @@
 list_tables = ["Appointments", "OpenSlots","Workers"]
 nav_bar_items = [{"title":"Afspraak maken", "url":"booking"},
+                 {"title": "Inloopspreekuur", "url": "mijnverslag"},
                  {"title":"Mijnkeuringsverslag", "url": "mijnverslag"},
                  {"title": "Inhoud keuring", "url": "inhoudkeuring"},
                  {"title": "Over ons", "url": "aboutus"},

@@ -17,7 +17,8 @@ from planningOS import create_slots, create_appointment, get_ninja_tables
 import requests
 import numpy as np
 from definitions import nav_bar_items, landingpage_items
-from texts import texts_landingpage
+from texts import texts_landingpage, welcome_message_whatsapp
+
 
 # Create a ModelView to add to our administrative interface
 class UserModelView(ModelView):
@@ -150,8 +151,14 @@ def security_context_processor():
 @secureApp.route('/')
 @secureApp.route('/index')
 def index():
-    return render_template('index.html', nav_bar_items=nav_bar_items, page="Home", text=texts_landingpage, landingpage_items=landingpage_items)
+    global welcome_message_whatsapp
+    return render_template('index.html', nav_bar_items=nav_bar_items, page="Home",
+                           text=texts_landingpage, landingpage_items=landingpage_items,
+                           welcome_message=welcome_message_whatsapp)
 
+@secureApp.route('/inloopspreekuur')
+def inloopspreekuur():
+    return render_template('inloopspreekuur.html', nav_bar_items=nav_bar_items, page="Inloopspreekuur")
 
 @secureApp.route('/zoekkeuring')
 def zoekkeuring():

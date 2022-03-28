@@ -1,3 +1,9 @@
+welcome_message_whatsapp = "Stuur een bericht naar RijRotterdam"
+import urllib
+
+welcome_message_whatsapp = urllib.parse.quote(welcome_message_whatsapp, safe='')
+welcome_message_whatsapp = "https://wa.me/31683825634?text=" + welcome_message_whatsapp
+
 title1 = """
 Een rijbewijskeuring voorbereiden kan ingewikkeld zijn.
 """
@@ -5,15 +11,50 @@ text1 = """
 RijRotterdam is opgezet om u zo goed mogelijk voor een lage prijs door een rijbewijskeuring te begeleiden. Communicatie met ons betekent contact met een kundige keuringsarts. Er zijn geen secretaresses en managers. Door regelzaken te automatiseren en de management lagen eruit te halen kunnen we de prijs van een rijbewijskeuring voor u zo laag mogelijk maken en rompslomp voorkomen.
 """
 
-title2 = """Waarom rijrotterdam?
+title2 = """
+Waarom rijrotterdam?
 """
-text2 = """Tijdens mijn werk als arts binnen verschillende organisaties heb ik gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als Rotterdamse arts voel ik mij verantwoordelijk voor de gezondheid van mijn medemens. Het is naar mijn mening onverantwoord om een relatief groot bedrag te vragen voor een keuring die gemiddeld 5 tot 10 minuten duurt. Bij RijRotterdam komt u goedkoper uit dan bij concurrenten. Hiervan kan u een lekkere gezonde maaltijd voor uzelf kopen en dit draagt weer bij aan uw welzijn en gezondheid. """
+
+text2 = """
+We hebben gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als zorgverleners vinden wij het onverantwoord om een relatief groot bedrag te vragen voor een keuring die gemiddeld 5 tot 10 minuten duurt. 
+Bij RijRotterdam komt u goedkoper uit dan bij concurrenten. Hiervan kan u een lekkere gezonde maaltijd voor uzelf kopen en dit draagt weer bij aan uw welzijn en gezondheid. 
+"""
 
 title3 = """Hoe maak ik een afspraak?"""
-text3 = """U kan een afspraak maken via deze link of u kan komen naar ons inloopspreekuur. Op dit moment zijn we enkel werkzaam in Rotterdam. Als we ons team uitbreiden zullen we op meer plekken in Nederland beschikbaar zijn.  """
+text3 = """
+U kan een afspraak maken of komen naar ons inloopspreekuur.
+<br>
+<br>
+De keuring bestaat uit een aantal korte vragen en onderzoeken om uw gezondheid te evalueren. De keuring duurt 5 tot 15 minuten als u gezond bent en u uzelf goed heeft voorbereid. 
+Heeft u één of meerdere aandoeningen dan kan het langer duren. 
+<br>
+<br>
+Op dit moment zijn we enkel werkzaam in Rotterdam en Capelle aan den IJssel. 
+<br>
+
+"""
+text3b = """
+ mee:
+<div><br></div>
+<ul>
+<li>Uw unieke ZD code. </li>
+<div>
+Deze is te vinden op de formulier van het CBR). U kan deze ook later aan ons doorgeven, maar de verwerking van uw keuring duurt dan langer. Als u komt voor een taxipas dan neemt u de papieren gezondheidsverklaring en uw keuringsformulier mee. 
+</div>
+<div><br></div>
+"""
 
 title4 = """Hoe bereid ik mij voor?"""
-text4 = """U kan u gezondheidsverklaring invullen via deze link. Binnen uiterlijk 10 dagen ontvangt u bericht van het CBR met uw verwijzing en het keurverslag. Op het keurverslag staat een ZD-code. Deze neemt u mee naar de keuring bij RijRotterdam. 
+text4 = """ 
+De eerste stap die u moet nemen is het invullen van een gezondheidsverklaring. 
+<br>
+
+<br>
+Binnen uiterlijk 10 dagen ontvangt u bericht van het CBR met uw verwijzing en het keurverslag. 
+Het verslag hoeft u niet zelf in te vullen dit doet de arts.
+<br>
+<br>
+Op het keurverslag staat een ZD-code. Deze neemt u mee naar de keuring bij RijRotterdam. 
 Als u een keurverslag heeft gekregen voor de oogarts, cardioloog, psychiater of internist dan moet u bij de desbetreffende specialist een afspraak maken.   
 """
 
@@ -55,7 +96,15 @@ in de buurt van zorgpersoneel (witte-jassen hypertensie). Dit kan leiden tot een
 """
 
 title6 = """Hoe krijg ik de uitslag? """
-text6 = """Het CBR (https://www.cbr.nl/nl/veelgestelde-vragen/hoe-lang-duurt-het-voordat-de-uitslag-van-de-medische-keuring-bekend-is.htm#:~:text=Vanaf%20het%20moment%20dat%20wij,te%20zien%20in%20Mijn%20CBR.) vermeldt het volgende: Vanaf het moment dat wij het rapport van uw arts ontvangen is de status van uw aanvraag binnen één week te zien in Mijn CBR."""
+text6 = """Vanaf het moment dat het keuringsrapport is ontvangen door het CBR is de status van uw aanvraag binnen één 
+week te zien in Mijn CBR. Bent u gezond en zijn er geen aanvullende vragen naar aanleiding van de keuring dan duurt het op basis van 
+onze ervaring een aantal dagen voordat het CBR reageert. Heeft het CBR extra vragen dan kan u een foto van de aanvullende vragen 
+mailen of appen zodat wij zo snel mogelijk de aanvullende informatie aan het CBR kunnen doorgeven.
+
+<br>
+<br>
+Als u goedkeuring heeft gehad van het CBR dan kan u naar het gemeentehuis om uw rijbewijs te verlengen.
+"""
 
 title7 = """Het CBR heeft aanvullende vragen, wat moet ik doen?"""
 text7 = """Formulieren met aanvullende vragen kunt u sturen naar: info@rijrotterdam.nl of via whatsapp. Wij streven ernaar binnen 3 werkdagen de aanvullende vragen te beantwoorden.  """

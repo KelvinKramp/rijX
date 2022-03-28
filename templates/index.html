@@ -7,7 +7,7 @@
       <section class="container home-section flex">
         <div class="home-section-left">
           <div>
-            <h1 class="animated__aboutussec animated fadeInUp">Rijbewijskeuringen in RijRotterdam</h1>
+            <h1 class="animated__aboutussec animated fadeInUp">Rijbewijskeuringen in Rotterdam</h1>
                 <ul class="list-nobull">
                 {% for i in landingpage_items %}
                 <li><h2 class="stagger animated__itsmain animated fadeInUp">- {{i.item}} </h2></li>
@@ -17,7 +17,7 @@
                 <br>
           </div>
           <div class="home-buttons stagger animated__itsmain">
-            <a href="/patient/home" class="">Maak direct een afspraak</a>
+            <a href="{{url_for('booking')}}" class="">Maak direct een afspraak</a>
             <a href="#more" class="">Lees meer...</a>
           </div>
 
@@ -45,13 +45,10 @@
       <section class="about-section">
         <div class="about-section-right">
           <div>
-            <h1>Waarom RijRotterdam.</h1>
-            <p>
-Tijdens mijn werk als arts binnen verschillende organisaties heb ik gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als Rotterdamse arts voel ik mij verantwoordelijk voor de gezondheid van mijn medemens. Het is naar mijn mening onverantwoord om een relatief groot bedrag te vragen voor een keuring die gemiddeld 5 tot 10 minuten duurt. Bij RijRotterdam komt u goedkoper uit dan bij concurrenten. Hiervan kan u een lekkere gezonde maaltijd voor uzelf kopen en dit draagt weer bij aan uw welzijn en gezondheid.
-
-            </p>
+            <h1>{{text.title1}}</h1>
+            <p>{{text.text1}}</p>
           </div>
-          <a href="#" class="learn_more_link">Learn More</a>
+<!--          <a href="#" class="learn_more_link">Lees meer</a>-->
         </div>
         <div class="about-section-left">
           <img
@@ -60,6 +57,7 @@ Tijdens mijn werk als arts binnen verschillende organisaties heb ik gemerkt dat 
           />
 
         </div>
+          <div></div>>
       </section>
       <br>
             <br>
@@ -72,41 +70,79 @@ Tijdens mijn werk als arts binnen verschillende organisaties heb ik gemerkt dat 
         </div>
         <div class="about-section-right">
           <div>
-            <h1>Een rijbewijskeuring voorbereiden kan ingewikkeld zijn.</h1>
-            <p>
-RijRotterdam is opgezet om u zo goed mogelijk voor een lage prijs door een rijbewijskeuring te begeleiden. Communicatie met ons betekent contact met een kundige keuringsarts. Er zijn geen secretaresses en managers. Door regelzaken te automatiseren en de management lagen eruit te halen kunnen we de prijs van een rijbewijskeuring voor u zo laag mogelijk maken en rompslomp voorkomen.
-
-            </p>
+            <h1>{{text.title2}}</h1>
+            <p>{{text.text2}}</p>
           </div>
-          <a href="#" class="learn_more_link">Learn More</a>
+          <a href={{url_for('aboutus')}} class="learn_more_link">Lees meer over RijRotterdam</a>
         </div>
       </section>
       <br>
       <br>
+              <br>
+      <br>
+        <section class="about-section">
+                              <div class="about-section-right">
+          <div>
+              <h1>{{text.title4}}</h1>
+              <p>Het verkrijgen van een nieuw rijbeewijs gebeurt in 3 stappen. Hieronder leest u meer over de stappen.</p>
+                        <img
+            src="/static/img/flowchart.jpeg"
+            height="200"
+            style="justify-content: center;"
+            alt="3 stappen rijbewijskeuring"
+          />
+          </div>
+        </div>
+        </section>
+    </section>
       <section class="about-section">
         <div class="about-section-right">
           <div>
-            <h1>Hoe bereid ik mij voor?</h1>
-            <p>
-U kan u gezondheidsverklaring invullen via deze link. Binnen uiterlijk 10 dagen ontvangt u bericht van het CBR met uw verwijzing en het keurverslag. Op het keurverslag staat een ZD-code. Deze neemt u mee naar de keuring bij RijRotterdam.
-
-            </p>
+              <h2>Stap 1: Gezondheidsverklaring aanvragen</h2>
+            <p>{{text.text4|safe}}</p>
           </div>
-          <a href="#" class="learn_more_link">Learn More</a>
         </div>
         <div class="about-section-right">
           <div>
-            <h1>Hoe maak ik een afspraak?</h1>
-            <p>
-U kan u gezondheidsverklaring invullen via deze link. Binnen uiterlijk 10 dagen ontvangt u bericht van het CBR met uw verwijzing en het keurverslag. Op het keurverslag staat een ZD-code. Deze neemt u mee naar de keuring bij RijRotterdam.
-
-            </p>
+            <a href="https://www.cbr.nl/nl/rijbewijs-houden/nl/gezondheidsverklaring/gezondheidsverklaring-invullen.htm#:~:text=Het%20invullen%20van%20de%20Gezondheidsverklaring,Gezondheidsverklaring%20betaalt%20u%20via%20iDeal" class="learn_more_link">Klik hier om een gezondheidsverklaring aan te vragen</a>.
           </div>
-          <a href="#" class="learn_more_link">Learn More</a>
         </div>
       </section>
-    </section>
+      <section class="about-section">
+        <div class="about-section-right">
+          <div>
+              <h2>Stap 2: Maak een afspraak</h2>
+            <p>{{text.text3|safe}}</p>
+          </div>
+        </div>
+        <div class="about-section-right">
+          <div>
+          <a href="{{url_for('booking')}}" class="learn_more_link">Klik hier om een afspraak te maken</a>
+          <a href="{{url_for('inloopspreekuur')}}" class="learn_more_link">Klik hier voor de inloopspreekuur tijden</a>
+              <a href="{{url_for('inloopspreekuur')}}" class="learn_more_link">Klik hier om te zien wat u mee moet nemen</a>
+          </div>
+        </div>
+      </section>
+<br>
+      <section class="about-section">
+        <div class="about-section-right">
+          <div>
 
+              <br>
+              <br>
+
+              <h2>Stap 3: Wacht de uitslag van het CBR af</h2>
+            <p>{{text.text6 | safe}}</p>
+          </div>
+        </div>
+                  <div class="about-section-right">
+          <div>
+          <a href="{{url_for('mijnverslag')}}" class="learn_more_link">Klik hier om uw keuringsverslag in te zien</a>
+          <a href="mailto:info@rijkeuringrotterdam.nl" class="learn_more_link">Mail ons aanvullende vragen</a>
+              <a href={{welcome_message}} class="learn_more_link" target="_blank">Whatsapp ons aanvullende vragen</a>
+          </div>
+        </div>
+      </section>
     <script src="../../assets/js/home.js"></script>
 
     <!-- waypoint CDN for animatioins -->
