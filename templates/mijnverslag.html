@@ -2,17 +2,27 @@
 
 {% block content %}
 
-    <div id="hero" class="hero overlay">
-        <div class="hero-content">
-            <div class="hero-text" style="margin-top: 50px;max-width: 80%;">
-                <h1>Mijn verslagen</h1>
-                <br>
-                <ul class="list-nobull">
-                <li>U kan hier uw keuringsverslag opvragen vanuit zorgdomein</li>
-                </ul>
-                <br>
-                <a href="#" class="btn btn-border">Start aanvraag</a>
-            </div><!-- /.hero-text -->
-        </div><!-- /.hero-content -->
-    </div><!-- /.hero -->
+    <!-- Benefints Area -->
+    <section class="about-section-wrapper first_about_section_wrapper"  id="more">
+      <section class="about-section">
+        <div class="about-section-right">
+          <div>
+            <h1>{{text.title1}}</h1>
+            <p>{{text.text1 |safe}}</p>
+                        <div class="home-buttons stagger">
+  <label for="lname">Telefoon nummer:</label>
+                            <br>
+                            <input type="tel" id="lname" name="lname"><br><br>
+                            <br><br>
+            <a href="{{url_for('booking')}}" class="">Vraag uw keuringsverslag op</a>
+          </div>
+<!--          <a href="#" class="learn_more_link">Lees meer</a>-->
+        </div>
+        <div class="about-section-right">
+
+          </div>
+        </div>
+      </section>
+              </section>
+
 {% endblock %}

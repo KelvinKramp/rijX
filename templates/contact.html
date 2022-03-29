@@ -1,24 +1,28 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <div id="hero" class="hero overlay">
-        <div class="hero-content">
-            <div class="hero-text" style="margin-top: 50px;max-width: 80%;">
-                <h1>Contact informatie</h1>
-                <br>
-                <a href="mailto:info@rijkeuringrotterdam.nl" class="btn btn-border">Stuur een bericht via whatsapp</a>
-                <br>
-                <div>                <br></div>
-                <a href="mailto:info@rijkeuringrotterdam.nl" class="btn btn-border">Stuur een mail</a>
-                <br>
-                <div>                <br></div>
-                <a href="mailto:info@rijkeuringrotterdam.nl" class="btn btn-border">Telefonisch contact</a>
-                                <br>
-                <div>                <br></div>
-                                <h4>E-mail: info@rijkeuringrotterdam.nl</h4>
-                <h4>Telefoon/Whatsapp 0612341234</h4>
-                <h4>Adres: Mauritsstraat 989, 3012 CH, Rotterdam</h4>
-            </div><!-- /.hero-text -->
-        </div><!-- /.hero-content -->
-    </div><!-- /.hero -->
+
+    <!-- Benefints Area -->
+    <section class="about-section-wrapper first_about_section_wrapper"  id="more">
+      <section class="about-section">
+        <div class="about-section-right">
+          <div>
+            <h1>{{text.title1}}</h1>
+                          <h2>{{text.title1b}}</h2>
+            <p>{{text.text1 |safe}}</p>
+                                                    <div class="home-buttons stagger">
+            <a href={{welcome_message}} target="_blank">Stuur een bericht via whatsapp</a>
+          </div>
+                        <div class="home-buttons stagger">
+            <a href="mailto:info@rijkeuringrotterdam.nl">Stuur een mail</a>
+          </div>
+
+<!--          <a href="#" class="learn_more_link">Lees meer</a>-->
+        </div>
+        <div class="about-section-right">
+
+          </div>
+        </div>
+      </section>
+              </section>
+
 {% endblock %}
