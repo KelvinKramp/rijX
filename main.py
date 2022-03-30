@@ -99,8 +99,8 @@ class CancellationView(UserModelView):
                 cancel(slot_selected, _type='slot')
             elif all_slots_delete_option:
                 delete_rows('Slots')
-        form.l_appointments = get_from_db(form="list", var="appointments")
-        form.l_openslots = get_from_db(form="list", var="slots")
+        form.l_appointments = get_from_db(form="list", table="appointments")
+        form.l_openslots = get_from_db(form="list", table="slots")
         return self.render('admin/cancellation.html', form=form)
 
 # Create a datastore and instantiate Flask-Security
@@ -109,7 +109,6 @@ user_datastore = SQLAlchemyUserDatastore(db, Users, Roles)
 
 
 security = Security(secureApp, user_datastore)
-
 
 
 # This decorator registers a function to be run before the first request to the app

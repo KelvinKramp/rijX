@@ -1,7 +1,6 @@
 venv
 routes
 models
-helpers
 controllers
 .env
 secrets.json

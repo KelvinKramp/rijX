@@ -190,7 +190,7 @@ texts_aboutus = {
 }
 
 
-title1_contact = "Contact"
+title1_contact = "Onbeantwoorde vragen?"
 title1b_contact = "Neem contact met ons op"
 text1_contact = ""
 texts_contact = {

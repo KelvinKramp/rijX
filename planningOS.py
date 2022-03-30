@@ -81,9 +81,9 @@ def delete_rows(table):
         con.close()
 
 def get_ninja_tables():
-    html_table_slots = get_from_db(form='html', var='slots')
-    html_table_appointments = get_from_db(form='html', var='appointments')
-    html_table_workers = get_from_db(form='html', var='workers')
+    html_table_slots = get_from_db(form='html', table='slots')
+    html_table_appointments = get_from_db(form='html', table='appointments')
+    html_table_workers = get_from_db(form='html', table='workers')
     headings = ["Open slots", "Appointments", "Workers"]
     tables = [html_table_slots, html_table_appointments, html_table_workers]
     table_ninja_clean = {}
