@@ -1321,6 +1321,9 @@ section.home-section .home-section-left > div p {
 }
 
 @media screen and (max-width: 500px) {
+  .logo {
+    font-size: 20px;
+  }
   section.home-section .home-section-left > div h1,
   section.home-section .home-section-left > div h2 {
     font-size: 24px !important;
@@ -1428,38 +1431,37 @@ section.home-section .home-section-left > div p {
   }
 }
 
-.input-wrapper-new input
-{
-    width: 100%;
-    flex: 1;
-    margin: 0rem !important;
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    display: flex;
-    height: 60px;
-    align-items: center;
-    border-bottom: 1px solid #cecece;
-    color: #999999;
-    outline: none;
-    border-radius: 0px !important;
-    font-family: "Poppins", sans-serif;
-    -webkit-appearance: none !important;
-    -webkit-border-radius: 0 !important;
+.input-wrapper-new input {
+  width: 100%;
+  flex: 1;
+  margin: 0rem !important;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid #cecece;
+  color: #999999;
+  outline: none;
+  border-radius: 0px !important;
+  font-family: "Poppins", sans-serif;
+  -webkit-appearance: none !important;
+  -webkit-border-radius: 0 !important;
 }
 
-.input-wrapper-new label
-{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    color: #999;
-    pointer-events: none;
-    transition: 0.3s ease all;
-    top: 20px;
+.input-wrapper-new label {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  top: 20px;
 }
 
-.input-wrapper-new input:focus + label, .input-wrapper-new.active label {
-    top: -20px;
-    color: #0077ff;
+.input-wrapper-new input:focus + label,
+.input-wrapper-new.active label {
+  top: -20px;
+  color: #0077ff;
 }
