@@ -28,8 +28,8 @@ class LocationDateForm(FlaskForm):
 
 
 class CancellationForm(FlaskForm):
-    l_appointments = get_from_db(form="list",var="appointments")
-    l_openslots = get_from_db(form="list",var="openslots")
+    l_appointments = get_from_db(form="list",table="appointments")
+    l_openslots = get_from_db(form="list",table="openslots")
     del_appointment = SubmitField('Delete appointment')
     del_openslot = SubmitField('Delete open slot')
     del_all_openslots = SubmitField('Delete all open slot')

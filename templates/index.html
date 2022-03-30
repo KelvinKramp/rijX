@@ -44,31 +44,15 @@
     <section class="about-section-wrapper first_about_section_wrapper"  id="more">
       <section class="about-section">
         <div class="about-section-right">
-          <div>
+          <div style="text-align=:justify;top:0;">
             <h1>{{text.title1}}</h1>
             <p>{{text.text1}}</p>
           </div>
+                      <a href={{url_for('inhoudkeuring')}} class="learn_more_link">Lees meer over de inhoud van een keuring</a>
+
 <!--          <a href="#" class="learn_more_link">Lees meer</a>-->
         </div>
-        <div class="about-section-left">
-          <img
-            src="https://media.istockphoto.com/photos/portrait-of-smiling-senior-man-driving-car-picture-id491268360?s=612x612"
-            alt=""
-          />
-
-        </div>
-          <div></div>>
-      </section>
-      <br>
-            <br>
-      <section class="about-section">
-        <div class="about-section-left">
-          <img
-            src="https://media.istockphoto.com/photos/portrait-of-smiling-senior-man-driving-car-picture-id491268360?s=612x612"
-            alt=""
-          />
-        </div>
-        <div class="about-section-right">
+        <div class="about-section-right" style="text-align:top;margin-top:0%;vertical-align:top;">
           <div>
             <h1>{{text.title2}}</h1>
             <p>{{text.text2}}</p>
@@ -76,10 +60,7 @@
           <a href={{url_for('aboutus')}} class="learn_more_link">Lees meer over RijRotterdam</a>
         </div>
       </section>
-      <br>
-      <br>
-              <br>
-      <br>
+              </section>
         <section class="about-section">
                               <div class="about-section-right">
           <div>
@@ -137,7 +118,7 @@
         </div>
                   <div class="about-section-right">
           <div>
-          <a href="{{url_for('mijnverslag')}}" class="learn_more_link">Klik hier om uw keuringsverslag in te zien</a>
+<!--          <a href="{{url_for('mijnverslag')}}" class="learn_more_link">Klik hier om uw keuringsverslag in te zien</a>-->
           <a href="mailto:info@rijkeuringrotterdam.nl" class="learn_more_link">Mail ons aanvullende vragen</a>
               <a href={{welcome_message}} class="learn_more_link" target="_blank">Whatsapp ons aanvullende vragen</a>
           </div>

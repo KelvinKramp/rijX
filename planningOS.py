@@ -29,13 +29,13 @@ def create_appointment(location, datetime, first_name, last_name, birthdate, ema
     Slots.query.filter_by(id=id).delete()
     db.session.commit()
 
-def get_from_db(form=None, var="appointments"):
+def get_from_db(form=None, table="appointments"):
     con = connect("app.sqlite3")
-    if var == "appointments":
+    if table == "appointments":
         df = pd.read_sql('SELECT * FROM Appointments', con)
-    elif var == "slots":
+    elif table == "slots":
         df = pd.read_sql('SELECT * FROM Slots', con)
-    elif var == "workers":
+    elif table == "workers":
         df = pd.read_sql('SELECT * FROM Workers', con)
     else:
         df = pd.DataFrame()
@@ -81,9 +81,9 @@ def delete_rows(table):
         con.close()
 
 def get_ninja_tables():
-    html_table_slots = get_from_db(form='html', var='slots')
-    html_table_appointments = get_from_db(form='html', var='appointments')
-    html_table_workers = get_from_db(form='html', var='workers')
+    html_table_slots = get_from_db(form='html', table='slots')
+    html_table_appointments = get_from_db(form='html', table='appointments')
+    html_table_workers = get_from_db(form='html', table='workers')
     headings = ["Open slots", "Appointments", "Workers"]
     tables = [html_table_slots, html_table_appointments, html_table_workers]
     table_ninja_clean = {}

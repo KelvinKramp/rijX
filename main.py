@@ -16,8 +16,10 @@ from datetime import timezone
 from planningOS import create_slots, create_appointment, get_ninja_tables
 import requests
 import numpy as np
-from definitions import nav_bar_items, landingpage_items
-from texts import texts_landingpage, welcome_message_whatsapp
+from definitions import nav_bar_items, landingpage_items, dict_payments_links
+from texts import texts_landingpage, welcome_message_whatsapp, \
+    texts_inloopspreekuur, texts_mijnkeuring, texts_aboutus, \
+    texts_contact, texts_inhoudkeuring
 
 
 # Create a ModelView to add to our administrative interface
@@ -37,9 +39,9 @@ class UserModelView(ModelView):
 class AppointmentsView(UserModelView):
     @expose("/", methods=['GET', 'POST'])
     def index(self):
-        html_table_slots = get_from_db(form='html', var='openslots')
-        html_table_appointments = get_from_db(form='html',var='appointments')
-        html_table_workers = get_from_db(form='html',var='workers')
+        html_table_slots = get_from_db(form='html', table='openslots')
+        html_table_appointments = get_from_db(form='html',table='appointments')
+        html_table_workers = get_from_db(form='html',table='workers')
         headings = ["Open slots", "Appointments", "Workers"]
         tables = [html_table_slots, html_table_appointments, html_table_workers]
         table_ninja_clean = {}
@@ -97,8 +99,8 @@ class CancellationView(UserModelView):
                 cancel(slot_selected, _type='slot')
             elif all_slots_delete_option:
                 delete_rows('Slots')
-        form.l_appointments = get_from_db(form="list", var="appointments")
-        form.l_openslots = get_from_db(form="list", var="slots")
+        form.l_appointments = get_from_db(form="list", table="appointments")
+        form.l_openslots = get_from_db(form="list", table="slots")
         return self.render('admin/cancellation.html', form=form)
 
 # Create a datastore and instantiate Flask-Security
@@ -107,7 +109,6 @@ user_datastore = SQLAlchemyUserDatastore(db, Users, Roles)
 
 
 security = Security(secureApp, user_datastore)
-
 
 
 # This decorator registers a function to be run before the first request to the app
@@ -158,7 +159,7 @@ def index():
 
 @secureApp.route('/inloopspreekuur')
 def inloopspreekuur():
-    return render_template('inloopspreekuur.html', nav_bar_items=nav_bar_items, page="Inloopspreekuur")
+    return render_template('inloopspreekuur.html', nav_bar_items=nav_bar_items, page="Inloopspreekuur", text=texts_inloopspreekuur)
 
 @secureApp.route('/zoekkeuring')
 def zoekkeuring():
@@ -167,17 +168,21 @@ def zoekkeuring():
 
 @secureApp.route('/mijnverslag')
 def mijnverslag():
-    return render_template('mijnverslag.html', nav_bar_items=nav_bar_items, page="Uw keuringsverslag")
+    return render_template('mijnverslag.html', nav_bar_items=nav_bar_items, page="Uw keuringsverslag", text=texts_mijnkeuring)
+
+@secureApp.route('/inhoudkeuring')
+def inhoudkeuring():
+    return render_template('inhoudkeuring.html', nav_bar_items=nav_bar_items, page="Inhoud keuring", text=texts_inhoudkeuring)
 
 
 @secureApp.route('/aboutus')
 def aboutus():
-    return render_template('aboutus.html', nav_bar_items=nav_bar_items, page="Over ons")
+    return render_template('aboutus.html', nav_bar_items=nav_bar_items, page="Over ons", text=texts_aboutus)
 
 
 @secureApp.route('/contact')
 def contact():
-    return render_template('contact.html', nav_bar_items=nav_bar_items, page="Contact")
+    return render_template('contact.html', nav_bar_items=nav_bar_items, page="Contact", text=texts_contact, welcome_message=welcome_message_whatsapp)
 
 
 @app.route('/vragen', methods=['GET', 'POST'])
@@ -218,6 +223,8 @@ def booking():
         # datetime = form.datetime.data
         session["appointment"] = location
         session["id"] = i.id
+        session["type_service"] = form.type_service.data
+        print(form.type_service.data)
         return redirect(url_for('booking2'))
     return render_template('booking.html', form=form, nav_bar_items=nav_bar_items, page="Afspraak maken")
 
@@ -233,7 +240,6 @@ def booking2():
     time=(str(dt.now(timezone.utc).day)+"-"+str(dt.now(timezone.utc).month)+"-"+str(dt.now(timezone.utc).year))
     # validate form on submit and commit to db
     if form.validate_on_submit():
-        print("VALIDATED")
         print(session["appointment"])
         choice_appointment = session["appointment"]
         id = session["id"]
@@ -252,10 +258,12 @@ def confirmation():
     print(session["appointment"])
     address = session["appointment"].split("|")[0]
     datetime = session["appointment"].split("|")[1]
+    type_service = session["type_service"]
     worker = "dr. Aaron Schwartz"
     email = session['email']
-    data = {"email":email ,"worker":worker,"address":address, "date":datetime}
-    payment_link = "paymentlink"
+    payment_link = dict_payments_links[type_service]
+    data = {"email":email ,"worker":worker,"address":address, "date":datetime, "type_service":type_service,
+            "payment_link":payment_link}
     send_mail(email, payment_link)
     return render_template("confirmation.html", data=data, nav_bar_items=nav_bar_items, page="Afspraak maken")
 

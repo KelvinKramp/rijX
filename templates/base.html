@@ -54,7 +54,6 @@
     <div class="header-container">
       <header>
         <a href="/index" class="logo"> RijRotterdam </a>
-
                     <ul class="nav navbar-nav navbar-right">
                         {% for nav_bar_item in nav_bar_items %}
                             {% if page == nav_bar_item.title %}
@@ -94,34 +93,42 @@
         alt=""
         class="footer-shape-3"
       />
-      <h1 class="footer-main-heading">Eperience Peachy Patient Today!</h1>
+<!--      <h1 class="footer-main-heading" href="url_for('ooking)">Maak een afspraak</h1>-->
       <div class="footer-links">
         <div class="first-col footer-col footer-presentation">
-          <h2>Peachy Patient</h2>
+          <h2>Rijrotterdam</h2>
           <small
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-            voluptatibus quod nam accusantium voluptate ab dolorem! Ad inventore
-            repellat odio.</small
+            >Scherpe prijzen. Kundige artsen. Korte lijnen.</small
           >
         </div>
         <nav class="second-col footer-col">
-          <li>Peachy Patient for Patients</li>
-          <li><a href="/patient/home">Patient Home</a></li>
-          <li><a href="/patient/registration">Patient Registration</a></li>
-          <li><a href="/patient/contact">Patient Support</a></li>
-          <li><a href="/patient/faq">Patient FAQ</a></li>
+          <li>Rijbewijskeuringen in Rotterdam</li>
+                        {% for nav_bar_item in nav_bar_items %}
+                            {% if page == nav_bar_item.title %}
+                                <li class="active"><a href={{url_for(nav_bar_item.url)}}>{{nav_bar_item.title}}</a></li>
+                            {% else %}
+                              <li><a href="{{nav_bar_item.url}}">{{nav_bar_item.title}}</a></li>
+                            {% endif %}
+                        {% endfor %}
         </nav>
         <nav class="third-col footer-col">
-          <li>Peachy Patient for Practice</li>
-          <li><a href="/practice/home">Practice Home</a></li>
-          <li><a href="/practice/registration">Practice Registration</a></li>
-          <li><a href="/practice/contact">Practice Support</a></li>
-          <li><a href="/practice/faq">Practice FAQ</a></li>
+          <li><a href="{{url_for('contact')}}">Contact</a></li>
+            <li><a href="/static/files/AlgemeneVoorwaarden.pdf">Algemente voorwaarden</a></li>
+          <li><a href="/static/files/PrivacyStatement.pdf">Privacy statement</a></li>
+<!--          <li><a href= target="_blank">Whatsapp</a></li>-->
+<!--          <li><a href="mailto:info@rijkeuringrotterdam.nl">E-mail</a></li>-->
+<!--          <li><a href="/practice/contact">Practice Support</a></li>-->
+<!--          <li><a href="/practice/faq">Practice FAQ</a></li>-->
         </nav>
         <nav class="fourth-col footer-col">
-          <li>Company</li>
-          <li><a href="#">Term & Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+            <div></div>
+            <div>@ 2022 RijX onderdeel van Medical Progress </div>
+            <div>Website door Kelvin Kramp and Atif Web</div>
+            <div>KVK: 77359089</div>
+            <div>IBAN: NL92ABNA0884505820</div>
+<!--          <li>RijRotterdam</li>-->
+<!--          <li><a href="#">Algemente voorwaarden</a></li>-->
+<!--          <li><a href="#">Privacy statement</a></li>-->
         </nav>
       </div>
     </footer>
