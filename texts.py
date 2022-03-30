@@ -147,9 +147,6 @@ Dit kan en moet anders. Wij zijn een team artsen en software developers die same
 Ons doel is om artsen en patienten dichter bij elkaar te brengen.
 Ons team bestaat uit: 
 <br>
-- Kelvin Kramp MD, PhD, Python developer
-<br>
-- Atif Asim, MBA, frontend developer 
 """
 
 title2_aboutus = """
