@@ -1,12 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="hero" class="hero overlay">
-        <div class="hero-content">
-            <div class="hero-text" style="margin-top: 50px;max-width: 80%;">
-    <div class="container text-center">
-        <div class="row pt-5 mt-5">
-            <div class="col-sm-12 text-white">
+    <section class="about-section-wrapper first_about_section_wrapper"  id="more">
+      <section class="about-section">
+        <div class="about-section-right">
                 <form action="{{ url_for('confirmation') }}" method="POST">
 
                         <html>
@@ -18,11 +15,8 @@
                         <p>Open deze mail en betaal het bedrag om de afspraak te bevestigen. </p>
                         </body>
                         </html>
-                    </div>
                 </form>
-            </div>
         </div>
-    </div>
-                    </div>
-    </div>
+      </section>
+              </section>
 {% endblock content %}
