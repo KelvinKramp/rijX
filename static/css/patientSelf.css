@@ -1,0 +1,308 @@
+.main-area .steps-area {
+  padding: 2rem 2rem;
+  padding-top: 4rem;
+}
+
+.main-area .steps-area nav {
+  margin-bottom: 0px;
+}
+.main-area .steps-area .top-icon-wrapper {
+  top: 1.3rem;
+}
+.main-area .steps-area nav a {
+  color: #fff;
+}
+.main-area .form-area .body-area {
+  /* padding-top: 3.5rem; */
+}
+.main-area .form-area .footer-form-area {
+  margin-bottom: 2rem;
+}
+.inputs-wrapper-new {
+  width: 100%;
+
+  grid-column-gap: 10px;
+}
+.inputs-wrapper-new > *:nth-child(1),
+.inputs-wrapper-new > *:nth-child(2) {
+  grid-column: span 3 !important;
+}
+.inputs-wrapper-new > *:last-child {
+  grid-column: span 2;
+}
+.inputs-wrapper-new > *:nth-child(3) {
+  grid-column: span 6;
+}
+.step3 .inputs-wrapper-new {
+  padding-top: 1rem !important;
+  margin-top: 1rem;
+}
+
+.last_heading {
+  font-size: 20px;
+  margin-top: 1rem;
+}
+.checkboxes-container {
+  display: flex;
+  flex-direction: column;
+}
+.width_60 {
+  width: 60% !important;
+}
+
+.checkboxes-wrapper {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.checkboxes-wrapper > * + * {
+  margin-left: 2rem;
+}
+.checkboxes-wrapper label {
+  margin-left: 10px;
+  color: #364a6b;
+  font-weight: 400;
+  cursor: pointer;
+}
+.checkboxes-wrapper .checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkboxes-container > h2 {
+  font-size: 20px;
+  margin-top: 1rem;
+}
+.custom-checkbox {
+  min-width: 28px;
+  height: 28px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 0px !important;
+  justify-content: center;
+}
+.custom-checkbox span {
+  display: block;
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+}
+input[type="radio"] {
+  display: none;
+}
+input:checked + .custom-checkbox {
+  border-color: #0077ff;
+}
+input:checked + .custom-checkbox span {
+  background-color: #0077ff;
+}
+
+.account-creation-wrapper {
+  margin-top: 1.5rem;
+}
+.bottom-area-main .info-area {
+  display: none;
+}
+.bottom-area-main .info-area > h1 {
+  font-size: 35px;
+}
+.bottom-area-main .info-area > p {
+  font-size: 17px;
+  margin-top: 0.7rem;
+  margin-bottom: 0.3rem;
+  color: #30476a;
+}
+.info-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-area ul {
+  list-style: none;
+}
+.info-area ul li:nth-child(odd) {
+  background-color: #fcfcfc;
+}
+.info-area ul li {
+  padding: 1.2rem 1.8rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.info-area ul li p {
+  font-weight: 400;
+}
+.info-area ul li .label {
+  width: 270px;
+  font-size: 13px;
+  color: #979a9f;
+}
+.info-area ul li .value {
+  font-size: 16px;
+  color: #1d232b;
+}
+#phoneverification-area form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.nxt-btn {
+  margin-left: auto;
+}
+#phoneverification-area .input-container {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.input-container {
+  position: relative;
+}
+
+#phoneverification-area .input-container .input-wrapper input {
+  width: 60px !important;
+  height: 60px;
+  text-align: center;
+  font-size: 20px;
+}
+#savephone-button {
+  background-color: #0077ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 1rem;
+  border-radius: 99px;
+  text-align: center;
+  cursor: pointer;
+  width: 303px;
+  height: 65px;
+  margin-bottom: 2rem;
+
+  box-shadow: 2px 10px 10px #dbecff;
+}
+#phoneverification-area .floating_input_wrapper {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  width: 60%;
+}
+#phoneverification-area .input-container .input-wrapper {
+  display: flex;
+  align-items: center;
+}
+#phoneverification-area .input-container .input-wrapper > * + * {
+  margin-left: 1rem;
+}
+#phoneverification-area .input-container .input-wrapper input {
+  min-height: 80px;
+}
+#phoneverification-area .input-container .input-wrapper input {
+  width: 60px !important;
+
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  display: block;
+
+  padding: 0rem 1rem;
+  border: 1px solid rgb(212, 234, 255);
+  outline: none;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+.resend_message {
+  margin-top: 0px !important;
+}
+#phoneverification-area .info_message span,
+.resend_message a {
+  font-weight: 600;
+  color: #0077ff;
+}
+
+#Insurance_company {
+  width: 60%;
+}
+
+@media screen and (max-width: 1150px) {
+  .mobile-responsive-header {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .step4 .inputs-wrapper-new,
+  .width_60 {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inputs-wrapper-new > *:nth-child(1),
+  .inputs-wrapper-new > *:nth-child(2),
+  .inputs-wrapper-new > *:nth-child(2),
+  .inputs-wrapper-new > *,
+  .inputs-wrapper-new > *:first-child {
+    grid-column: span 4 !important;
+  }
+  .main-area .form-area {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  .step4 .inputs-wrapper-new > *:nth-child(1),
+  .step4 .inputs-wrapper-new > *:nth-child(2) {
+    grid-column: span 2 !important;
+  }
+  .inputs-wrapper-new > *:nth-child(2),
+  .inputs-wrapper-new > *,
+  .inputs-wrapper-new > *:first-child,
+  .inputs-wrapper-new > *:nth-child(3) {
+    grid-column: span 6 !important;
+  }
+}
+@media screen and (max-width: 570px) {
+  .checkboxes-wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .checkboxes-wrapper > * + * {
+    margin-left: 0px;
+  }
+  .step3 > *:nth-child(2) .checkboxes-wrapper > * + * {
+    margin-left: 20px;
+  }
+  .checkboxes-wrapper > * {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .checkboxes-container > h2,
+  .last_heading {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .checkboxes-container > h2 {
+    font-size: 16px;
+  }
+
+  #phoneverification-area .floating_input_wrapper,
+  #savephone-button,
+  #phoneverification-area .input-container .input-wrapper input {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-area .form-area .checkboxes-area {
+    grid-template-columns: 1fr;
+  }
+  #phoneverification-area .input-container .input-wrapper > * + * {
+    margin-left: 5px;
+  }
+}
