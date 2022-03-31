@@ -12,6 +12,8 @@ if "Users" in os.getcwd():
     SQL_URI = 'sqlite:///app.sqlite3'
 else:
     SQL_URI = os.environ['DATABASE_URL']
+    if SQL_URI and SQL_URI.startswith("postgres://"):
+        uri = SQL_URI.replace("postgres://", "postgresql://", 1)
 
 
 app = Flask(__name__)
