@@ -7,8 +7,7 @@ from forms import LocationDateForm, ScheduleForm, CancellationForm, SearchForm
 from flask import request, session
 from flask_sqlalchemy import SQLAlchemy
 from helpers.mail import send_message_mailgun as send_mail
-from datetime import datetime as dt
-from datetime import timezone
+import os
 from planningOS import create_slots, create_appointment, get_from_db, cancel, delete_rows
 from app import secureApp, db, Users, Roles, Slots, app
 from datetime import datetime as dt
@@ -121,12 +120,16 @@ security = Security(secureApp, user_datastore)
 #   to other programmers what is being done and has additional security functions.
 # DO NOT USE ADMIN AS AN ACCOUNTNAME OF PASSWORD!!!!
 
-# @secureApp.before_first_request
-# def create_user():
-#     db.drop_all()
-#     db.create_all()
-#     user_datastore.create_user(email='admin', password='admin')
-#     db.session.commit()
+@secureApp.before_first_request
+def create_user():
+    db.drop_all()
+    db.create_all()
+    from dotenv import load_dotenv
+    load_dotenv()
+    email = os.environ.get('admin_email')
+    password = os.environ.get('admin_password')
+    user_datastore.create_user(email=email, password=password)
+    db.session.commit()
 
 
 
