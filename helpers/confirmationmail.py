@@ -181,8 +181,8 @@ confirmationpart2 = """ " target="_blank" style="display: inline-block; padding:
           <!-- start copy -->
           <tr>
             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-              <p style="margin: 0;"><a href="https://rijrotterdam.nl/inloopspreekuur">Klik hier</a> om te lezen op onze site wat u moet meenemen naar uw keuring. </p><br>
-                              <p style="margin: 0;"><a href="https://rijrotterdam.nl/contact">Klik hier</a> om contact met ons op te nemen als u nog aanvullende vragen heeft. </p>
+              <p style="margin: 0;"><a href="https://www.rijrotterdam.nl/inloopspreekuur">Klik hier</a> om te lezen op onze site wat u moet meenemen naar uw keuring. </p><br>
+                              <p style="margin: 0;"><a href="https://www.rijrotterdam.nl/contact">Klik hier</a> om contact met ons op te nemen als u nog aanvullende vragen heeft. </p>
             </td>
           </tr>
           <!-- end copy -->

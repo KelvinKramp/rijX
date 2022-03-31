@@ -1,57 +1,340 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="hero" class="hero overlay">
-        <div class="hero-content">
-            <div class="hero-text">
-            <div class="hero-text" style="margin-top: 50px;max-width: 80%;">
-                    <h1>Maak een afspraak</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 , maximum-scale=1"
+    />
+
+    <link rel="stylesheet" href="/static/css/patienthome.css" />
+    <link rel="stylesheet" href="static/css/patientwizard.css" />
+    <link rel="stylesheet" href="static/css/patientSelf.css" />
+    <!-- <link rel="stylesheet" href="static/css/layout/common.css" /> -->
+    <link rel="stylesheet" href="static/css/index.css" />
+    <!-- gsap link -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+    <!-- animate.css cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+
+    <!-- Maseter Animation css  -->
+    <link rel="stylesheet" href="static/css/animations_master.css" />
+
+    <title>RijRotterdam</title>
+  </head>
+
+  <body>
+
+
+    <!-- main -->
+
+    <section class="main-area animated__stepform">
+      <div class="steps-area">
+        <h1>Booking</h1>
+
+        <ul class="steps-container">
+          <li class="active" id="step-list1">
+            <div class="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+              >
+                <g
+                  id="Group_20167"
+                  data-name="Group 20167"
+                  transform="translate(-240 -505)"
+                >
+                  <g
+                    id="Ellipse_474"
+                    data-name="Ellipse 474"
+                    transform="translate(240 505)"
+                    fill="#53c952"
+                    stroke="#53c952"
+                    stroke-width="3"
+                  >
+                    <circle cx="21" cy="21" r="21" stroke="none" />
+                    <circle cx="21" cy="21" r="19.5" fill="none" />
+                  </g>
+                  <path
+                    id="Path_64093"
+                    data-name="Path 64093"
+                    d="M10656.462,8888.936l5,5.222,11.35-11.351"
+                    transform="translate(-10402.963 -8362.307)"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="4"
+                  />
+                </g>
+              </svg>
+            </div>
+            <p>Locatie en datum</p>
+          </li>
+
+          <li id="step-list2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="42"
+              height="42"
+              class="step-number"
+              viewBox="0 0 42 42"
+            >
+              <g
+                id="Group_20166"
+                data-name="Group 20166"
+                transform="translate(-206 -459)"
+              >
+                <text
+                  id="_2"
+                  data-name="2"
+                  transform="translate(222 487)"
+                  fill="#3694ff"
+                  font-size="18"
+                  font-family="Poppins-SemiBold, Poppins"
+                  font-weight="600"
+                >
+                  <tspan x="0" y="0">2</tspan>
+                </text>
+                <g
+                  id="Ellipse_473"
+                  data-name="Ellipse 473"
+                  transform="translate(206 459)"
+                  fill="none"
+                  stroke="#3694ff"
+                  stroke-width="3"
+                >
+                  <circle cx="21" cy="21" r="21" stroke="none" />
+                  <circle cx="21" cy="21" r="19.5" fill="none" />
+                </g>
+              </g>
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="42"
+              height="42"
+              viewBox="0 0 42 42"
+              class="step-done"
+            >
+              <g
+                id="Group_20167"
+                data-name="Group 20167"
+                transform="translate(-240 -505)"
+              >
+                <g
+                  id="Ellipse_474"
+                  data-name="Ellipse 474"
+                  transform="translate(240 505)"
+                  fill="#53c952"
+                  stroke="#53c952"
+                  stroke-width="3"
+                >
+                  <circle cx="21" cy="21" r="21" stroke="none" />
+                  <circle cx="21" cy="21" r="19.5" fill="none" />
+                </g>
+                <path
+                  id="Path_64093"
+                  data-name="Path 64093"
+                  d="M10656.462,8888.936l5,5.222,11.35-11.351"
+                  transform="translate(-10402.963 -8362.307)"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="4"
+                />
+              </g>
+            </svg>
+
+            <p>Persoonlijke informatie</p>
+          </li>
+          <li id="step-list3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="42"
+              height="42"
+              viewBox="0 0 42 42"
+            >
+              <g
+                id="Group_20167"
+                data-name="Group 20167"
+                transform="translate(-206 -544)"
+              >
+                <text
+                  id="_3"
+                  data-name="3"
+                  transform="translate(222 571)"
+                  fill="#3694ff"
+                  font-size="18"
+                  font-family="Poppins-SemiBold, Poppins"
+                  font-weight="600"
+                >
+                  <tspan x="0" y="0">3</tspan>
+                </text>
+                <g
+                  id="Ellipse_474"
+                  data-name="Ellipse 474"
+                  transform="translate(206 544)"
+                  fill="none"
+                  stroke="#3694ff"
+                  stroke-width="3"
+                >
+                  <circle cx="21" cy="21" r="21" stroke="none" />
+                  <circle cx="21" cy="21" r="19.5" fill="none" />
+                </g>
+              </g>
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="42"
+              height="42"
+              viewBox="0 0 42 42"
+              class="step-done"
+            >
+              <g
+                id="Group_20167"
+                data-name="Group 20167"
+                transform="translate(-240 -505)"
+              >
+                <g
+                  id="Ellipse_474"
+                  data-name="Ellipse 474"
+                  transform="translate(240 505)"
+                  fill="#53c952"
+                  stroke="#53c952"
+                  stroke-width="3"
+                >
+                  <circle cx="21" cy="21" r="21" stroke="none" />
+                  <circle cx="21" cy="21" r="19.5" fill="none" />
+                </g>
+                <path
+                  id="Path_64093"
+                  data-name="Path 64093"
+                  d="M10656.462,8888.936l5,5.222,11.35-11.351"
+                  transform="translate(-10402.963 -8362.307)"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="4"
+                />
+              </g>
+            </svg>
+            <p>Bevestiging</p>
+          </li>
+        </ul>
+      </div>
+      <form class="form-area" id="test" action="" method="post">
+        <div class="header-form-area">
+          <p class="mbl-step">Step 1</p>
+          <p>Problemen? <a href="{{ url_for('contact') }}">Vraag om help</a></p>
+        </div>
+        <div class="body-area">
+          <div class="step step1">
+            <div class="top-presentation">
+              <br>
+                            <br>
+                            <br>
+              <h1>Selecteer een afspraak</h1>
+              <p>Kies locatie, datum en type keuring</p>
+                                          <br>
+                            <br>
+            </div>
+            <div class="step_first_area">
+              <h1></h1>
+
+              <div class="select_container">
+                <div class="select_wrapper">
+                  <label for="#">Locatie en datum</label>
+                  <select id="location" name="Lokatie en datum" required="">
+                        {% for location in form.location %}
+                            {{location}}
+                        {% endfor %}
+                  </select>
                 </div>
-                <div class="description-title-booking">
-                    <h4>Kies een locatie en datum in Rotterdam</h4>
+                <div class="select_wrapper">
+                  <label for="#">Type keuring</label>
+                  {{ form.hidden_tag() }}
+                  <select id="type_service" name="Type keuring" required="">
+                        {% for location in form.type_service %}
+                            {{location}}
+                        {% endfor %}
+                  </select>
                 </div>
-                <form action="{{ url_for('booking') }}" method="POST">
-                                <div class="content-section">
-                                    <form method="POST" action="">
-                                    {{ form.hidden_tag() }}
-                                        <fieldset class="form-group">
-                                            <div class="form-group">
-                                                {{ form.location.label(class="form-control-label") }}
-                                                {% if form.location.errors %}
-                                                    {{ form.location(class="form-control form-control-lg is-invalid") }}
-                                                    <div class="invalid-feedback">
-                                                        {% for error in form.location.errors %}
-                                                            <span>{{ error }}</span>
-                                                        {% endfor %}
-                                                    </div>
-                                                {% else %}
-                                                    {{ form.location(class="form-control form-control-lg") }}
-                                                {% endif %}
-                                            </div>
-                                        </fieldset>
-                                        <fieldset class="form-group">
-                                            <div class="form-group">
-                                                {{ form.type_service.label(class="form-control-label") }}
-                                                {% if form.type_service.errors %}
-                                                    {{ form.type_service(class="form-control form-control-lg is-invalid") }}
-                                                    <div class="invalid-feedback">
-                                                        {% for error in form.type_service.errors %}
-                                                            <span>{{ error }}</span>
-                                                        {% endfor %}
-                                                    </div>
-                                                {% else %}
-                                                    {{ form.type_service(class="form-control form-control-lg") }}
-                                                {% endif %}
-                                            </div>
-                                        </fieldset>
-                                        <div><br></div>
-                                        <div class="btn btn-border">
-                                            {{ form.submit(class="btn btn-outline-info") }}
-                                        </div>
-                                    </form>
-                                </div>
-                    </div>
-    </div>
-               </div>    </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step step2" style="display: none">
+            <div class="top-presentation">
+              <h1>Uw gegevens</h1>
+              <p>Vul uw gegevens in</p>
+            </div>
+            <div class="inputs-wrapper-new floating_input_wrapper">
+              <div class="input-wrapper-new">
+                {{ form.first_name}}
+                {{ form.first_name.label }}
+              </div>
+
+              <div class="input-wrapper-new">
+                {{ form.last_name}}
+                {{ form.last_name.label }}
+              </div>
+              <div class="input-wrapper-new">
+
+                {{ form.birthdate}}
+                {{ form.birthdate.label }}
+              </div>
+
+              <div class="input-wrapper-new">
+                {{ form.phone_number}}
+                {{ form.phone_number.label }}
+              </div>
+              <div class="input-wrapper-new">
+                {{ form.email}}
+                {{ form.email.label }}
+              </div>
+            </div>
+          </div>
+
+          <div class="step step3" style="display: none">
+            <div class="top-presentation">
+              <h1>Ingevulde gegevens</h1>
+              <p>Controleer of de gegevens kloppen</p>
+            </div>
+
+            <div class="confirmation_area"></div>
+          </div>
+        </div>
+        <div class="footer-form-area">
+          <button class="previous">Vorige</button>
+          <button class="next">Volgende</button>
+          <button type="submit" name="btnSubmit" value="bevestigen" class="submit next">Bevestigen</button>
+<!--    <button name="foo" value="upvote">Upvote</button>-->
+        </div>
+      </form>
+    </section>
+    <script src="static/js/home.js"></script>
+    <script src="static/js/InputFloat.js"></script>
+
+    <script src="static/js/wizard.js"></script>
+
+    <!-- waypoint CDN for animatioins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="static/js/animation-master/animation-master.js"></script>
 
 {% endblock %}

@@ -9,22 +9,17 @@ class SearchForm(FlaskForm):
     type = "search"
 
 
-class UserInfoForm(FlaskForm):
-    last_name = StringField('Achternaam', validators=[InputRequired(message="Vul naam in "), Length(min=2, max=30)])
-    first_name = StringField('Voornaam', validators=[DataRequired(), Length(min=2, max=30)])
-    birthdate = DateField('Geboorte datum', validators=[DataRequired()])
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    phone_number = StringField('Telefoonnummer', validators=[DataRequired(), Length(min=10, max=14)])
-    submit = SubmitField('Maak een afspraak')
-
-
 class LocationDateForm(FlaskForm):
-    # READ OPEN SLOTS FROM OPEN SLOTS DB
-    # EXTRACT LOCATION AND DATETIMES OF OPEN SLOTS AND CONVERT TO LISTS
-    location = SelectField("", validators=[DataRequired()])
-    type_service = SelectField("", choices=list_services, validators=[DataRequired()])
+    last_name = StringField('Achternaam', name="Achternaam",validators=[InputRequired(message="Vul naam in "), Length(min=2, max=30)])
+    first_name = StringField('Voornaam', name="Voornaam", validators=[DataRequired(), Length(min=2, max=30)])
+    birthdate = DateField('Geboorte datum', name="Geboortedatum", validators=[DataRequired()])
+    email = StringField('Email', name="Email",validators=[DataRequired(), Email()])
+    phone_number = StringField('Telefoonnummer', name="Telefoonnummer",validators=[DataRequired(), Length(min=10, max=14)])
+    submit = SubmitField('Maak een afspraak')
+    location = SelectField("Lokatie en datum", name="Lokatie en datum",validators=[DataRequired()])
+    type_service = SelectField("Type keuring", name="Type keuring",choices=list_services, validators=[DataRequired()])
     # datetime = SelectField("Selecteer dag en tijd", validators=[DataRequired()],choices=["Maandag 3 november","Dinsdag 4 november"])
-    submit = SubmitField('Volgende')
+    submit = SubmitField('Bevestigen')
 
 
 class CancellationForm(FlaskForm):

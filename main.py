@@ -3,7 +3,7 @@ from flask_admin import helpers as admin_helpers
 from flask_admin.contrib.sqla import ModelView
 from flask_security import current_user, Security, SQLAlchemyUserDatastore
 from flask import render_template, url_for,  redirect
-from forms import UserInfoForm, LocationDateForm, ScheduleForm, CancellationForm, SearchForm
+from forms import LocationDateForm, ScheduleForm, CancellationForm, SearchForm
 from flask import request, session
 from flask_sqlalchemy import SQLAlchemy
 from helpers.mail import send_message_mailgun as send_mail
@@ -119,6 +119,7 @@ security = Security(secureApp, user_datastore)
 # - The user_datastore class will hash the password for us
 # - Usubg user_datastore is a better method then db.session.add(Users(email='admin', password='admin') as it shows d
 #   to other programmers what is being done and has additional security functions.
+# DO NOT USE ADMIN AS AN ACCOUNTNAME OF PASSWORD!!!!
 
 # @secureApp.before_first_request
 # def create_user():
@@ -216,7 +217,15 @@ def booking():
     form = LocationDateForm()
     l = Slots.query.all()
     form.location.choices = [(i.id, str(i.location)+" | "+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]) for i in l]
+    last_name = form.last_name.data
+    first_name = form.first_name.data
+    birthdate = form.birthdate.data
+    email = form.email.data
+    phone_number = form.phone_number.data
+    time=(str(dt.now(timezone.utc).day)+"-"+str(dt.now(timezone.utc).month)+"-"+str(dt.now(timezone.utc).year))
+
     if form.validate_on_submit():
+        print("submitted")
         id = form.location.data
         i = Slots.query.filter_by(id=id).first()
         location = str(i.location)+"|"+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]
@@ -225,7 +234,17 @@ def booking():
         session["id"] = i.id
         session["type_service"] = form.type_service.data
         print(form.type_service.data)
-        return redirect(url_for('booking2'))
+        print(session["appointment"])
+        choice_appointment = session["appointment"]
+        id = session["id"]
+        location = choice_appointment.split("|")[0]
+        datetime = choice_appointment.split("|")[1]
+        create_appointment(location, datetime, first_name, last_name, birthdate, email, phone_number, time, id)
+        session['email'] = email
+        session['datetime'] = datetime
+        # redirect to confirmation page
+        return redirect(url_for('confirmation'))
+    print("not het submitted")
     return render_template('booking.html', form=form, nav_bar_items=nav_bar_items, page="Afspraak maken")
 
 

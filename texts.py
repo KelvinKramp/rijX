@@ -232,17 +232,17 @@ De urine wordt onderzocht op suiker. Als u suikerziekte (diabetes) heeft dan pla
 </p>
 <br>
 <br>
+<div style="text-align: center;
+justify-content:center;">
 <img
 src="/static/img/urine.jpg"
 style="margin-bottom: 20px;   margin-left: auto;
 margin-right: auto;
-width: 25%; box-shadow: 4px 10px 30px #deeaf5;
+ box-shadow: 4px 10px 30px #deeaf5;
 width: 50%;
-border-radius: 10px;
-text-align: center;
-justify-content:center;"
-
+border-radius: 10px;"
 />
+</div>
               
 <br>
 <br>
@@ -255,6 +255,8 @@ Tijdens de keuring wordt ook gekeken naar uw gezichtsscherpte. Er wordt een zoge
 Hieronder ziet u hoe het zicht wordt getest. U vertelt telkens waar de opening zit: boven, links, rechts of onder. 
 </p>
 <br>
+<div style="text-align: center;
+justify-content:center;">
 <img
 src="/static/img/landoltc.png"
 style="margin-bottom: 20px;   margin-left: auto;
@@ -263,6 +265,7 @@ width: 25%; box-shadow: 4px 10px 30px #deeaf5;
 width: 50%;
 border-radius: 10px;"
 />
+</div>
 
 <br>
 <br>

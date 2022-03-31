@@ -28,10 +28,13 @@ const GetFormValues = () => {
       value: EachInput.value,
     });
   });
+  for (let i = 0; i < AllSelects.length; i++) {
+  console.log(AllSelects[i]);
+    }
   AllSelects.forEach((EachSelect) => {
     SelectValueArray.push({
-      name: EachSelect.value,
-      value: EachSelect.name,
+      name: EachSelect.name,
+      value: EachSelect.value,
     });
   });
 
@@ -46,13 +49,13 @@ const GetFormValues = () => {
   </div>`
     );
   });
-
+console.log(AllSelects)
   AllSelects.forEach((EachObject) => {
     document.querySelector(".confirmation_area").insertAdjacentHTML(
       "beforeend",
       ` <div class="box">
     <h1>${EachObject.name}</h1>
-    <p>${EachObject.value}</p>
+    <p>${EachObject[EachObject.selectedIndex].innerHTML}</p>
   </div>`
     );
   });
@@ -116,5 +119,13 @@ const NavigateBack = (e) => {
   }
 };
 
+function Submit () {
+    const form = document.querySelector("#test")
+    console.log(form)
+    form.submit()
+
+};
+
 Buttons.nextButton.addEventListener("click", NavigateNext);
 Buttons.prevButton.addEventListener("click", NavigateBack);
+Buttons.submitButton.addEventListener("click", Submit);
