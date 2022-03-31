@@ -13,7 +13,7 @@ if "Users" in os.getcwd():
 else:
     SQL_URI = os.environ['DATABASE_URL']
     if SQL_URI and SQL_URI.startswith("postgres://"):
-        uri = SQL_URI.replace("postgres://", "postgresql://", 1)
+        SQL_URI = SQL_URI.replace("postgres://", "postgresql://", 1)
 
 
 app = Flask(__name__)
