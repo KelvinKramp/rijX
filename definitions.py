@@ -18,8 +18,9 @@ list_services = [("medisch","Medische keuring €35,00"),
                  ]
 
 landingpage_items = [{"item":"BIG geregistreerde artsen"},
-                    {"item":"Inzage in uw keuringsverslag"},
+                    {"item":"Inzage in uw keuringsrapport"},
                     {"item":"Verbonden met Zorgdomein"},
+                     {"item": "Direct contact keuringsarts"},
                     {"item":"Prijzen vanaf 35 euro"},
                      ]
 

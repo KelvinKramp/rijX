@@ -10,7 +10,7 @@
             <h1 class="animated__aboutussec animated fadeInUp">Rijbewijskeuringen in Rotterdam</h1>
                 <ul class="list-nobull">
                 {% for i in landingpage_items %}
-                <li><h2 class="stagger animated__itsmain animated fadeInUp">- {{i.item}} </h2></li>
+                <li><h2 class="stagger animated__itsmain animated fadeInUp"> {{i.item}} </h2></li>
                     {% endfor %}
 
                 </ul>
@@ -23,8 +23,8 @@
 
           <!-- Image In  Mobile View -->
           <img
-            src="https://media.istockphoto.com/photos/smiling-senior-afro-man-driving-a-car-and-looking-at-camera-picture-id1159586745?s=612x612"
-            alt=""
+            src="/static/img/echtpaar_small.jpg"
+            alt="rijrotterdamechtpaar"
             class="mobile-image animated__femaledocmobile"
           />
         </div>
@@ -32,8 +32,8 @@
         <!-- Image in Desktop View -->
         <div class="home-section-right">
           <img
-            src="https://media.istockphoto.com/photos/smiling-senior-afro-man-driving-a-car-and-looking-at-camera-picture-id1159586745?s=612x612"
-            alt=""
+            src="/static/img/echtpaar_small.jpg"
+            alt="rijrotterdamechtpaar"
             class=""
           />
         </div>
@@ -119,8 +119,8 @@
                   <div class="about-section-right">
           <div>
 <!--          <a href="{{url_for('mijnverslag')}}" class="learn_more_link">Klik hier om uw keuringsverslag in te zien</a>-->
-          <a href="mailto:info@rijkeuringrotterdam.nl" class="learn_more_link">Mail ons aanvullende vragen</a>
-              <a href={{welcome_message}} class="learn_more_link" target="_blank">Whatsapp ons aanvullende vragen</a>
+          <a href="mailto:info@rijkeuringrotterdam.nl" class="learn_more_link">Mail ons aanvullende medische vragen van het CBR</a>
+<!--              <a href={{welcome_message}} class="learn_more_link" target="_blank">Whatsapp algemene vragen</a>-->
           </div>
         </div>
       </section>
