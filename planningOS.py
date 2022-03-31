@@ -2,7 +2,20 @@ from app import db, Slots, Appointments, Workers
 from datetime import datetime
 from datetime import timedelta
 import pandas as pd
-from sqlite3 import connect
+import os
+
+
+# MAKE DIFFERENCE BETWEEN PRODUCTION AND DEVELOPMENT ENVIRONMENT
+def conn_db():
+    if "Users" in os.getcwd():
+        from sqlite3 import connect
+        con = connect("app.sqlite3")
+    else:
+        from sqlalchemy import create_engine
+        db_uri = os.environ.get('SQLALCHEMY_DATABASE_URI')
+        con = create_engine(db_uri, echo=True)
+    return con
+
 
 def create_slots(location, date, starttime, endtime, timeduration, worker):
     # Create datetime objects for each time (a and b)
@@ -20,6 +33,7 @@ def create_slots(location, date, starttime, endtime, timeduration, worker):
         db.session.add(data)
     db.session.commit()
 
+
 def create_appointment(location, datetime, first_name, last_name, birthdate, email, phone_number, time, id):
     # create appointment in appointments table
     data = Appointments(location, datetime, first_name, last_name, birthdate, email, phone_number, time)
@@ -29,8 +43,9 @@ def create_appointment(location, datetime, first_name, last_name, birthdate, ema
     Slots.query.filter_by(id=id).delete()
     db.session.commit()
 
+
 def get_from_db(form=None, table="appointments"):
-    con = connect("app.sqlite3")
+    con = conn_db()
     if table == "appointments":
         df = pd.read_sql('SELECT * FROM Appointments', con)
     elif table == "slots":
@@ -51,8 +66,9 @@ def get_from_db(form=None, table="appointments"):
     else:
         return df
 
+
 def cancel(cancellation, _type):
-    con = connect("app.sqlite3")
+    con = conn_db()
     cur = con.cursor()
     if _type == 'appointment':
         execution_string= """DELETE FROM Appointments WHERE id = '{}';""".format(cancellation[0])
@@ -66,8 +82,9 @@ def cancel(cancellation, _type):
         con.commit()
         con.close()
 
+
 def delete_rows(table):
-    con = connect("app.sqlite3")
+    con = conn_db()
     cur = con.cursor()
     if table == 'Appointments':
         execution_string= """DELETE FROM Appointments;"""
@@ -79,6 +96,7 @@ def delete_rows(table):
         cur.execute(execution_string)
         con.commit()
         con.close()
+
 
 def get_ninja_tables():
     html_table_slots = get_from_db(form='html', table='slots')
@@ -96,8 +114,8 @@ def get_ninja_tables():
         tables_ninja.append(table_ninja)
     return tables_ninja
 
-# CRUD doctors -> do later, not necessary now
 
+# CRUD doctors -> do later, not necessary now
 if __name__ == '__main__':
     from datetime import datetime as dt
     from datetime import timedelta

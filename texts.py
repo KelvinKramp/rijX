@@ -58,7 +58,7 @@ Als u een keurverslag heeft gekregen voor een medisch specialist (bv. oogarts, c
 """
 
 title5 = """ Wat neem ik mee?"""
-text5 = """U neemt de volgende zaken mee:
+text5 = """U neemt de volgende zaken mee naar een keuring:
 <br>
 <br>
 <ul>
@@ -111,7 +111,7 @@ texts_landingpage = {
 }
 
 title1_inloop = """
-Inloopspreek uur
+Datums inloopspreek uur
 """
 
 text1_inloop = """
@@ -120,6 +120,19 @@ Op dit moment staan er de volgende inloopspreekuren gepland:
  - van 14:00 tot 17:00 op vrijdagmiddag in Capelle aan den IJssel
  <br>
  - van 14:00 tot 17:00 op vrijdagmiddag in Rotterdam
+ 
+ <br>
+  <br> <br>
+
+<img
+src="/static/img/incarpackage_small.jpg"
+style="margin-bottom: 20px;   margin-left: auto;
+margin-right: auto;
+ box-shadow: 4px 10px 30px #deeaf5;
+width: 100%;
+border-radius: 10px;"
+/>
+
 """
 
 texts_inloopspreekuur = {
@@ -131,7 +144,9 @@ Mijn keuringsverslag
 """
 
 text1_mijnkeuring= """
-Medische metingen die plaats vinden zijn uw eigendom, u heeft daarom altijd recht op inzage. Wij maken de inzage makkelijk voor u met mijnkeuringsverslag. U Kan u keuring via deze pagina opvragen. Wij sturen uw een verificatie code per SMS en indien de verificatie succesvol is krijgt u uw keuringsverslag opgstuurd via het e-mail adres dat bij ons staat geregistreerd. 
+Medische metingen die plaats vinden zijn uw eigendom, u heeft daarom altijd recht op inzage. Wij maken de inzage makkelijk voor u met mijnkeuringsverslag. 
+Na een keuring kan u uw rapport via deze pagina opvragen. 
+Via een beveiligde mail verbinding ontvangt u het rapport wat naar het CBR is gegaan. 
 """
 
 texts_mijnkeuring = {

@@ -1,10 +1,23 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_security import current_user, Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin
+import os
+import json
+from dotenv import load_dotenv
+
+
+# MAKE DIFFERENCE BETWEEN PRODUCTION AND DEVELOPMENT ENVIRONMENT
+if "Users" in os.getcwd():
+    load_dotenv()
+    SQL_URI = 'sqlite:///app.sqlite3'
+else:
+    SQL_URI = os.environ['DATABASE_URL']
+
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
-app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.sqlite3'
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
+app.config ['SQLALCHEMY_DATABASE_URI'] = SQL_URI
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
@@ -14,8 +27,8 @@ db = SQLAlchemy(app)
 secureApp = app
 # Configure a specific Bootswatch theme
 secureApp.config['FLASK_ADMIN_SWATCH'] = 'sandstone'
-secureApp.config['SECRET_KEY'] = 'secretkey'
-secureApp.config['SECURITY_PASSWORD_SALT'] = 'none'
+secureApp.config['SECRET_KEY'] = os.environ['SECRET_KEY_ADMIN']
+secureApp.config['SECURITY_PASSWORD_SALT'] = os.environ['SECURITY_PASSWORD_SALT']
 # Configure application to route to the Flask-Admin index view upon login
 secureApp.config['SECURITY_POST_LOGIN_VIEW'] = '/admin/'
 # Configure application to route to the Flask-Admin index view upon logout
