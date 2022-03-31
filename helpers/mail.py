@@ -1,4 +1,3 @@
-
 from datetime import datetime as dt
 import datetime
 import smtplib
@@ -7,16 +6,11 @@ import os
 from dotenv import load_dotenv
 from helpers.confirmationmail import confirmationpart1, confirmationpart2
 import smtplib
-
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+
 load_dotenv()
-# # SET VARIABLES FOR MAIL
-# secrets = './secrets.json'
-# with open(secrets) as f:
-#     secret = json.load(f)
-# developer = secret["developer"]
 sender = os.environ.get("SENDER")
 smtp_login = os.environ.get("SMTP_LOGIN")
 password = os.environ.get("PASSWORD")
