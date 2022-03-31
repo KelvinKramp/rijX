@@ -15,7 +15,7 @@ from datetime import timezone
 from planningOS import create_slots, create_appointment, get_ninja_tables
 import requests
 import numpy as np
-from definitions import nav_bar_items, landingpage_items, dict_payments_links
+from definitions import nav_bar_items, landingpage_items, dict_payments_links, list_services
 from texts import texts_landingpage, welcome_message_whatsapp, \
     texts_inloopspreekuur, texts_mijnkeuring, texts_aboutus, \
     texts_contact, texts_inhoudkeuring
@@ -72,8 +72,9 @@ class ScheduleView(UserModelView):
         if form.timeduration.data:
             timeduration = int(form.timeduration.data[0:2])
         worker = form.worker.data
+        BIG = form.BIG.data
         if form.validate_on_submit():
-            create_slots(location, date, starttime, endtime, timeduration, worker)
+            create_slots(location, date, starttime, endtime, timeduration, worker, BIG)
             tables_ninja = get_ninja_tables()
             return self.render('admin/openslots.html', tables_ninja=tables_ninja)
         return self.render('admin/schedule.html', form=form)
@@ -231,10 +232,11 @@ def booking():
         # print("submitted")
         id = form.location.data
         i = Slots.query.filter_by(id=id).first()
-        location = str(i.location)+"|"+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]
-        # datetime = form.datetime.data
-        session["appointment"] = location
         session["id"] = i.id
+        session["worker"] = i.worker
+        session["BIG"] = i.BIG
+        location = str(i.location)+"|"+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]
+        session["appointment"] = location
         session["type_service"] = form.type_service.data
         # print(form.type_service.data)
         # print(session["appointment"])
@@ -256,11 +258,12 @@ def confirmation():
     address = session["appointment"].split("|")[0]
     datetime = session["appointment"].split("|")[1]
     type_service = session["type_service"]
-    worker = "dr. Aaron Schwartz"
+    worker = session["worker"]
     email = session['email']
+    BIG = session["BIG"]
     payment_link = dict_payments_links[type_service]
-    data = {"email":email ,"worker":worker,"address":address, "date":datetime, "type_service":type_service,
-            "payment_link":payment_link}
+    data = {"email":email ,"worker":worker,"address":address, "date":datetime, "type_service":dict(list_services).get(type_service),
+            "payment_link":payment_link, "BIG":BIG}
     send_mail(email, payment_link)
     return render_template("confirmation.html", data=data, nav_bar_items=nav_bar_items, page="Afspraak maken")
 

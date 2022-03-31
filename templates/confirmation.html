@@ -1,22 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
+<form action="{{ url_for('confirmation') }}" method="POST">
     <section class="about-section-wrapper first_about_section_wrapper"  id="more">
       <section class="about-section">
         <div class="about-section-right">
-                <form action="{{ url_for('confirmation') }}" method="POST">
 
-                        <html>
-                        <body>
                         <h2>De afspraak staat gepland</h2>
-                        <p>Er is een afspraak voor u gepland op {{ data.date }} voor een {{ data.type_service }}</p>
-                        <p>Arts: {{ data.worker }}, BIG: {{data.BIG}}, lokatie: {{ data.address }} </p>
-                        <p>Er is een bevestigingsmail met betaallink verzonden naar {{data.email}}</p>
-                        <p>Open deze mail en betaal het bedrag om de afspraak te bevestigen. </p>
-                        </body>
-                        </html>
-                </form>
+                        <br>
+                        <br>
+                        <p>Er is een afspraak voor u gepland op {{ data.date }} op lokatie: {{ data.address }}.</p>
+                        <br>
+                        <p>Het gaat om het volgende type keuring: {{ data.type_service }}.</p>
+                        <br>
+                        <p>U zal worden gezien door de volgende arts:</p>
+                        <p>Dr. {{ data.worker }}, BIG registratie nummer {{data.BIG}}.</p>
+                        <br>
+                        <p>Er is een bevestigingsmail met betaallink verzonden naar: {{data.email}}.</p>
+                        <br>
+                        <p>Open deze mail en betaal het bedrag om de afspraak te bevestigen.</p>
+                        <p>Kan u de mail niet vinden, kijk dan in uw spambox of neem contact met ons op.</p>
         </div>
       </section>
-              </section>
+</section>
+</form>
 {% endblock content %}

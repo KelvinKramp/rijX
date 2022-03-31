@@ -20,7 +20,7 @@ def conn_db():
 
 
 
-def create_slots(location, date, starttime, endtime, timeduration, worker):
+def create_slots(location, date, starttime, endtime, timeduration, worker, BIG):
     # Create datetime objects for each time (a and b)
     dateTimeA = datetime.combine(date.today(), starttime)
     dateTimeB = datetime.combine(date.today(), endtime)
@@ -32,7 +32,7 @@ def create_slots(location, date, starttime, endtime, timeduration, worker):
     for i in range(abs(int(number_clients))):
         starttime = (dateTimeA + (i * timedelta(minutes=timeduration))).time()
         endtime = (dateTimeA + ((i + 1) * timedelta(minutes=timeduration))).time()
-        data = Slots(location, date, starttime, endtime, timeduration, worker)
+        data = Slots(location, date, starttime, endtime, timeduration, worker, BIG)
         db.session.add(data)
     db.session.commit()
 

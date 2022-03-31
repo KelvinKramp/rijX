@@ -89,7 +89,6 @@ class Appointments(db.Model):
         self.phone_number = phone_number
         self.time = time
 
-
 class Slots(db.Model):
     __tablename__ = 'Slots'
     id = db.Column(db.Integer, primary_key=True)
@@ -99,19 +98,21 @@ class Slots(db.Model):
     endtime = db.Column(db.Time(), unique=False, nullable=False)
     timeduration = db.Column(db.String(20), unique=False, nullable=False)
     worker = db.Column(db.String(50), unique=False, nullable=False)
+    BIG = db.Column(db.Integer, unique=False, nullable=False)
 
-    def __init__(self, location, date, starttime, endtime, timeduration, worker):
+    def __init__(self, location, date, starttime, endtime, timeduration, worker, BIG):
         self.location = location
         self.date = date
         self.starttime = starttime
         self.endtime = endtime
         self.timeduration = timeduration
         self.worker = worker
+        self.BIG = BIG
 
-
+# connect this class to id worker from Slots class later
 class Workers(db.Model):
     __tablename__ = 'Workers'
-    id = db.Column(db.Integer, primary_key=True) # connect to id worker from Slots class later
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), unique=True, nullable=False)
     BIG = db.Column(db.String(20), unique=True, nullable=False)
     openslots = db.Column(db.String(20), unique=False, nullable=False)

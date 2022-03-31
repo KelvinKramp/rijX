@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, DateField, SelectField, TimeField, SelectMultipleField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, DateField, SelectField, TimeField, SelectMultipleField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, InputRequired
 from planningOS import get_from_db
 from definitions import list_services
@@ -39,4 +39,5 @@ class ScheduleForm(FlaskForm):
     endtime = TimeField("Eindtijd", validators=[DataRequired()])
     timeduration =  SelectField("Selecteer ", validators=[DataRequired()],choices=["10 min", "15 min", "20 min", "25 min", "30 min"])
     worker = StringField('Naam', validators=[DataRequired(), Length(min=2, max=30)])
+    BIG = IntegerField("BIG",validators=[DataRequired()])
     submit = SubmitField('Submit')
