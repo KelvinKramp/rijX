@@ -175,19 +175,29 @@ Open source software als de weg tot een beter welzijn
 """
 
 text2_aboutus = """
-We willen dat minder artsen afhankelijk worden van het huidige complexe en logge zorgsysteem. We geloven dat het democratiseren van de technische middelen die de gezondheidszorg efficienter maken zal leiden tot kwalitatief betere zorg op de langere termijn.
+We willen dat minder artsen afhankelijk worden van het huidige complexe en logge zorgsysteem. 
+We geloven dat het democratiseren van de technische middelen die de gezondheidszorg efficienter 
+terwijl wordt voldaan aan de veiligheidsnormen zal leiden tot kwalitatief betere zorg op de langere termijn.
 <br><br>
-De sjablooncode van deze website is openbaar. Mochten er artsen, verpleegkundigen of fysiotherapeuten zijn die hun diensten willen aanbieden met hetzelfde sjabloon dan hoeven zij enkel de code te downloaden, eenvoudige aanpassingen te maken en te gebruiken voor het medisch doel waarvoor zij dit willen gebruiken.
+De sjablooncode van deze website is openbaar. Mochten er artsen, verpleegkundigen of fysiotherapeuten zijn die hun 
+diensten willen aanbieden met hetzelfde sjabloon dan hoeven zij enkel de code te downloaden, eenvoudige aanpassingen te 
+maken en te gebruiken voor het medisch doel waarvoor zij dit willen gebruiken.
+Door zich daarnaast aan te sluiten bij één van de bestaande platforms voor veilige digitale communicatie kunnen 
+zij de beste vorm van offline en online zorg bieden die mogelijk is. 
 
 <br><br>
-Wat is het voordeel ten opzichte van bijvoorbeeld WordPress? Ten eerste WordPress is niet veilig: 
+Wat is het voordeel ten opzichte van bijvoorbeeld WordPress? 
+<br><br>
+Ten eerste is WordPress niet veilig: 
 <a href="https://www.hipaavault.com/hipaa-wordpress/is-wordpress-hipaa-compliant/#:~:text=Simply%20because%20at%20its%20core,by%20a%20host%20of%20vulnerabilities." style="text-decoration: underline;">
 "out-of-the-box WordPress software is not secure for the storage or transfer of protected health information (PHI)."
-</a>. Door deze website te koppelen aan Zivver, ZorgMail of SmartLockr kan je veilig patienten gegevens verzenden en ontvangen van patienten, clienten en collega zorgverleners. 
+</a>. Door de sjablooncode van deze website te koppelen aan een platform zoals Zivver, ZorgMail of SmartLockr kan je veilig gegevens verzenden en ontvangen van patienten, clienten en collega zorgverleners. 
 <br><br>
-Ten tweede, wordt er continu gewerkt om de functies van de administratie zo gebruikersvriendelijk mogelijk te maken voor zorgprofessionals
- en te zorgen dat deze up-to-date zijn met de laatste ICT ontwikkelingen. Dit is een proces wat buiten de sfeer van open source software erg traag gaat en vaak 
- helemaal stil staat. Door samenwerking met de open source community is vaak veel meer mogelijk. <br><br> 
+Ten tweede, wordt er continu gewerkt aan het verlichten van de administratieve lasten voor zorgprofessionals. 
+Door ervoor zorgen dat de code up-to-date is met de laatste ICT ontwikkelingen kunnen we technologie voor ons laten werken i.p.v.
+dat wij voor de technologie werken. 
+Dit verbeterproces is iets wat buiten de sfeer van open source software erg traag gaat en vaak 
+ helemaal stil staat. Door samenwerking met de open source community kunnen we stappen vooruit zetten! <br><br> 
 """
 
 title3_aboutus = """

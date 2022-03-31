@@ -192,8 +192,8 @@ def contact():
 @app.route('/vragen', methods=['GET', 'POST'])
 def vragen():
     search = SearchForm(request.form)
-    print(search)
-    print(vars(search))
+    # print(search)
+    # print(vars(search))
     if request.method == 'POST':
         return search_results(search)
     return render_template('vragen.html', form=search, nav_bar_items=nav_bar_items, page="Vragen")
@@ -209,7 +209,7 @@ def search_results(search):
     list_answers = list_answers.decode('UTF-8')
     null = np.nan
     list_answers = eval(list_answers.encode('unicode_escape'))
-    print(list_answers)
+    # print(list_answers)
     return render_template('search.html', form=search, answers=list_answers, nav_bar_items=nav_bar_items, page="Zoek keuring")
 
 
@@ -228,7 +228,7 @@ def booking():
     time=(str(dt.now(timezone.utc).day)+"-"+str(dt.now(timezone.utc).month)+"-"+str(dt.now(timezone.utc).year))
 
     if form.validate_on_submit():
-        print("submitted")
+        # print("submitted")
         id = form.location.data
         i = Slots.query.filter_by(id=id).first()
         location = str(i.location)+"|"+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]
@@ -236,8 +236,8 @@ def booking():
         session["appointment"] = location
         session["id"] = i.id
         session["type_service"] = form.type_service.data
-        print(form.type_service.data)
-        print(session["appointment"])
+        # print(form.type_service.data)
+        # print(session["appointment"])
         choice_appointment = session["appointment"]
         id = session["id"]
         location = choice_appointment.split("|")[0]
@@ -247,37 +247,12 @@ def booking():
         session['datetime'] = datetime
         # redirect to confirmation page
         return redirect(url_for('confirmation'))
-    print("not het submitted")
     return render_template('booking.html', form=form, nav_bar_items=nav_bar_items, page="Afspraak maken")
-
-
-@app.route("/booking2", methods=['GET', 'POST'])
-def booking2():
-    form = UserInfoForm()
-    last_name = form.last_name.data
-    first_name = form.first_name.data
-    birthdate = form.birthdate.data
-    email = form.email.data
-    phone_number = form.phone_number.data
-    time=(str(dt.now(timezone.utc).day)+"-"+str(dt.now(timezone.utc).month)+"-"+str(dt.now(timezone.utc).year))
-    # validate form on submit and commit to db
-    if form.validate_on_submit():
-        print(session["appointment"])
-        choice_appointment = session["appointment"]
-        id = session["id"]
-        location = choice_appointment.split("|")[0]
-        datetime = choice_appointment.split("|")[1]
-        create_appointment(location, datetime, first_name, last_name, birthdate, email, phone_number, time, id)
-        session['email'] = email
-        session['datetime'] = datetime
-        # redirect to confirmation page
-        return redirect(url_for('confirmation'))
-    return render_template('booking2.html', form=form, nav_bar_items=nav_bar_items, page="Afspraak maken")
 
 
 @app.route("/confirmation", methods=['GET', 'POST'])
 def confirmation():
-    print(session["appointment"])
+    # print(session["appointment"])
     address = session["appointment"].split("|")[0]
     datetime = session["appointment"].split("|")[1]
     type_service = session["type_service"]
