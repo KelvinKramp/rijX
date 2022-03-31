@@ -12,8 +12,10 @@ def conn_db():
         con = connect("app.sqlite3")
     else:
         from sqlalchemy import create_engine
-        db_uri = os.environ.get('SQLALCHEMY_DATABASE_URI')
-        con = create_engine(db_uri, echo=True)
+        SQL_URI = os.environ.get('DATABASE_URL')
+        if SQL_URI and SQL_URI.startswith("postgres://"):
+            SQL_URI = SQL_URI.replace("postgres://", "postgresql://", 1)
+        con = create_engine(SQL_URI, echo=True)
     return con
 
 
