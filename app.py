@@ -5,10 +5,11 @@ import os
 import json
 from dotenv import load_dotenv
 
+load_dotenv()
 
 # MAKE DIFFERENCE BETWEEN PRODUCTION AND DEVELOPMENT ENVIRONMENT
 if "Users" in os.getcwd():
-    load_dotenv()
+
     SQL_URI = 'sqlite:///app.sqlite3'
 else:
     SQL_URI = os.environ['DATABASE_URL']

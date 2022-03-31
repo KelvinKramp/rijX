@@ -19,6 +19,7 @@ def conn_db():
     return con
 
 
+
 def create_slots(location, date, starttime, endtime, timeduration, worker):
     # Create datetime objects for each time (a and b)
     dateTimeA = datetime.combine(date.today(), starttime)
@@ -49,11 +50,11 @@ def create_appointment(location, datetime, first_name, last_name, birthdate, ema
 def get_from_db(form=None, table="appointments"):
     con = conn_db()
     if table == "appointments":
-        df = pd.read_sql('SELECT * FROM Appointments', con)
+        df = pd.read_sql('SELECT * FROM "Appointments"', con)
     elif table == "slots":
-        df = pd.read_sql('SELECT * FROM Slots', con)
+        df = pd.read_sql('SELECT * FROM "Slots"', con)
     elif table == "workers":
-        df = pd.read_sql('SELECT * FROM Workers', con)
+        df = pd.read_sql('SELECT * FROM "Workers"', con)
     else:
         df = pd.DataFrame()
 
@@ -73,13 +74,13 @@ def cancel(cancellation, _type):
     con = conn_db()
     cur = con.cursor()
     if _type == 'appointment':
-        execution_string= """DELETE FROM Appointments WHERE id = '{}';""".format(cancellation[0])
+        execution_string= """DELETE FROM "Appointments" WHERE id = '{}';""".format(cancellation[0])
         cur.execute(execution_string)
         con.commit()
         con.close()
         # create_slots(location, date, starttime, endtime, timeduration, worker)
     elif _type == 'slot':
-        execution_string= """DELETE FROM Slots WHERE id = '{}';""".format(cancellation[0])
+        execution_string= """DELETE FROM "Slots" WHERE id = '{}';""".format(cancellation[0])
         cur.execute(execution_string)
         con.commit()
         con.close()
@@ -89,12 +90,12 @@ def delete_rows(table):
     con = conn_db()
     cur = con.cursor()
     if table == 'Appointments':
-        execution_string= """DELETE FROM Appointments;"""
+        execution_string= """DELETE FROM "Appointments";"""
         cur.execute(execution_string)
         con.commit()
         con.close()
     if table == 'Slots':
-        execution_string= """DELETE FROM Slots;"""
+        execution_string= """DELETE FROM "Slots";"""
         cur.execute(execution_string)
         con.commit()
         con.close()
@@ -121,6 +122,7 @@ def get_ninja_tables():
 if __name__ == '__main__':
     from datetime import datetime as dt
     from datetime import timedelta
+    from app import db, Slots
     date = dt.now()
     data = Slots("Rdam", date, dt.now().time(), (dt.now() + timedelta(minutes=60)).time(), 10, "ASDSA")
     db.session.add(data)
