@@ -785,6 +785,16 @@ section.home-section .home-section-right img {
   grid-gap: 1rem;
   position: relative;
 }
+.side-images-2 {
+  width: 350px;
+  height: 100px;
+    margin-left: 100px;
+}
+.side-images-2 .image3{
+  width: 200px;
+  margin-left: 250px;
+}
+
 .widget_img {
   position: absolute;
   bottom: -10px;
@@ -792,6 +802,11 @@ section.home-section .home-section-right img {
   width: 330px;
 }
 .side-images img {
+  box-shadow: 4px 10px 30px #deeaf5;
+  width: 100%;
+  border-radius: 10px;
+}
+.side-images-2 img {
   box-shadow: 4px 10px 30px #deeaf5;
   width: 100%;
   border-radius: 10px;
