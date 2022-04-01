@@ -948,7 +948,7 @@ section.about-section .about-section-left .card {
   flex-direction: column;
   justify-content: flex-end;
   height: 90%;
-
+text-align:justify !important;
   padding-bottom: 2rem;
 }
 .about-section-right .home-buttons {
