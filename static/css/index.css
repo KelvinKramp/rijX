@@ -708,6 +708,12 @@ section.home-section .home-section-right img {
   margin-top: 3rem;
   width: 76%;
 }
+.special_changing_section .home-buttons{
+width:100%;
+
+
+}
+
 .home-buttons > a {
   display: flex;
   align-items: center;
@@ -766,6 +772,16 @@ section.home-section .home-section-right img {
   grid-column-gap: 4rem;
   grid-row-gap: 2rem;
 }
+.special_changing_section{
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+text-align: center;
+
+}
+
+
 
 .about-section-left {
   position: relative;
@@ -932,7 +948,7 @@ section.about-section .about-section-left .card {
   flex-direction: column;
   justify-content: flex-end;
   height: 90%;
-
+text-align:justify !important;
   padding-bottom: 2rem;
 }
 .about-section-right .home-buttons {
@@ -1480,3 +1496,12 @@ section.home-section .home-section-left > div p {
   top: -20px;
   color: #0077ff;
 }
+
+input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+input[type="date"]:in-range::-webkit-datetime-edit-text {
+  color: transparent;
+}
+
+
