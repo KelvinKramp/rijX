@@ -12,7 +12,7 @@ class SearchForm(FlaskForm):
 class LocationDateForm(FlaskForm):
     last_name = StringField('Achternaam', name="Achternaam",validators=[InputRequired(message="Vul naam in "), Length(min=2, max=30)])
     first_name = StringField('Voornaam', name="Voornaam", validators=[DataRequired(), Length(min=2, max=30)])
-    birthdate = DateField('Geboorte datum', name="Geboortedatum", validators=[DataRequired()])
+    birthdate = DateField('', name="Geboortedatum", validators=[DataRequired()])
     email = StringField('Email', name="Email",validators=[DataRequired(), Email()])
     phone_number = StringField('Telefoonnummer', name="Telefoonnummer",validators=[DataRequired(), Length(min=10, max=16)])
     submit = SubmitField('Maak een afspraak')
