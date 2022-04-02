@@ -5,3 +5,4 @@ controllers
 .env
 secrets.json
 secrets.py
+test_slots.pkl

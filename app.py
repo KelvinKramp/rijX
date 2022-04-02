@@ -9,7 +9,6 @@ load_dotenv()
 
 # MAKE DIFFERENCE BETWEEN PRODUCTION AND DEVELOPMENT ENVIRONMENT
 if "Users" in os.getcwd():
-
     SQL_URI = 'sqlite:///app.sqlite3'
 else:
     SQL_URI = os.environ['DATABASE_URL']
@@ -99,8 +98,9 @@ class Slots(db.Model):
     timeduration = db.Column(db.String(20), unique=False, nullable=False)
     worker = db.Column(db.String(50), unique=False, nullable=False)
     BIG = db.Column(db.BigInteger, unique=False, nullable=False)
+    group_id = db.Column(db.Integer, nullable=True)
 
-    def __init__(self, location, date, starttime, endtime, timeduration, worker, BIG):
+    def __init__(self, location, date, starttime, endtime, timeduration, worker, BIG, group_id):
         self.location = location
         self.date = date
         self.starttime = starttime
@@ -108,6 +108,7 @@ class Slots(db.Model):
         self.timeduration = timeduration
         self.worker = worker
         self.BIG = BIG
+        self.group_id = group_id
 
 # connect this class to id worker from Slots class later
 class Workers(db.Model):

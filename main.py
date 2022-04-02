@@ -5,21 +5,19 @@ from flask_security import current_user, Security, SQLAlchemyUserDatastore
 from flask import render_template, url_for,  redirect
 from forms import LocationDateForm, ScheduleForm, CancellationForm, SearchForm
 from flask import request, session
-from flask_sqlalchemy import SQLAlchemy
 from helpers.mail import send_message_mailgun as send_mail
 import os
-from planningOS import create_slots, create_appointment, get_from_db, cancel, delete_rows
 from app import secureApp, db, Users, Roles, Slots, app
 from datetime import datetime as dt
 from datetime import timezone
-from planningOS import create_slots, create_appointment, get_ninja_tables
+from planningOS import create_slots, create_appointment, get_ninja_tables, get_from_db, cancel, delete_rows
 import requests
 import numpy as np
-from definitions import nav_bar_items, landingpage_items, dict_payments_links, list_services
+from definitions import nav_bar_items, landingpage_items, dict_payments_links, list_services, address_list
 from texts import texts_landingpage, welcome_message_whatsapp, \
     texts_inloopspreekuur, texts_mijnkeuring, texts_aboutus, \
     texts_contact, texts_inhoudkeuring
-
+from dateutil.parser import parse
 
 # Create a ModelView to add to our administrative interface
 class UserModelView(ModelView):
@@ -115,11 +113,11 @@ security = Security(secureApp, user_datastore)
 #  i.e. calling localhost:5000 from the browser
 # The function does the following things:
 # - Create the tables for the users and roles
-# - Add a user admin with password admin
+# - Add a user with an email  and with passworddefined in .env file admin
 # - The user_datastore class will hash the password for us
 # - Usubg user_datastore is a better method then db.session.add(Users(email='admin', password='admin') as it shows d
 #   to other programmers what is being done and has additional security functions.
-# DO NOT USE ADMIN AS AN ACCOUNTNAME OF PASSWORD!!!!
+# DO NOT USE ADMIN AS PASSWORD!!!!
 
 @secureApp.before_first_request
 def create_user():
@@ -131,7 +129,19 @@ def create_user():
     password = os.environ.get('admin_password')
     user_datastore.create_user(email=email, password=password)
     db.session.commit()
-
+    if os.environ.get("FLASK_ENV") == "development":
+        import pandas as pd
+        df = pd.read_pickle("test_slots.pkl")
+        if "Users" in os.getcwd():
+            from sqlite3 import connect
+            con = connect("app.sqlite3")
+        else:
+            from sqlalchemy import create_engine
+            SQL_URI = os.environ.get('DATABASE_URL')
+            if SQL_URI and SQL_URI.startswith("postgres://"):
+                SQL_URI = SQL_URI.replace("postgres://", "postgresql://", 1)
+            con = create_engine(SQL_URI, echo=True)
+        df.to_sql("Slots", con=con, if_exists='append', index=False)
 
 
 
@@ -219,8 +229,13 @@ def search_results(search):
 @app.route("/booking", methods=['GET', 'POST'])
 def booking():
     form = LocationDateForm()
-    l = Slots.query.all()
-    form.location.choices = [(i.id, str(i.location)+" | "+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]) for i in l]
+    # l = Slots.query.all()
+    # form.location.choices = [(i.id, str(i.location.split(",")[-1])+" | "+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]) for i in l]
+    l = get_from_db(table="slots", form="earliest-time-slots-list")
+    form.location.choices = [
+        (i[0], str(i[1].split(",")[-1]).strip() + " | " + str(parse(i[2]).strftime('%d-%m-%Y')) + " " + str(i[3].time())[0:5])
+        for i in l]
+
     last_name = form.last_name.data
     first_name = form.first_name.data
     birthdate = form.birthdate.data
@@ -235,7 +250,7 @@ def booking():
         session["id"] = i.id
         session["worker"] = i.worker
         session["BIG"] = i.BIG
-        location = str(i.location)+"|"+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]
+        location = str(i.location)+"|" + str(i.date.strftime('%d-%m-%Y')) + " " + str(i.starttime)[0:5]
         session["appointment"] = location
         session["type_service"] = form.type_service.data
         # print(form.type_service.data)
@@ -249,7 +264,7 @@ def booking():
         session['datetime'] = datetime
         # redirect to confirmation page
         return redirect(url_for('confirmation'))
-    return render_template('booking.html', form=form, nav_bar_items=nav_bar_items, page="Afspraak maken")
+    return render_template('booking.html', form=form, nav_bar_items=nav_bar_items, address_list=address_list, page="Afspraak maken")
 
 
 @app.route("/confirmation", methods=['GET', 'POST'])

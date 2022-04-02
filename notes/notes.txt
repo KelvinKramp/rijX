@@ -1,0 +1,5 @@
+Get all db rows manually
+https://www.sqlitetutorial.net/sqlite-python/sqlite-python-select/
+
+Why int in sql is converted to floats
+https://stackoverflow.com/questions/37796916/pandas-read-sql-integer-became-float

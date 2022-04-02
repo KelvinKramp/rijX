@@ -3,7 +3,7 @@ from datetime import datetime
 from datetime import timedelta
 import pandas as pd
 import os
-
+import numpy as np
 
 # MAKE DIFFERENCE BETWEEN PRODUCTION AND DEVELOPMENT ENVIRONMENT
 def conn_db():
@@ -29,10 +29,11 @@ def create_slots(location, date, starttime, endtime, timeduration, worker, BIG):
     # max clients in given time: Divide difference in seconds by given timeduration per client in seconds
     number_clients = dateTimeDifference.total_seconds() / (timeduration * 60)
     # loop over max number of clients in given time
+    group_id = np.random.randint(0,500)
     for i in range(abs(int(number_clients))):
         starttime = (dateTimeA + (i * timedelta(minutes=timeduration))).time()
         endtime = (dateTimeA + ((i + 1) * timedelta(minutes=timeduration))).time()
-        data = Slots(location, date, starttime, endtime, timeduration, worker, BIG)
+        data = Slots(location, date, starttime, endtime, timeduration, worker, BIG, group_id)
         db.session.add(data)
     db.session.commit()
 
@@ -49,15 +50,18 @@ def create_appointment(location, datetime, first_name, last_name, birthdate, ema
 
 def get_from_db(form=None, table="appointments"):
     con = conn_db()
+
+    # DIFFERENT TABLE SELECTIONS
     if table == "appointments":
-        df = pd.read_sql('SELECT * FROM "Appointments"', con)
+        df = pd.read_sql('SELECT * FROM "Appointments";', con)
     elif table == "slots":
-        df = pd.read_sql('SELECT * FROM "Slots"', con)
+        df = pd.read_sql('SELECT * FROM "Slots";', con)
     elif table == "workers":
-        df = pd.read_sql('SELECT * FROM "Workers"', con)
+        df = pd.read_sql('SELECT * FROM "Workers";', con)
     else:
         df = pd.DataFrame()
 
+    # DIFFERENT FORMS OF RETURNING DATA
     if form == "html":
         if not df.empty:
             df = df.set_index("id")
@@ -66,6 +70,21 @@ def get_from_db(form=None, table="appointments"):
         return df.to_html(classes=None, index=False)
     elif form == "list":
         return df.values.tolist()
+    elif form == "earliest-time-slots-list":
+        df["starttime"] = pd.to_datetime(df["starttime"])
+        df = df.loc[df.groupby('group_id').starttime.idxmin()]
+        return df.values.tolist()
+        # cur = con.cursor()
+        # cur.execute("""SELECT
+        #   * , MIN(starttime)
+        # FROM
+        #   slots
+        # GROUP BY
+        #   group_id;""")
+        # l = cur.fetchall()
+        # # convert list of tuples to list of list
+        # earliest_time_slots_list = [list(ele) for ele in l]
+        # return earliest_time_slots_list
     else:
         return df
 

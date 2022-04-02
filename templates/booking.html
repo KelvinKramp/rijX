@@ -234,7 +234,7 @@
                 />
               </g>
             </svg>
-            <p>Bevestiging</p>
+            <p>Controle</p>
           </li>
         </ul>
       </div>
@@ -275,6 +275,16 @@
                         {% endfor %}
                   </select>
                 </div>
+
+                <div><br>
+                                <p>Hieronder staan de adressen van de lokaties. Deze worden ook naar u toegestuurd in de bevestigingsmail na het maken van een afspraak. </p>
+                  <br>
+                {% for i in address_list %}
+                <p> {{i | safe }} </p><br>
+                    {% endfor %}
+                  </div>
+                  <div></div>
+<!--                <div><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Ak2LMsRS_gyMQPxSmYDa3ziVMDjD42ca&ehbc=2E312F" width="640" height="480"></iframe></div>-->
               </div>
             </div>
           </div>
