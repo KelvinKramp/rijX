@@ -10,6 +10,10 @@ let Buttons = {
   },
   BodyArea = document.querySelector(".body-area");
 
+let InputsWrapper = document.querySelectorAll(
+  ".step2 .input-wrapper-new input"
+);
+
 Buttons.submitButton.addEventListener("click", (e) => {
   e.preventDefault();
 });
@@ -28,13 +32,10 @@ const GetFormValues = () => {
       value: EachInput.value,
     });
   });
-  for (let i = 0; i < AllSelects.length; i++) {
-  console.log(AllSelects[i]);
-    }
   AllSelects.forEach((EachSelect) => {
     SelectValueArray.push({
-      name: EachSelect.name,
-      value: EachSelect.value,
+      name: EachSelect.value,
+      value: EachSelect.name,
     });
   });
 
@@ -49,13 +50,13 @@ const GetFormValues = () => {
   </div>`
     );
   });
-console.log(AllSelects)
+
   AllSelects.forEach((EachObject) => {
     document.querySelector(".confirmation_area").insertAdjacentHTML(
       "beforeend",
       ` <div class="box">
     <h1>${EachObject.name}</h1>
-    <p>${EachObject[EachObject.selectedIndex].innerHTML}</p>
+    <p>${EachObject.value}</p>
   </div>`
     );
   });
@@ -69,6 +70,24 @@ const NavigateNext = (e) => {
   if (Steps.currentStep < 3) {
     BodyArea.querySelector(`.step${Steps.currentStep}`).style.display = "none";
     Steps.currentStep++;
+    if (Steps.currentStep == 3) {
+      // validate area
+
+      let Error;
+
+      InputsWrapper.forEach((EachWrapper) => {
+        if (EachWrapper.value == "") {
+          Error = true;
+        }
+      });
+
+      if (Error) {
+        window.alert("Please fill all fields");
+        Steps.currentStep--;
+      }
+
+      Error = false;
+    }
     BodyArea.querySelector(`.step${Steps.currentStep}`).style.display = "block";
     document.querySelector(
       `.header-form-area .mbl-step`
@@ -119,13 +138,5 @@ const NavigateBack = (e) => {
   }
 };
 
-function Submit () {
-    const form = document.querySelector("#test")
-    console.log(form)
-    form.submit()
-
-};
-
 Buttons.nextButton.addEventListener("click", NavigateNext);
 Buttons.prevButton.addEventListener("click", NavigateBack);
-Buttons.submitButton.addEventListener("click", Submit);
