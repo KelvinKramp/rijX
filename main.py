@@ -18,6 +18,10 @@ from texts import texts_landingpage, welcome_message_whatsapp, \
     texts_inloopspreekuur, texts_mijnkeuring, texts_aboutus, \
     texts_contact, texts_inhoudkeuring
 from dateutil.parser import parse
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Create a ModelView to add to our administrative interface
 class UserModelView(ModelView):
@@ -123,8 +127,6 @@ security = Security(secureApp, user_datastore)
 def create_user():
     db.drop_all()
     db.create_all()
-    from dotenv import load_dotenv
-    load_dotenv()
     email = os.environ.get('admin_email')
     password = os.environ.get('admin_password')
     user_datastore.create_user(email=email, password=password)
@@ -292,4 +294,7 @@ admin.add_view(CancellationView(Users, db.session,name="Cancellation", endpoint=
 
 
 if __name__ == '__main__':
-    secureApp.run(debug=True)
+    if os.environ.get("FLASK_ENV") == "development":
+        secureApp.run(debug=True)
+    else:
+        secureApp.run(debug=False)
