@@ -1,6 +1,4 @@
-from string import Template
-
-confirmation_template = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -153,18 +151,18 @@ confirmation_template = """<!DOCTYPE html>
           <!-- start copy -->
           <tr>
             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                    <p style="margin: 0;">Er is een afspraak voor u gepland op $date_123 op $address_123.</p>
+                    <p style="margin: 0;">Er is een afspraak voor u gepland op QWE op sada sada. </p>
                     <br>
-                    <p style="margin: 0;">Het gaat om het volgende type keuring: $type_service.</p>
+                    <p style="margin: 0;"> Het gaat om het volgende type keuring: TEST.</p>
                     <br>
-                    <p style="margin: 0;">U zal worden gezien door $worker met BIG registratie nummer $BIG.</p>
+                    <p style="margin: 0;">U zal worden gezien door someone met BIG registratie nummer 1231313.</p>
                     <br>
                     <p style="margin: 0;">Klik op de onderstaande betaallink (blauwe knop) om de afspraak te bevestigen.</p>
             </td>
           </tr>
           <!-- end copy -->
 
-                        
+
           <!-- start button -->
           <tr>
             <td align="left" bgcolor="#ffffff">
@@ -174,7 +172,7 @@ confirmation_template = """<!DOCTYPE html>
                     <table border="0" cellpadding="0" cellspacing="0">
                       <tr>
                         <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                          <a href="$payment_link" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Online betalen</a>
+                          <a href="https://tikkie.me/pay/RijRdam/bAFvY84bg74J6XioYMnKk" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">Online betalen</a>
                         </td>
                       </tr>
                     </table>
@@ -227,7 +225,7 @@ confirmation_template = """<!DOCTYPE html>
             <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
               <p style="margin: 0;">U ontvangt deze email omdat u een keuring heeft aangevraagd via rijrotterdam.nl. Als u niet de bedoelde ontvanger bent van deze email dan kunt u deze email gerust verwijderen.</p>
               <br>
-              <p style="margin: 0;">U wordt verzocht om dit bericht niet te beantwoorden. E-mailberichten die naar dit adres worden verzonden, worden niet beantwoord.</p>  
+              <p style="margin: 0;">U wordt verzocht om dit bericht niet te beantwoorden. E-mailberichten die naar dit adres worden verzonden, worden niet beantwoord.</p>
             </td>
           </tr>
           <!-- end permission -->
@@ -255,17 +253,4 @@ confirmation_template = """<!DOCTYPE html>
   <!-- end body -->
 
 </body>
-</html>"""
-
-
-if __name__ == '__main__':
-    datetime = "1-1-2022"
-    address = "test_address"
-    type_service ="medische keuring"
-    worker = "dr. Test"
-    BIG="123123"
-    payment_link= "https://tikkie.me/pay/RijRdam/bAFvY84bg74J6XioYMnKk"
-    # print(Template(confirmation_template).safe_substitute(date_123=datetime, address_123=address, type_service = type_service, worker=worker, BIG=BIG, payment_link=payment_link))
-    plain = "Uw afpsraak is gemaakt voor {datetime} op {address} voor type keuring {type_service}. U wordt geholpen door {worker} met BIG {BIG}. " \
-            "Dit is de betaallink: {payment_link}. Klik op de link om te betalen en de afspraak te bevestigen.".format(datetime=datetime,address=address, type_service=type_service, worker=worker, BIG=BIG, payment_link=payment_link)
-    print(plain)
+</html>

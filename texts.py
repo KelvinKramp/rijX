@@ -114,8 +114,7 @@ title1_inloop = """
 Datums inloopspreekuur
 """
 
-text1_inloop = """
-Op dit moment staan er de volgende inloopspreekuren gepland:
+text1_inloop = """Op dit moment staan onderstaande inloopspreekuren gepland. Let op dat u niet altijd geholpen kan worden bij drukte. Als u zekerheid wilt maak dan een afspraak.
 <br><br>
 <h3>
 Corkstraat 46, 3047AC Rotterdam Overschie:
@@ -137,6 +136,13 @@ Kanaalweg 33 2903LR Capelle aan den IJssel:
   <p>
  - van 15:00 tot 16:00 op donderdagmiddag 12 mei.</p>
  <br>
+  <br> 
+ <h3>
+Olympiaweg 4 3077 AL Rotterdam:
+</h3>
+ <br>
+ <p>
+ - Volgt.</p>
   <br> <br>
 
 <img
@@ -160,8 +166,7 @@ Mijn keuringsverslag
 
 text1_mijnkeuring= """
 Medische metingen die plaats vinden zijn uw eigendom, u heeft daarom altijd recht op inzage. Wij maken de inzage makkelijk voor u met mijnkeuringsverslag. 
-Na een keuring kan u uw rapport via deze pagina opvragen. 
-Via een beveiligde mail verbinding ontvangt u het rapport wat naar het CBR is gegaan. 
+Na een keuring kan u uw rapport via deze pagina opvragen. U ontvangt het rapport wat naar het CBR is gegaan via een beveilgde e-mail. 
 """
 
 texts_mijnkeuring = {
@@ -268,7 +273,7 @@ De bloeddruk kan hoger dan gewoonlijk zijn tijdens een keuring. Dit noemt met "w
 <br>
 <h3>Urine</h3>
 <p>
-De urine wordt onderzocht op suiker. Als u suikerziekte (diabetes) heeft dan plast u meer suiker uit dan normaal. Dit kan terug worden gezien in de urine. In sommige gevallen doet de arts een onderzoek die ook gelijk kijkt naar andere dingen in de urine. Dit lkunnen zaken zijn zoals afweercellen, rode bloedcellen of bacterien in de urine. Als u de uitslag hiervan wilt hebben kan u dat bespreken met de arts.  
+De urine wordt onderzocht op suiker. Als u suikerziekte (diabetes) heeft dan plast u meer suiker uit dan normaal. Deze verhoogde hoeveelheid suiker in de urine kan terug worden gedetecteerd in de urine. 
 </p>
 <br>
 <br>
@@ -288,11 +293,11 @@ border-radius: 10px;"
 <br>
 <h3>Gezichtsscherpte</h3>
 <p>
-Tijdens de keuring wordt ook gekeken naar uw gezichtsscherpte. Er wordt een zogenaamde visuskaart op afstand gebruikt. U moet zeggen waar de opening in een cirkel zit.  Als u boven de 0.5 scoort tijdens deze test dan is uw gezichtsscherpte voldoende voor het autorijden. Lager scoren dan de norm kan aan verschillende zaken liggen. Het kan zijn dat uw bril of lenzen niet goed zijn afgesteld, maar wat we ook vaak tegenkomen is staar. Dit is een aandoening die veel voorkomt bij ouderen en goed te behandelen is door een oogarts. Om te vermijden dat men afgekeurd wordt op een onvoldoende gezichtsvermogen kan men van tevoren naar een opticien gaan. 
+Tijdens de keuring wordt ook gekeken naar uw gezichtsscherpte. Er wordt een zogenaamde visuskaart op afstand gebruikt. Hieronder ziet u hoe het zicht wordt getest. U vertelt telkens waar de opening zit: boven, links, rechts of onder. 
+Als u boven de 0.5 scoort tijdens deze test dan is uw gezichtsscherpte voldoende voor het autorijden. Lager scoren dan de norm kan aan verschillende zaken liggen. Het kan zijn dat uw bril of lenzen niet goed zijn afgesteld, maar wat we ook vaak tegenkomen is staar. Dit is een aandoening die veel voorkomt bij ouderen en goed te behandelen is door een oogarts. Om te vermijden dat men afgekeurd wordt op een onvoldoende gezichtsvermogen kan men van tevoren naar een opticien gaan. 
 </p>
 <br>
 <p>
-Hieronder ziet u hoe het zicht wordt getest. U vertelt telkens waar de opening zit: boven, links, rechts of onder. 
 </p>
 <br>
 <div style="text-align: center;

@@ -4,6 +4,7 @@ from datetime import timedelta
 import pandas as pd
 import os
 import numpy as np
+from helpers.encryption import encrypt_message, decrypt
 
 # MAKE DIFFERENCE BETWEEN PRODUCTION AND DEVELOPMENT ENVIRONMENT
 def conn_db():
@@ -39,10 +40,16 @@ def create_slots(location, date, starttime, endtime, timeduration, worker, BIG):
 
 
 def create_appointment(location, datetime, first_name, last_name, birthdate, email, phone_number, time, id):
+    # encrypt sensitive information
+    l_unencrypted = [first_name, last_name, birthdate, email, phone_number]
+    l_encrypted = [str(encrypt_message(str(i)).decode("utf-8")) for i in l_unencrypted]
+    first_name, last_name, birthdate, email, phone_number = l_encrypted
+
     # create appointment in appointments table
     data = Appointments(location, datetime, first_name, last_name, birthdate, email, phone_number, time)
     db.session.add(data)
     db.session.commit()
+
     # remove empty slot from Slots table
     Slots.query.filter_by(id=id).delete()
     db.session.commit()
@@ -54,6 +61,9 @@ def get_from_db(form=None, table="appointments"):
     # DIFFERENT TABLE SELECTIONS
     if table == "appointments":
         df = pd.read_sql('SELECT * FROM "Appointments";', con)
+        l_encrypted = ["first_name", "last_name", "birthdate", "email", "phone_number"]
+        for i in l_encrypted:
+            df[i] = df[i].apply(decrypt)
     elif table == "slots":
         df = pd.read_sql('SELECT * FROM "Slots";', con)
     elif table == "workers":

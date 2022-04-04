@@ -35,7 +35,8 @@ dict_payments_links = {
                 'thuiskeuring':'https://tikkie.me/pay/RijRdam/wwVEAfN8pkXKCzKXmokd2h'
                 }
 
-address_list = ['<h3>Rotterdam Overschie </h3> Corkstraat 46, 3047AC <br> <a href="https://goo.gl/maps/Juy8PXtUY1uZf5UK8">Klik hier om te zien op de kaart</a> ',
-                '<h3>Capelle aan den IJssel </h3> Kanaalweg 33, 2903LR <br> <a href="https://goo.gl/maps/ae7f51xgw2xyry3W9">Klik hier om te zien op de kaart</a> ']
-address_list_short = ["ADD Business Point, Corkstraat 46, 3047AC, Rotterdam Overschie", "ADD Business Point, Kanaalweg 33, 2903 LR, Capelle aan den IJssel"]
+address_list = ['<h3>Rotterdam Overschie </h3> Corkstraat 46, 3047AC <br> <a href="https://goo.gl/maps/Juy8PXtUY1uZf5UK8" target=_blank>Klik hier voor de lokatie op de kaart</a> ',
+                '<h3>Capelle aan den IJssel </h3> Kanaalweg 33, 2903LR <br> <a href="https://goo.gl/maps/ae7f51xgw2xyry3W9" target=_blank>Klik hier voor de lokatie op de kaart</a> ',
+                '<h3>Rotterdam Feyenoord </h3> Olympiaweg 4, 3077 AL <br> <a href="https://goo.gl/maps/FTsMX5u77rL4zvkw5" target=_blank>Klik hier voor de lokatie op de kaart</a> ']
+address_list_short = ["ADD Business Point, Corkstraat 46, 3047AC, Rotterdam Overschie", "ADD Business Point, Kanaalweg 33, 2903 LR, Capelle aan den IJssel", "Kantoorgebouw Greenstand, Olympiaweg 4, 3077 AL, Rotterdam Feyenoord"]
 # address_list = [i["item"] for i in address_list]

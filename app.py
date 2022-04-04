@@ -67,15 +67,16 @@ class Roles(db.Model, RoleMixin):
 
 
 class Appointments(db.Model):
+    # use long strings for db storage to facilitate encrypted strings
     __tablename__ = 'Appointments'
     id = db.Column(db.Integer, primary_key=True)
     location = db.Column(db.String(20), unique=False, nullable=False)
     datetime = db.Column(db.String(20), unique=False, nullable=False)
-    first_name = db.Column(db.String(20), unique=False, nullable=False)
-    last_name = db.Column(db.String(120), unique=False, nullable=False)
-    birthdate = db.Column(db.String(120), unique=False, nullable=False)
-    email = db.Column(db.String(20), unique=False, nullable=False)
-    phone_number = db.Column(db.String(20), unique=False, nullable=False)
+    first_name = db.Column(db.String(200), unique=False, nullable=False)
+    last_name = db.Column(db.String(200), unique=False, nullable=False)
+    birthdate = db.Column(db.String(200), unique=False, nullable=False)
+    email = db.Column(db.String(200), unique=False, nullable=False)
+    phone_number = db.Column(db.String(200), unique=False, nullable=False)
     time = db.Column(db.String(100), unique=False, nullable=True)
 
     def __init__(self, location, datetime, first_name, last_name, birthdate, email, phone_number, time):

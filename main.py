@@ -280,8 +280,8 @@ def confirmation():
     BIG = session["BIG"]
     payment_link = dict_payments_links[type_service]
     data = {"email":email ,"worker":worker,"address":address, "date":datetime, "type_service":dict(list_services).get(type_service),
-            "payment_link":payment_link, "BIG":BIG}
-    send_mail(email, payment_link)
+            "payment_link":payment_link, "BIG":BIG} # added extra data to form for future corrections if necessary
+    send_mail(email, datetime, address, type_service, worker, BIG, payment_link)
     return render_template("confirmation.html", data=data, nav_bar_items=nav_bar_items, page="Afspraak maken")
 
 

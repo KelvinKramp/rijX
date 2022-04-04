@@ -34,8 +34,8 @@ const GetFormValues = () => {
   });
   AllSelects.forEach((EachSelect) => {
     SelectValueArray.push({
-      name: EachSelect.value,
-      value: EachSelect.name,
+      name: EachSelect.name,
+      value: EachSelect.value,
     });
   });
 
@@ -56,7 +56,7 @@ const GetFormValues = () => {
       "beforeend",
       ` <div class="box">
     <h1>${EachObject.name}</h1>
-    <p>${EachObject.value}</p>
+    <p>${EachObject[EachObject.selectedIndex].innerHTML}</p>
   </div>`
     );
   });
@@ -82,7 +82,7 @@ const NavigateNext = (e) => {
       });
 
       if (Error) {
-        window.alert("Please fill all fields");
+        window.alert("Vul alle benodigde gegevens in.");
         Steps.currentStep--;
       }
 
@@ -138,5 +138,11 @@ const NavigateBack = (e) => {
   }
 };
 
+function Submit () {
+    const form = document.querySelector("#test")
+    form.submit()
+};
+
 Buttons.nextButton.addEventListener("click", NavigateNext);
 Buttons.prevButton.addEventListener("click", NavigateBack);
+Buttons.submitButton.addEventListener("click", Submit);
