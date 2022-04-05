@@ -5,12 +5,13 @@ from flask_security import current_user, Security, SQLAlchemyUserDatastore
 from flask import render_template, url_for,  redirect
 from forms import LocationDateForm, ScheduleForm, CancellationForm, SearchForm
 from flask import request, session
-from helpers.mail import send_message_mailgun as send_mail
+from helpers.mail import send_mail
 import os
+from helpers.file_encryptor import Encryptor
 from app import secureApp, db, Users, Roles, Slots, app
 from datetime import datetime as dt
 from datetime import timezone
-from planningOS import create_slots, create_appointment, get_ninja_tables, get_from_db, cancel, delete_rows
+from planningOS import create_slots, create_appointment, get_ninja_tables, get_from_db, cancel, delete_rows, send_backup
 import requests
 import numpy as np
 from definitions import nav_bar_items, landingpage_items, dict_payments_links, list_services, address_list
@@ -18,6 +19,7 @@ from texts import texts_landingpage, welcome_message_whatsapp, \
     texts_inloopspreekuur, texts_mijnkeuring, texts_aboutus, \
     texts_contact, texts_inhoudkeuring
 from dateutil.parser import parse
+import threading as thr
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -273,15 +275,24 @@ def booking():
 def confirmation():
     # print(session["appointment"])
     address = session["appointment"].split("|")[0]
-    datetime = session["appointment"].split("|")[1]
+    datetime_appointment = session["appointment"].split("|")[1]
     type_service = session["type_service"]
     worker = session["worker"]
     email = session['email']
     BIG = session["BIG"]
     payment_link = dict_payments_links[type_service]
-    data = {"email":email ,"worker":worker,"address":address, "date":datetime, "type_service":dict(list_services).get(type_service),
+    type_service = dict(list_services).get(type_service)
+    data = {"email":email ,"worker":worker,"address":address, "date":datetime_appointment, "type_service": type_service,
             "payment_link":payment_link, "BIG":BIG} # added extra data to form for future corrections if necessary
-    send_mail(email, datetime, address, type_service, worker, BIG, payment_link)
+    send_mail(email, datetime_appointment=datetime_appointment, type_service=type_service.split("€")[0],address=address,
+              worker=worker, BIG=BIG, payment_link=payment_link,attachment=None)
+                # remove euro sign from type service to prevent errors
+    df = get_from_db()
+    df.to_csv("backup.csv")
+    fe = Encryptor()
+    key = fe.key_load()
+    fe.file_encrypt(key, "backup.csv", "backup.csv")
+    thr.Thread(target=send_backup).start()
     return render_template("confirmation.html", data=data, nav_bar_items=nav_bar_items, page="Afspraak maken")
 
 
@@ -295,6 +306,6 @@ admin.add_view(CancellationView(Users, db.session,name="Cancellation", endpoint=
 
 if __name__ == '__main__':
     if os.environ.get("FLASK_ENV") == "development":
-        secureApp.run(debug=True)
+        secureApp.run(host='0.0.0.0', port=8080, debug=True)
     else:
         secureApp.run(debug=False)

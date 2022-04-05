@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<style>
+body, html {
+  height: 100%;
+}
+</style>
+<html>
+<body style="height: 100%">
     <!-- Benefints Area -->
     <section class="about-section-wrapper first_about_section_wrapper"  id="more" style="padding-top:10rem;vertical-align:middle;">
       <section class="about-section special_changing_section" style="margin-top:10px">
@@ -15,8 +21,8 @@
 <!--                <input type="text" name="Number" id="Number" />-->
 
                             </div>
-                            <div class="home-buttons stagger">
-            <a href="{{url_for('booking')}}" class="">Vraag uw keuringsverslag op</a>
+                            <div class="home-buttons stagger" style="margin: auto;width: 40%;padding: 10px;">
+            <a href="{{url_for('booking')}}" class="">Vraag uw verslag op</a>
           </div>
 <!--          <a href="#" class="learn_more_link">Lees meer</a>-->
         </div>
@@ -26,5 +32,6 @@
         </div>
       </section>
               </section>
-
+</body>
+</html>
 {% endblock %}

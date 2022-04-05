@@ -1,3 +1,11 @@
+import os
+
+"""
+PROJECT DEFINITIONS
+"""
+
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__)) + "/"
+
 list_tables = ["Appointments", "OpenSlots","Workers"]
 nav_bar_items = [{"title":"Afspraak maken", "url":"booking"},
                  {"title": "Inloopspreekuur", "url": "inloopspreekuur"},

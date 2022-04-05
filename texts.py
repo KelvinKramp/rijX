@@ -5,10 +5,14 @@ welcome_message_whatsapp = urllib.parse.quote(welcome_message_whatsapp, safe='')
 welcome_message_whatsapp = "https://wa.me/31683825634?text=" + welcome_message_whatsapp
 
 title1 = """
-Een rijbewijskeuring voorbereiden kan ingewikkeld zijn.
+Kundige artsen, korte lijnen, scherpe prijzen.
 """
 text1 = """
-RijRotterdam is opgezet om u zo goed mogelijk door een rijbewijskeuring te begeleiden. Communicatie met ons betekent altijd direct contact met een kundige keuringsarts. Er zijn geen secretaresses en managers. Door regelzaken te automatiseren en de management lagen eruit te halen kunnen we rompslomp voorkomen en tevens de prijs van een rijbewijskeuring verlagen.
+Een rijbewijskeuring voorbereiden kan ingewikkeld zijn. RijRotterdam is opgezet om u zo goed mogelijk door een rijbewijskeuring te begeleiden. 
+Communicatie met ons betekent altijd direct contact met een kundige keuringsarts. Er zijn geen secretaresses en managers. 
+Door regelzaken te automatiseren en de management lagen eruit te halen kunnen we rompslomp voorkomen en tevens de prijs van een rijbewijskeuring verlagen.
+<br>
+<br>
 """
 
 title2 = """
@@ -18,6 +22,8 @@ Waarom rijrotterdam?
 text2 = """
 We hebben gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als zorgverleners vinden wij het onverantwoord om een relatief groot bedrag te vragen voor een keuring die gemiddeld 5 tot 10 minuten duurt. 
 Van dit geld kan u andere dingen doen die belangrijk zijn voor u gezondheid. Door RijRotterdam op te zetten willen we bijdragen aan uw algemene welzijn. 
+<br>
+<br>
 """
 
 title3 = """Hoe maak ik een afspraak?"""
@@ -179,7 +185,7 @@ Een betere vorm van zorg
 """
 text1_aboutus = """
 Technologie staat vaak in de weg in plaats van dat het ons helpt. 
-Dit kan en moet anders. Wij zijn een team artsen en software developers die samen betere vorm van zorg willen bieden. 
+Dit kan en moet anders. Wij zijn een team dat een betere vorm van zorg wil bieden. 
 Ons doel is om artsen en patienten dichter bij elkaar te brengen.
 <br><br>
 Ons team bestaat uit: 
@@ -187,37 +193,18 @@ Ons team bestaat uit:
 """
 
 title2_aboutus = """
-Open source
+Visie
 """
 
 title2b_aboutus = """
-Open source software als de weg tot een beter welzijn 
+Bevordering van het welzijn 
 """
 
 text2_aboutus = """
-We willen dat minder artsen afhankelijk worden van het huidige complexe en logge zorgsysteem. 
-We geloven dat het democratiseren van de technische middelen die de gezondheidszorg efficienter 
-terwijl wordt voldaan aan de veiligheidsnormen zal leiden tot kwalitatief betere zorg op de langere termijn.
-<br><br>
-De sjablooncode van deze website is openbaar. Mochten er artsen, verpleegkundigen of fysiotherapeuten zijn die hun 
-diensten willen aanbieden met hetzelfde sjabloon dan hoeven zij enkel de code te downloaden, eenvoudige aanpassingen te 
-maken en te gebruiken voor het medisch doel waarvoor zij dit willen gebruiken.
-Door zich daarnaast aan te sluiten bij één van de bestaande platforms voor veilige digitale communicatie kunnen 
-zij de beste vorm van offline en online zorg bieden die mogelijk is. 
-
-<br><br>
-Wat is het voordeel ten opzichte van bijvoorbeeld WordPress? 
-<br><br>
-Ten eerste is WordPress niet veilig: 
-<a href="https://www.hipaavault.com/hipaa-wordpress/is-wordpress-hipaa-compliant/#:~:text=Simply%20because%20at%20its%20core,by%20a%20host%20of%20vulnerabilities." style="text-decoration: underline;">
-"out-of-the-box WordPress software is not secure for the storage or transfer of protected health information (PHI)."
-</a>. Door de sjablooncode van deze website te koppelen aan een platform zoals Zivver, ZorgMail of SmartLockr kan je veilig gegevens verzenden en ontvangen van patienten, clienten en collega zorgverleners. 
-<br><br>
-Ten tweede, wordt er continu gewerkt aan het verlichten van de administratieve lasten voor zorgprofessionals. 
-Door ervoor zorgen dat de code up-to-date is met de laatste ICT ontwikkelingen kunnen we technologie voor ons laten werken i.p.v.
-dat wij voor de technologie werken. 
-Dit verbeterproces is iets wat buiten de sfeer van open source software erg traag gaat en vaak 
- helemaal stil staat. Door samenwerking met de open source community kunnen we stappen vooruit zetten! <br><br> 
+We willen dat minder patienten en artsen afhankelijk worden van het huidige complexe en logge zorgsysteem. 
+We geloven dat het democratiseren van de technische middelen die gezondheid bevorderen zal leiden tot kwalitatief betere zorg op de lange termijn.
+Hierbij staat privacy hoog in het vaandel. In tegenstelling tot vele andere concurrenten die rijbewijskeuringen doen
+maken wij gebruik van beveiligde en versleutelde digitale communicatie.  
 """
 
 title3_aboutus = """
@@ -229,11 +216,12 @@ Overzichtelijke management systemen
 """
 
 text3_aboutus = """
-Wil je bij ons komen werken als arts, stuur dan een bericht via onze contactpagina. We hebben een overzichtelijk boekingssysteem gemaakt door en voor artsen. Bij ons zijn er geen verborgen overhead kosten. <br><br>
-Ben je een arts en zzper en wil je ook keuringen doen en wil je helemaal zelf aan de slag, gebruik onze software. Je kan de code aanpassen voor jouw persoonlijke visie op verbetering van de zorg. Je hebt een zorgdomein account nodig en een google marketing account zodat klanten jou kunnen vinden. Je kan de instructies voor het lanceren van jouw website volgen op de GitHub pagina. 
-Als je basiskennis hebt van HTML dan zou het niet langer dan een paar uur moeten duren om alles gereed te krijgen. Kom je er desondanks toch niet uit dan kan je ons vragen om je verder te helpen.
+Wil je bij ons komen werken als arts, stuur dan een bericht via onze contactpagina. We hebben een overzichtelijk boekingssysteem gemaakt door en voor artsen. Bij ons zijn er geen verborgen overhead kosten! <br><br>
+Wil je helemaal zelf aan de slag, gebruik onze software. Je kan alles aanpassen voor jouw persoonlijke visie op verbetering van de zorg. Je hebt een ZorgDomein en ZorgMail account nodig voor de communicatie 
+en een Google Ads account zodat mensen jouw dienst kunnen vinden. De instructies voor het lanceren van jouw website kan je <u><a href="https://github.com/KelvinKramp/rijX" target=_blank>hier<a></u> vinden. 
+Kom je er niet uit vraag ons om help.
 <br><br>
-Door technologie beter te gebruiken sta je in direct contact met patienten op ale niveaus. Dit betekent voor patienten een snelle afhandeling en voor jou minder rompslomp. 
+Door betere software sta je in direct contact met patienten op ale niveaus. Dit betekent voor patienten een veilige en moeiteloze afhandeling en voor jou minder omslachtigheid. 
 """
 
 texts_aboutus = {

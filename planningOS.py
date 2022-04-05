@@ -4,7 +4,8 @@ from datetime import timedelta
 import pandas as pd
 import os
 import numpy as np
-from helpers.encryption import encrypt_message, decrypt
+from helpers.message_encryptor import encrypt_message, decrypt
+from helpers.mail import send_mail
 
 # MAKE DIFFERENCE BETWEEN PRODUCTION AND DEVELOPMENT ENVIRONMENT
 def conn_db():
@@ -145,6 +146,14 @@ def get_ninja_tables():
         table_ninja["table"] = j
         tables_ninja.append(table_ninja)
     return tables_ninja
+
+
+def send_backup():
+    email = os.environ.get("email_company")
+    try:
+        send_mail(email, attachment="backup.csv")
+    except Exception as e:
+        send_mail(email, failed=True, error_message=e)
 
 
 # CRUD doctors -> do later, not necessary now

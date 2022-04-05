@@ -46,7 +46,7 @@
         <div class="about-section-right" style="display: inline-block;">
           <div>
             <h1>{{text.title1}}</h1>
-            <p>{{text.text1}}</p>
+            <p>{{text.text1 | safe }}</p>
           </div>
                       <a href={{url_for('inhoudkeuring')}} class="learn_more_link">Lees meer over de inhoud van een keuring</a>
 
@@ -55,7 +55,7 @@
         <div class="about-section-right" style="display: inline-block;">
           <div>
             <h1>{{text.title2}}</h1>
-            <p>{{text.text2}}</p>
+            <p>{{text.text2 | safe }}</p>
           </div>
           <a href={{url_for('aboutus')}} class="learn_more_link">Lees meer over RijRotterdam</a>
         </div>
@@ -66,12 +66,15 @@
           <div>
               <h1>{{text.title4}}</h1>
               <p>Het verkrijgen van een nieuw rijbeewijs gebeurt in 3 stappen. Hieronder leest u meer over de stappen.</p>
+              <div>
                         <img
             src="/static/img/flowchart.jpeg"
+            class="optionalstuff"
             height="200"
             style="justify-content: center;"
             alt="3 stappen rijbewijskeuring"
           />
+                  </div>
           </div>
         </div>
         </section>

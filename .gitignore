@@ -6,3 +6,4 @@ controllers
 secrets.json
 secrets.py
 test_slots.pkl
+backup.csv
