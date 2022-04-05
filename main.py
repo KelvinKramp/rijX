@@ -134,6 +134,7 @@ def create_user():
     user_datastore.create_user(email=email, password=password)
     db.session.commit()
     if os.environ.get("FLASK_ENV") == "development":
+
         import pandas as pd
         df = pd.read_pickle("test_slots.pkl")
         if "Users" in os.getcwd():
