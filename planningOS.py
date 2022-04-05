@@ -167,4 +167,4 @@ if __name__ == '__main__':
     data = Slots("Rdam", date, dt.now().time(), (dt.now() + timedelta(minutes=60)).time(), 10, "ASDSA")
     db.session.add(data)
     db.session.commit()
-    create_slots("Rdam", date, dt.now().time(), (dt.now() + timedelta(minutes=60)).time(), 10, "ASDSA")
+    create_slots("Rdam", date, dt.now().time(), (dt.now() + timedelta(minutes=60)).time(), 10, "ASDSA", "123")
