@@ -67,15 +67,15 @@ def send_mail(recipient, datetime_appointment=None, address=None, type_service=N
         msg.attach(part1)
     msg['From'] = os.environ.get("SENDER")
     msg['Subject'] = subject
-
     msg['To'] = recipient
+
     with smtplib.SMTP_SSL(SMTP_SERVER, 465) as smtp:
         smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
         smtp.send_message(msg)
 
 if __name__ == "__main__":
     # TEST FAILED SENDING BACKUP
-    # send_mail( "test@gmail.com", failed=True, error_message="test error message")
+    send_mail( "test@gmail.com", failed=True, error_message="test error message")
 
     # TEST SENDING BACKUP
     # send_mail("test@gmail.com", attachment="backup.csv" )
