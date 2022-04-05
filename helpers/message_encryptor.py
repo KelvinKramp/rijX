@@ -1,8 +1,5 @@
-import re
 from cryptography.fernet import Fernet
-import keyring
 import os
-import json
 
 
 # DEFINE FUNCTIONS FOR ENCRYPTING FROM https://devqa.io/encrypt-decrypt-data-python/
@@ -10,7 +7,7 @@ def load_key():
     """
     Load the previously generated key
     """
-    key = keyring.get_password("system", "username")
+    key = os.environ.get("ENCRYPTION_KEY")
     return key
 
 
