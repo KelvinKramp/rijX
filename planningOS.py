@@ -82,20 +82,9 @@ def get_from_db(form=None, table="appointments"):
     elif form == "list":
         return df.values.tolist()
     elif form == "earliest-time-slots-list":
-        df["starttime"] = pd.to_datetime(df["starttime"])
+        df["starttime"] = pd.to_datetime(df["starttime"].apply(str))
         df = df.loc[df.groupby('group_id').starttime.idxmin()]
         return df.values.tolist()
-        # cur = con.cursor()
-        # cur.execute("""SELECT
-        #   * , MIN(starttime)
-        # FROM
-        #   slots
-        # GROUP BY
-        #   group_id;""")
-        # l = cur.fetchall()
-        # # convert list of tuples to list of list
-        # earliest_time_slots_list = [list(ele) for ele in l]
-        # return earliest_time_slots_list
     else:
         return df
 
