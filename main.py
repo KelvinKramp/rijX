@@ -237,7 +237,7 @@ def booking():
     # form.location.choices = [(i.id, str(i.location.split(",")[-1])+" | "+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]) for i in l]
     l = get_from_db(table="slots", form="earliest-time-slots-list")
     form.location.choices = [
-        (i[0], str(i[1].split(",")[-1]).strip() + " | " + str(parse(i[2]).strftime('%d-%m-%Y')) + " " + str(i[3].time())[0:5])
+        (i[0], str(i[1].split(",")[-1]).strip() + " | " + str(parse(str(i[2])).strftime('%d-%m-%Y')) + " " + str(i[3].time())[0:5])
         for i in l]
 
     last_name = form.last_name.data
