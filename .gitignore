@@ -7,3 +7,6 @@ secrets.json
 secrets.py
 test_slots.pkl
 backup.csv
+app.sqlite3-journal
+app.sqlite3
+users.sqlite3

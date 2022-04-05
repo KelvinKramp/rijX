@@ -70,7 +70,7 @@ class Appointments(db.Model):
     # use long strings for db storage to facilitate encrypted strings
     __tablename__ = 'Appointments'
     id = db.Column(db.Integer, primary_key=True)
-    location = db.Column(db.String(20), unique=False, nullable=False)
+    location = db.Column(db.String(300), unique=False, nullable=False)
     datetime = db.Column(db.String(20), unique=False, nullable=False)
     first_name = db.Column(db.String(200), unique=False, nullable=False)
     last_name = db.Column(db.String(200), unique=False, nullable=False)
@@ -92,11 +92,11 @@ class Appointments(db.Model):
 class Slots(db.Model):
     __tablename__ = 'Slots'
     id = db.Column(db.Integer, primary_key=True)
-    location = db.Column(db.String(50), unique=False, nullable=False)
+    location = db.Column(db.String(300), unique=False, nullable=False)
     date = db.Column(db.Date(), unique=False, nullable=False)
     starttime = db.Column(db.Time(), unique=False, nullable=False)
     endtime = db.Column(db.Time(), unique=False, nullable=False)
-    timeduration = db.Column(db.String(20), unique=False, nullable=False)
+    timeduration = db.Column(db.String(200), unique=False, nullable=False)
     worker = db.Column(db.String(50), unique=False, nullable=False)
     BIG = db.Column(db.BigInteger, unique=False, nullable=False)
     group_id = db.Column(db.Integer, nullable=True)

@@ -1435,7 +1435,7 @@ section.home-section .home-section-left > div p {
     font-size: 18px;
   }
   .about-section {
-    margin-top: 0px;
+    margin-top: 100px;
   }
 }
 @media screen and (max-width: 330px) {

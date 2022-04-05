@@ -105,6 +105,8 @@ def cancel(cancellation, _type):
     cur = con.cursor()
     if _type == 'appointment':
         execution_string= """DELETE FROM "Appointments" WHERE id = '{}';""".format(cancellation[0])
+        # INSERT INTO table_name
+        # VALUES (value1, value2, value3, ...);
         cur.execute(execution_string)
         con.commit()
         con.close()
