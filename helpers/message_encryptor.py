@@ -1,5 +1,7 @@
 from cryptography.fernet import Fernet
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 # DEFINE FUNCTIONS FOR ENCRYPTING FROM https://devqa.io/encrypt-decrypt-data-python/
@@ -15,7 +17,7 @@ def encrypt_message(message):
     """
     Encrypts a message
     """
-    key = load_key()
+    key = os.environ.get("ENCRYPTION_KEY")
     encoded_message = message.encode()
     f = Fernet(key)
     encrypted_message = f.encrypt(encoded_message)
