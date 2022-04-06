@@ -22,4 +22,4 @@ text = log_file_text
 subject = "Unittest result " + date + ":" + status
 
 # SEND MAIL
-send_mail(recipient=os.environ.get("DEVELOPER"), subject=subject, message=text)
+send_mail(os.environ.get("DEVELOPER"), subject=subject, message=text)
