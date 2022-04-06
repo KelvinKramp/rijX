@@ -18,7 +18,7 @@ def conn_db():
         SQL_URI = os.environ.get('DATABASE_URL')
         if SQL_URI and SQL_URI.startswith("postgres://"):
             SQL_URI = SQL_URI.replace("postgres://", "postgresql://", 1)
-        con = create_engine(SQL_URI, echo=True)
+        con = create_engine(SQL_URI, echo=True).raw_connection()
     return con
 
 

@@ -99,7 +99,7 @@ class Slots(db.Model):
     timeduration = db.Column(db.String(200), unique=False, nullable=False)
     worker = db.Column(db.String(50), unique=False, nullable=False)
     BIG = db.Column(db.BigInteger, unique=False, nullable=False)
-    group_id = db.Column(db.Integer, unique=True, nullable=True)
+    group_id = db.Column(db.Integer, unique=False, nullable=True)
 
     def __init__(self, location, date, starttime, endtime, timeduration, worker, BIG, group_id):
         self.location = location
