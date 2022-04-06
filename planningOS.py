@@ -37,6 +37,7 @@ def create_slots(location, date, starttime, endtime, timeduration, worker, BIG):
     for i in range(abs(int(number_clients))):
         starttime = (dateTimeA + (i * timedelta(minutes=timeduration))).time()
         endtime = (dateTimeA + ((i + 1) * timedelta(minutes=timeduration))).time()
+        print(location, date, starttime, endtime, timeduration, worker, BIG, group_id)
         data = Slots(location, date, starttime, endtime, timeduration, worker, BIG, group_id)
         db.session.add(data)
     db.session.commit()
