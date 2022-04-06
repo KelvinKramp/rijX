@@ -1,12 +1,13 @@
 import unittest
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-import time
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+# from selenium import webdriver
+# from selenium.webdriver.chrome.options import Options
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.webdriver.chrome.service import Service
+
 import os
-from selenium.webdriver.chrome.service import Service
+import time
 import requests
 
 # define sleep parameter
@@ -42,27 +43,27 @@ class TestFeedbackApp(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print('SETTING UP TEST UNIT')
-        global driver, wait
-        # https://stackoverflow.com/questions/63783983/element-not-interactable-in-selenium-chrome-headless-mode
-        if "Users" in os.getcwd():
-            options = Options()
-            options.add_argument("--window-size=1920,1080")
-            options.add_argument("--start-maximized")
-            # options.add_argument("--headless")
-            driver = webdriver.Chrome(options=options)
-        else:
-            chrome_options = Options()
-            chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-            chrome_options.add_argument("--headless")
-            chrome_options.add_argument("--disable-dev-shm-usage")
-            chrome_options.add_argument("--no-sandbox")
-            ser = Service(os.environ.get("CHROMEDRIVER_PATH"))
-            driver = webdriver.Chrome(service=ser,
-                                  options=chrome_options)
-        wait = WebDriverWait(driver, 10)
-        time.sleep(2)
-        driver.get(test_page)
-        print("CONNECTION TO BROWSER SUCCESFULL")
+        # global driver, wait
+        # # https://stackoverflow.com/questions/63783983/element-not-interactable-in-selenium-chrome-headless-mode
+        # if "Users" in os.getcwd():
+        #     options = Options()
+        #     options.add_argument("--window-size=1920,1080")
+        #     options.add_argument("--start-maximized")
+        #     # options.add_argument("--headless")
+        #     driver = webdriver.Chrome(options=options)
+        # else:
+        #     chrome_options = Options()
+        #     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+        #     chrome_options.add_argument("--headless")
+        #     chrome_options.add_argument("--disable-dev-shm-usage")
+        #     chrome_options.add_argument("--no-sandbox")
+        #     ser = Service(os.environ.get("CHROMEDRIVER_PATH"))
+        #     driver = webdriver.Chrome(service=ser,
+        #                           options=chrome_options)
+        # wait = WebDriverWait(driver, 10)
+        # time.sleep(2)
+        # driver.get(test_page)
+        # print("CONNECTION TO BROWSER SUCCESFULL")
 
 
     def test_a_booking(self):
@@ -123,7 +124,7 @@ class TestFeedbackApp(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        driver.close()
+        # driver.close()
         print('TEARING DOWN CLASS')
 
 
