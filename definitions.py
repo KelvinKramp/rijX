@@ -20,9 +20,9 @@ list_time_duration_choices = ["10 min", "15 min", "20 min", "25 min", "30 min"]
 
 list_services = [("medisch","Medische keuring €35,00"),
                  ('75+', '75+ rijbewijs A/B/BE €35,00'),
-                 ('groot', 'Rijbewijskeuring groot €35,00'),
-                 ('taxipas', 'Rijbewijskeuring taxipas €35,00'),
-                 ('touring', 'Rijbewijskeuring touringscarchauffeurs €35,00'),
+                 ('groot', 'Rijbewijskeuring groot €50,00'),
+                 ('taxipas', 'Rijbewijskeuring taxipas €50,00'),
+                 ('touring', 'Rijbewijskeuring touringscarchauffeurs €50,00'),
                  ('multiplekeuring', 'Meerdere keuringen €50,00'),
                  ('thuiskeuring', 'Thuiskeuring €75,00'),
                  ]

@@ -10,3 +10,4 @@ backup.csv
 app.sqlite3-journal
 app.sqlite3
 users.sqlite3
+setup_db.py
