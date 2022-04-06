@@ -36,10 +36,10 @@ landingpage_items = [{"item":"BIG geregistreerde artsen"},
 dict_payments_links = {
                 "medisch":"https://tikkie.me/pay/RijRdam/ucsqSFszXivucPSqxJgXKE",
                 '75+':'https://tikkie.me/pay/RijRdam/eVJuiK65iGQbP3NxSvb6Jb',
-                'groot': 'https://tikkie.me/pay/RijRdam/7RrXrKdTKC7ckUjAzM5NRX',
-                'taxipas': 'https://tikkie.me/pay/RijRdam/3MWN3ATsyiXjU3FTShEwXr',
-                'touring': 'https://tikkie.me/pay/RijRdam/a72TP7RzzMSrNaQazgcoAY',
-                'multiplekeuring': 'https://tikkie.me/pay/RijRdam/bAFvY84bg74J6XioYMnKk',
+                'groot': 'https://tikkie.me/pay/RijRdam/5Tw1pD5VhaqvxadXjT3VaZ',
+                'taxipas': 'https://tikkie.me/pay/RijRdam/uwY19wRbnunMdH6tPMsRuu',
+                'touring': 'https://tikkie.me/pay/RijRdam/oXz3nSdJDWknGvnfYJyqaH',
+                'multiplekeuring': 'https://tikkie.me/pay/RijRdam/66UkyC3CG5M6SnpdWpeEjg',
                 'thuiskeuring':'https://tikkie.me/pay/RijRdam/wwVEAfN8pkXKCzKXmokd2h'
                 }
 
