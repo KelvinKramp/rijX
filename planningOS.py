@@ -1,5 +1,5 @@
 from app import db, Slots, Appointments, Workers
-from datetime import datetime
+from datetime import datetime as dt
 from datetime import timedelta
 import pandas as pd
 import os
@@ -24,15 +24,15 @@ def conn_db():
 
 def create_slots(location, date, starttime, endtime, timeduration, worker, BIG):
     # Create datetime objects for each time (a and b)
-    dateTimeA = datetime.combine(date.today(), starttime)
-    dateTimeB = datetime.combine(date.today(), endtime)
+    dateTimeA = dt.combine(date.today(), starttime)
+    dateTimeB = dt.combine(date.today(), endtime)
     # Get the difference between datetimes (as timedelta)
     dateTimeDifference = dateTimeB - dateTimeA
     # max clients in given time: Divide difference in seconds by given timeduration per client in seconds
     number_clients = dateTimeDifference.total_seconds() / (timeduration * 60)
     # loop over max number of clients in given time
-    dt = datetime.datetime.now()
-    seq = int(dt.strftime("%Y%m%d%H%M%S"))
+    datetime_now = dt.now()
+    seq = int(datetime_now.strftime("%Y%m%d%H%M%S"))
     group_id = seq # create unique group ID based on datetime
     for i in range(abs(int(number_clients))):
         starttime = (dateTimeA + (i * timedelta(minutes=timeduration))).time()
