@@ -109,7 +109,7 @@ class TestFeedbackApp(unittest.TestCase):
         #
         # driver.maximize_window()
         # element = wait.until(EC.element_to_be_clickable((By.XPATH, submit)))
-        # driver.find_element(By.XPATH, submit).click()
+        # driver.find_element(By.XPATH, submit).click() # test
 
         time.sleep(5)
         page_source = driver.page_source
