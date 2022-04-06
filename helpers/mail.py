@@ -24,18 +24,30 @@ def get_credentials():
     SMTP_SERVER = os.environ.get("SMTP_SERVER")
     return EMAIL_ADDRESS, EMAIL_PASSWORD, SMTP_SERVER
 
-def send_mail(recipient, datetime_appointment=None, address=None, type_service=None, worker=None,
-              BIG=None, payment_link=None, attachment=None, failed=False, error_message=None):
+
+def send_mail(recipient, subject=None, datetime_appointment=None, address=None, type_service=None, worker=None,
+              BIG=None, payment_link=None, attachment=None, failed=False, message=None):
+
     # load credentials
     EMAIL_ADDRESS, EMAIL_PASSWORD, SMTP_SERVER = get_credentials()
 
-    # if failed sending send error message
-    if failed:
-        plain = error_message
+    # if subject in message, send normal mail
+    if subject:
+        plain = message
+        subject = subject
+        part = MIMEText(plain, 'plain')
+        msg = MIMEMultipart('alternative')
+        msg.attach(part)
+
+    # if backup failed sending send error message
+    elif failed:
+        plain = message
         subject = "BACKUP FAILED"
         part = MIMEText(plain, 'plain')
         msg = MIMEMultipart('alternative')
         msg.attach(part)
+
+    # if attachment (backup file)
     elif attachment:
         msg = MIMEMultipart()
         body = "Backup"
@@ -51,6 +63,8 @@ def send_mail(recipient, datetime_appointment=None, address=None, type_service=N
         file_name = "backup-"+date+"-"+str(dt.now().time())[0:5].replace(":", "-")
         part.add_header('Content-Disposition', "attachment; filename= %s" % file_name)
         msg.attach(part)
+
+    # otherwise send html plain mail, as an alternative send plain mail
     else:
         html = Template(confirmation_template).safe_substitute(date_123=datetime_appointment, address_123=address,
                                                                type_service=type_service, worker=worker, BIG=BIG,
@@ -65,17 +79,20 @@ def send_mail(recipient, datetime_appointment=None, address=None, type_service=N
         msg = MIMEMultipart('alternative')
         msg.attach(part2)
         msg.attach(part1)
+
+    # set message configuration
     msg['From'] = os.environ.get("SENDER")
     msg['Subject'] = subject
     msg['To'] = recipient
 
+    # send message
     with smtplib.SMTP_SSL(SMTP_SERVER, 465) as smtp:
         smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
         smtp.send_message(msg)
 
 if __name__ == "__main__":
     # TEST FAILED SENDING BACKUP
-    send_mail( "test@gmail.com", failed=True, error_message="test error message")
+    # send_mail( "test@gmail.com", failed=True, message="test error message")
 
     # TEST SENDING BACKUP
     # send_mail("test@gmail.com", attachment="backup.csv" )

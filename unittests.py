@@ -13,7 +13,7 @@ sleep_par_short = 0.1
 sleep_par_long = 10
 
 # INPUT VARIABLES
-test_page = "http://127.0.0.1:5000/"
+test_page = "https://www.rijrotterdam.nl/"
 test_name = "test_name"
 test_last_name = "test last name"
 test_email = "test_email@email.com"
@@ -34,7 +34,7 @@ button3 = "/html/body/section/form/div[3]/button[2]"
 submit = "/html/body/section/form/div[3]/button[3]"
 
 # CHECK KEYWORDS
-keyword1 = "De afspraak staat gepland"
+keyword1 = "Selecteer een afspraak"
 
 
 class TestFeedbackApp(unittest.TestCase):
@@ -43,7 +43,7 @@ class TestFeedbackApp(unittest.TestCase):
         print('SETTING UP TEST UNIT')
         global driver, wait
         # https://stackoverflow.com/questions/63783983/element-not-interactable-in-selenium-chrome-headless-mode
-        if "Users1" in os.getcwd():
+        if "Users" in os.getcwd():
             options = Options()
             options.add_argument("--window-size=1920,1080")
             options.add_argument("--start-maximized")
@@ -73,43 +73,43 @@ class TestFeedbackApp(unittest.TestCase):
         driver.implicitly_wait(5)
         element = wait.until(EC.element_to_be_clickable((By.XPATH, button2)))
         driver.implicitly_wait(5)
-        driver.maximize_window()
-
-        driver.find_element(By.CLASS_NAME, "next").click()
-
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, name)))
-        driver.find_element(By.XPATH, name).clear()
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, name)))
-        driver.find_element(By.XPATH, name).send_keys(test_name)
-
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, last_name)))
-        driver.find_element(By.XPATH, last_name).clear()
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, last_name)))
-        driver.find_element(By.XPATH, last_name).send_keys(test_last_name)
-
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, birthdate)))
-        driver.find_element(By.XPATH, birthdate).clear()
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, birthdate)))
-        driver.find_element(By.XPATH, birthdate).send_keys(test_birthdate)
-
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, email)))
-        driver.find_element(By.XPATH, email).clear()
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, email)))
-        driver.find_element(By.XPATH, email).send_keys(test_email)
-
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, phone_number)))
-        driver.find_element(By.XPATH, phone_number).clear()
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, phone_number)))
-        driver.find_element(By.XPATH, phone_number).send_keys(test_phonenumber)
-
-
-        driver.maximize_window()
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, button3)))
-        driver.find_element(By.XPATH, button2).click()
-
-        driver.maximize_window()
-        element = wait.until(EC.element_to_be_clickable((By.XPATH, submit)))
-        driver.find_element(By.XPATH, submit).click()
+        # driver.maximize_window()
+        #
+        # driver.find_element(By.CLASS_NAME, "next").click()
+        #
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, name)))
+        # driver.find_element(By.XPATH, name).clear()
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, name)))
+        # driver.find_element(By.XPATH, name).send_keys(test_name)
+        #
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, last_name)))
+        # driver.find_element(By.XPATH, last_name).clear()
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, last_name)))
+        # driver.find_element(By.XPATH, last_name).send_keys(test_last_name)
+        #
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, birthdate)))
+        # driver.find_element(By.XPATH, birthdate).clear()
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, birthdate)))
+        # driver.find_element(By.XPATH, birthdate).send_keys(test_birthdate)
+        #
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, email)))
+        # driver.find_element(By.XPATH, email).clear()
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, email)))
+        # driver.find_element(By.XPATH, email).send_keys(test_email)
+        #
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, phone_number)))
+        # driver.find_element(By.XPATH, phone_number).clear()
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, phone_number)))
+        # driver.find_element(By.XPATH, phone_number).send_keys(test_phonenumber)
+        #
+        #
+        # driver.maximize_window()
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, button3)))
+        # driver.find_element(By.XPATH, button2).click()
+        #
+        # driver.maximize_window()
+        # element = wait.until(EC.element_to_be_clickable((By.XPATH, submit)))
+        # driver.find_element(By.XPATH, submit).click()
 
         time.sleep(5)
         page_source = driver.page_source

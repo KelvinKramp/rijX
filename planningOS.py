@@ -7,6 +7,7 @@ import numpy as np
 from helpers.message_encryptor import encrypt_message, decrypt
 from helpers.mail import send_mail
 
+
 # MAKE DIFFERENCE BETWEEN PRODUCTION AND DEVELOPMENT ENVIRONMENT
 def conn_db():
     if "Users" in os.getcwd():
@@ -21,7 +22,6 @@ def conn_db():
     return con
 
 
-
 def create_slots(location, date, starttime, endtime, timeduration, worker, BIG):
     # Create datetime objects for each time (a and b)
     dateTimeA = datetime.combine(date.today(), starttime)
@@ -31,7 +31,9 @@ def create_slots(location, date, starttime, endtime, timeduration, worker, BIG):
     # max clients in given time: Divide difference in seconds by given timeduration per client in seconds
     number_clients = dateTimeDifference.total_seconds() / (timeduration * 60)
     # loop over max number of clients in given time
-    group_id = np.random.randint(0,500)
+    dt = datetime.datetime.now()
+    seq = int(dt.strftime("%Y%m%d%H%M%S"))
+    group_id = seq # create unique group ID based on datetime
     for i in range(abs(int(number_clients))):
         starttime = (dateTimeA + (i * timedelta(minutes=timeduration))).time()
         endtime = (dateTimeA + ((i + 1) * timedelta(minutes=timeduration))).time()
@@ -153,7 +155,7 @@ if __name__ == '__main__':
     from datetime import timedelta
     from app import db, Slots
     date = dt.now()
-    data = Slots("Rdam", date, dt.now().time(), (dt.now() + timedelta(minutes=60)).time(), 10, "ASDSA")
+    data = Slots("Rdam", date, dt.now().time(), (dt.now() + timedelta(minutes=60)).time(), 10, "TEST DOCTOR")
     db.session.add(data)
     db.session.commit()
-    create_slots("Rdam", date, dt.now().time(), (dt.now() + timedelta(minutes=60)).time(), 10, "ASDSA", "123")
+    create_slots("Rdam", date, dt.now().time(), (dt.now() + timedelta(minutes=60)).time(), 10, "TEST DOCTOR", "123234123")

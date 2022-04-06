@@ -20,18 +20,18 @@ Waarom rijrotterdam?
 """
 
 text2 = """
-We hebben gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als zorgverleners vinden wij het onverantwoord om een relatief groot bedrag te vragen voor een keuring die gemiddeld 5 tot 10 minuten duurt. 
-Van dit geld kan u andere dingen doen die belangrijk zijn voor u gezondheid. Door RijRotterdam op te zetten willen we bijdragen aan uw algemene welzijn. 
+We hebben gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als zorgverleners vinden wij het onverantwoord om een relatief groot bedrag te vragen voor een vaak korte keuring. 
+RijRotterdam doet keuringen voor een eerlijke prijs. Van het geld wat u overhoud kan u andere dingen doen die belangrijk zijn voor u gezondheid.  
 <br>
 <br>
 """
 
 title3 = """Hoe maak ik een afspraak?"""
 text3 = """
-U kan een afspraak maken of komen naar ons inloopspreekuur. Op dit moment zijn we werkzaam in Rotterdam en Capelle aan den IJssel. 
+U kan een afspraak maken of komen naar ons inloopspreekuur. Op dit moment zijn we werkzaam in Rotterdam Overschie, Rotterdam Feyenoord en Rotterdam Oost/Capelle aan den IJssel. 
 <br>
 <br>
-De keuring bestaat uit een aantal korte vragen en onderzoeken om uw gezondheid te evalueren. De keuring duurt 5 tot 15 minuten als u gezond bent en u uzelf goed heeft voorbereid. 
+De keuring bestaat uit een aantal korte vragen en onderzoeken om uw gezondheid te evalueren. De keuring duurt 10 tot 15 minuten als u gezond bent en u uzelf goed heeft voorbereid. 
 Bent u zaken in de voorbereiding vergeten of heeft u één of meerdere aandoeningen dan kan het langer duren. 
 <br>
 
@@ -60,7 +60,7 @@ Het verslag hoeft u niet zelf in te vullen dit doet de arts.
 <br>
 <br>
 Op het keurverslag staat een ZD-code. Deze neemt u mee naar de keuring bij RijRotterdam. 
-Als u een keurverslag heeft gekregen voor een medisch specialist (bv. oogarts, cardioloog of psychiater) dan moet u bij een medisch specialist een afspraak maken.   
+Als u een keurverslag heeft gekregen voor een medisch specialist (bv. oogarts, cardioloog of psychiater) dan moet u niet bij ons, maar bij een medisch specialist een afspraak maken.   
 """
 
 title5 = """ Wat neem ik mee?"""
@@ -100,7 +100,7 @@ in de buurt van zorgpersoneel (de zogenaamde "witte-jassen hypertensie"). Dit ka
 
 title6 = """Hoe krijg ik de uitslag? """
 text6 = """Vanaf het moment dat het keuringsrapport is ontvangen door het CBR is de status van uw aanvraag binnen één 
-week te zien in Mijn CBR. Bent u gezond en zijn er geen aanvullende vragen naar aanleiding van de keuring dan duurt het op basis van 
+week te zien in <u><a href="https://www.cbr.nl/nl/service/nl/artikel/inloggen-op-mijn-cbr-2.html"> Mijn CBR</a></u>. Bent u gezond en zijn er geen aanvullende vragen naar aanleiding van de keuring dan duurt het op basis van 
 onze ervaring een aantal dagen voordat het CBR reageert. Heeft het CBR extra vragen dan kan u een foto van de aanvullende vragen 
 mailen via onze beveiligde email platform zodat wij zo snel mogelijk de aanvullende informatie aan het CBR kunnen doorgeven.
 
@@ -171,8 +171,8 @@ Mijn keuringsverslag
 """
 
 text1_mijnkeuring= """
-Medische metingen die plaats vinden zijn uw eigendom, u heeft daarom altijd recht op inzage. Wij maken de inzage makkelijk voor u met mijnkeuringsverslag. 
-Na een keuring kan u uw rapport via deze pagina opvragen. U ontvangt het rapport wat naar het CBR is gegaan via een beveilgde e-mail. 
+Medische metingen die plaats vinden zijn uw eigendom, u heeft daarom altijd recht op inzage. Wij maken de inzage makkelijk voor u met Mijnkeuringsverslag. 
+Na een keuring kan u uw rapport via deze pagina opvragen. Via een beveilgde e-mail ontvangt u het rapport dat naar het CBR is gegaan na de keuring. 
 """
 
 texts_mijnkeuring = {
@@ -221,7 +221,7 @@ Wil je helemaal zelf aan de slag, gebruik onze software. Je kan alles aanpassen 
 en een Google Ads account zodat mensen jouw dienst kunnen vinden. De instructies voor het lanceren van jouw website kan je <u><a href="https://github.com/KelvinKramp/rijX" target=_blank>hier<a></u> vinden. 
 Kom je er niet uit vraag ons om help.
 <br><br>
-Door betere software sta je in direct contact met patienten op ale niveaus. Dit betekent voor patienten een veilige en moeiteloze afhandeling en voor jou minder omslachtigheid. 
+Door betere software sta je in direct contact met patienten op ale niveaus. Dit betekent voor patienten een veilige en moeiteloze afhandeling en voor jou minder omslachtigheid! 
 """
 
 texts_aboutus = {

@@ -157,6 +157,7 @@ admin = Admin(secureApp, name='Admin', base_template='my_master.html', template_
 
 ########################################################################################################################
 
+
 # Add the context processor to make variables also accessible to /templates/security/*.html files that extend admin/master.html
 @security.context_processor
 def security_context_processor():
@@ -167,6 +168,7 @@ def security_context_processor():
         h = admin_helpers
     )
 
+
 # Define the index route
 @secureApp.route('/')
 @secureApp.route('/index')
@@ -176,9 +178,11 @@ def index():
                            text=texts_landingpage, landingpage_items=landingpage_items,
                            welcome_message=welcome_message_whatsapp)
 
+
 @secureApp.route('/inloopspreekuur')
 def inloopspreekuur():
     return render_template('inloopspreekuur.html', nav_bar_items=nav_bar_items, page="Inloopspreekuur", text=texts_inloopspreekuur)
+
 
 @secureApp.route('/zoekkeuring')
 def zoekkeuring():
@@ -188,6 +192,7 @@ def zoekkeuring():
 @secureApp.route('/mijnverslag')
 def mijnverslag():
     return render_template('mijnverslag.html', nav_bar_items=nav_bar_items, page="Uw keuringsverslag", text=texts_mijnkeuring)
+
 
 @secureApp.route('/inhoudkeuring')
 def inhoudkeuring():
@@ -222,7 +227,6 @@ def search_results(search):
     r = requests.post(QA_SERVER_URL, json={'question': search_string})
     list_answers = r.content
     list_answers = list_answers.decode('UTF-8')
-    null = np.nan
     list_answers = eval(list_answers.encode('unicode_escape'))
     # print(list_answers)
     return render_template('search.html', form=search, answers=list_answers, nav_bar_items=nav_bar_items, page="Zoek keuring")
@@ -233,8 +237,6 @@ def search_results(search):
 @app.route("/booking", methods=['GET', 'POST'])
 def booking():
     form = LocationDateForm()
-    # l = Slots.query.all()
-    # form.location.choices = [(i.id, str(i.location.split(",")[-1])+" | "+ str(i.date.strftime('%d-%m-%Y'))+ " " +str(i.starttime)[0:5]) for i in l]
     l = get_from_db(table="slots", form="earliest-time-slots-list")
     form.location.choices = [
         (i[0], str(i[1].split(",")[-1]).strip() + " | " + str(parse(str(i[2])).strftime('%d-%m-%Y')) + " " + str(i[3].time())[0:5])
@@ -284,7 +286,7 @@ def confirmation():
     type_service = dict(list_services).get(type_service)
     data = {"email":email ,"worker":worker,"address":address, "date":datetime_appointment, "type_service": type_service,
             "payment_link":payment_link, "BIG":BIG} # added extra data to form for future corrections if necessary
-    send_mail(email, datetime_appointment=datetime_appointment, type_service=type_service.split("€")[0],address=address,
+    send_mail(email, datetime_appointment=datetime_appointment, type_service=type_service.split("€")[0][:-1],address=address,
               worker=worker, BIG=BIG, payment_link=payment_link,attachment=None)
                 # remove euro sign from type service to prevent errors
     df = get_from_db()

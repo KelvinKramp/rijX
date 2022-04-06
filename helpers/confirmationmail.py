@@ -259,13 +259,17 @@ confirmation_template = """<!DOCTYPE html>
 
 
 if __name__ == '__main__':
-    datetime = "1-1-2022"
-    address = "test_address"
-    type_service ="medische keuring"
-    worker = "dr. Test"
-    BIG="123123"
-    payment_link= "https://tikkie.me/pay/RijRdam/bAFvY84bg74J6XioYMnKk"
+    # HTML mail test
+    # datetime = "1-1-2022"
+    # address = "test_address"
+    # type_service ="medische keuring"
+    # worker = "dr. Test"
+    # BIG="123123"
+    # payment_link= "https://tikkie.me/testlink"
     # print(Template(confirmation_template).safe_substitute(date_123=datetime, address_123=address, type_service = type_service, worker=worker, BIG=BIG, payment_link=payment_link))
-    plain = "Uw afpsraak is gemaakt voor {datetime} op {address} voor type keuring {type_service}. U wordt geholpen door {worker} met BIG {BIG}. " \
-            "Dit is de betaallink: {payment_link}. Klik op de link om te betalen en de afspraak te bevestigen.".format(datetime=datetime,address=address, type_service=type_service, worker=worker, BIG=BIG, payment_link=payment_link)
-    print(plain)
+
+    # Plain mail test
+    # plain = "Uw afpsraak is gemaakt voor {datetime} op {address} voor type keuring {type_service}. U wordt geholpen door {worker} met BIG {BIG}. " \
+    #         "Dit is de betaallink: {payment_link}. Klik op de link om te betalen en de afspraak te bevestigen.".format(datetime=datetime,address=address, type_service=type_service, worker=worker, BIG=BIG, payment_link=payment_link)
+    # print(plain)
+    pass
