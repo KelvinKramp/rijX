@@ -1,7 +1,97 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 , maximum-scale=1"
+    />
 
-{% block content %}
-<form action="{{ url_for('confirmation') }}" method="POST">
+<!--    <link rel="stylesheet" href="../assets/css/index.css" />-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations_master.css') }}">
+    <!-- gsap link -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+      <!-- Global site tag (gtag.js) - Google Ads: 1026266099 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1026266099"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-1026266099');
+    </script>
+
+    <!-- Event snippet for Website sale conversion page -->
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-1026266099/wcX-COGByLADEPOnrukD',
+          'transaction_id': ''
+      });
+    </script>
+
+
+    <!-- jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+    <!-- animate.css cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+
+    <!-- Maseter Animation css  -->
+<!--    <link rel="stylesheet" href="../assets/css/animations_master.css" />-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations_master.css') }}">
+
+    <title>RijRotterdam</title>
+  </head>
+ <body>
+    <nav class="nav_side">
+      <a href="/" class="logo"> RijRotterdam </a>
+      <nav>
+            {% for nav_bar_item in nav_bar_items %}
+                {% if page == nav_bar_item.title %}
+                    <li class="active"><a href={{url_for(nav_bar_item.url)}}>{{nav_bar_item.title}}</a></li>
+                {% else %}
+                  <li><a href="{{nav_bar_item.url}}">{{nav_bar_item.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+      </nav>
+    </nav>
+
+    <div class="header-container">
+      <header>
+        <a href="/index" class="logo"> RijRotterdam </a>
+                    <ul class="nav navbar-nav navbar-right">
+                        {% for nav_bar_item in nav_bar_items %}
+                            {% if page == nav_bar_item.title %}
+                                <li class="active"><a href={{url_for(nav_bar_item.url)}}>{{nav_bar_item.title}}</a></li>
+                            {% else %}
+                              <li><a href="{{nav_bar_item.url}}">{{nav_bar_item.title}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+      </header>
+    </div>
+    <!-- mobile responsive header -->
+    <div class="mobile-responsive-header">
+      <a href="/" class="logo"> RijRotterdam </a>
+      <span class="burger-menu testing">
+        <img src="/static/img/buger_icon_black.svg" alt="" />
+      </span>
+    </div>
+
+
+    <form action="{{ url_for('confirmation') }}" method="POST">
     <section class="about-section-wrapper first_about_section_wrapper"  id="more">
       <section class="about-section">
         <div class="about-section-right">
@@ -15,6 +105,75 @@
                         <p>Het kan 5 tot 10 minnuten duren voordat u de mail ontvangt. Kan u de mail niet vinden, kijk dan in uw spambox of neem contact met ons op.</p>
         </div>
       </section>
-</section>
-</form>
-{% endblock content %}
+    </section>
+    </form>
+
+     <!-- Footer Area -->
+    <footer class="patient-peachy-footer">
+      <img
+        src="assets/img/footer-shape-1.svg"
+        alt=""
+        class="footer-shape-1"
+      />
+      <img
+        src="assets/img/footer-shape-2.svg"
+        alt=""
+        class="footer-shape-2"
+      />
+      <img
+        src="assets/img/footer-shape-3.svg"
+        alt=""
+        class="footer-shape-3"
+      />
+<!--      <h1 class="footer-main-heading" href="url_for('ooking)">Maak een afspraak</h1>-->
+      <div class="footer-links">
+        <div class="first-col footer-col footer-presentation">
+          <h2>Rijrotterdam</h2>
+          <small
+            >Kundige artsen. Korte lijnen. Scherpe prijzen.</small
+          >
+        </div>
+        <nav class="second-col footer-col">
+          <li>Rijbewijskeuringen in Rotterdam</li>
+                        {% for nav_bar_item in nav_bar_items %}
+                            {% if page == nav_bar_item.title %}
+                                <li class="active"><a href={{url_for(nav_bar_item.url)}}>{{nav_bar_item.title}}</a></li>
+                            {% else %}
+                              <li><a href="{{nav_bar_item.url}}">{{nav_bar_item.title}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+        </nav>
+        <nav class="third-col footer-col">
+          <li><a href="{{url_for('contact')}}">Contact</a></li>
+            <li><a href="/static/files/AlgemeneVoorwaarden.pdf">Algemente voorwaarden</a></li>
+          <li><a href="/static/files/PrivacyStatement.pdf">Privacy statement</a></li>
+
+<!--          <li><a href= target="_blank">Whatsapp</a></li>-->
+<!--          <li><a href="mailto:info@rijkeuringrotterdam.nl">E-mail</a></li>-->
+<!--          <li><a href="/practice/contact">Practice Support</a></li>-->
+<!--          <li><a href="/practice/faq">Practice FAQ</a></li>-->
+        </nav>
+        <nav class="fourth-col footer-col" style="justify-content:right; text-align:right;">
+            <li>@2022 RijRotterdam</li>
+            <li></li>
+            <li>Onderdeel van Medical Progress</li>
+            <li>KVK 77359089</li>
+            <li>AGB 84058350</li>
+            <li>IBAN NL92ABNA0884505820</li>
+            <li>BTW-nummer NL003191397B73</li>
+<!--          <li>RijRotterdam</li>-->
+<!--          <li><a href="#">Algemente voorwaarden</a></li>-->
+<!--          <li><a href="#">Privacy statement</a></li>-->
+        </nav>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="/static/js/home.js"></script>
+
+    <!-- waypoint CDN for animatioins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="/static/js/animation-master/animation-master.js"></script>
+  </body>
+</html>
+
