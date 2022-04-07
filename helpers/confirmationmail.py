@@ -225,7 +225,7 @@ confirmation_template = """<!DOCTYPE html>
           <!-- start permission -->
           <tr>
             <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
-              <p style="margin: 0;">U ontvangt deze email omdat u een keuring heeft aangevraagd via rijrotterdam.nl. Als u niet de bedoelde ontvanger bent van deze email dan kunt u deze email gerust verwijderen.</p>
+              <p style="margin: 0;">U ontvangt deze e-mail omdat u een keuring heeft aangevraagd via rijrotterdam.nl. Als u niet de bedoelde ontvanger bent van deze email dan kunt u deze email gerust verwijderen.</p>
               <br>
               <p style="margin: 0;">U wordt verzocht om dit bericht niet te beantwoorden. E-mailberichten die naar dit adres worden verzonden, worden niet beantwoord.</p>  
             </td>

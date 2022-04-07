@@ -16,23 +16,24 @@ Door regelzaken te automatiseren en de management lagen eruit te halen kunnen we
 """
 
 title2 = """
-Waarom rijrotterdam?
+Waarom RijRotterdam?
 """
 
 text2 = """
-We hebben gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als zorgverleners vinden wij het onverantwoord om een relatief groot bedrag te vragen voor een vaak korte keuring. 
-RijRotterdam doet keuringen voor een eerlijke prijs. Van het geld wat u overhoud kan u andere dingen doen die belangrijk zijn voor u gezondheid.  
+We hebben gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als zorgverleners vinden wij het onverantwoord om een relatief hoog bedrag te vragen voor een vaak korte rijbewijskeuring. 
+RijRotterdam doet keuringen voor een eerlijke prijs. Van het geld dat u overhoudt, kunt u andere dingen doen die belangrijk zijn voor uw gezondheid. 
 <br>
 <br>
 """
 
 title3 = """Hoe maak ik een afspraak?"""
 text3 = """
-U kan een afspraak maken of komen naar ons inloopspreekuur. Op dit moment zijn we werkzaam in Rotterdam Overschie, Rotterdam Feyenoord en Rotterdam Oost/Capelle aan den IJssel. 
+U kan een afspraak maken of naar ons inloopspreekuur komen. Momenteel zijn we werkzaam in Rotterdam Overschie, Rotterdam Feyenoord en Rotterdam Oost/Capelle aan den IJssel.
 <br>
 <br>
-De keuring bestaat uit een aantal korte vragen en onderzoeken om uw gezondheid te evalueren. De keuring duurt 10 tot 15 minuten als u gezond bent en u uzelf goed heeft voorbereid. 
-Bent u zaken in de voorbereiding vergeten of heeft u één of meerdere aandoeningen dan kan het langer duren. 
+De keuring bestaat uit een aantal korte vragen en onderzoeken om uw gezondheid te evalueren. De keuring duurt 10 tot 15 
+minuten als u gezond bent en uzelf goed heeft voorbereid. Bent u zaken in de voorbereiding vergeten of heeft u één of 
+meerdere aandoeningen, dan kan de keuring langer duren.
 <br>
 
 <br>
@@ -70,39 +71,37 @@ text5 = """U neemt de volgende zaken mee naar een keuring:
 <ul>
 <li><h3>Uw ZD-code</h3></li>
 <p>
-Neem het formulier met de ZD-code mee. ZD staat voor ZorgDomein. Dit is het systeem waarmee de meeste artsen en specialisten digitaal met elkaar communiceren. 
-Eventueel kan u de ZD-code ook later aan ons doorgeven, maar de verwerking van uw keuring duurt dan langer. 
-Als u komt voor een taxipas of touringscarchauffeurs keuring dan heeft u geen ZD-code nodig, maar dan neemt u de papieren gezondheidsverklaring en uw keuringsformulier mee. 
+Neem het formulier met de ZD-code mee. ZD staat voor ZorgDomein. Dit is het systeem waarmee de meeste artsen en specialisten digitaal met elkaar communiceren. Eventueel kunt u de ZD-code ook later aan ons doorgeven. De verwerking van uw keuring duurt daardoor wel langer. Als u komt voor een taxipas- of touringcarchauffeurskeuring, dan heeft u geen ZD-code nodig, maar u neemt dan uw gezondheidsverklaring en keuringsformulier mee.
 </p><br>
 <li><h3>Uw rijbewijs of paspoort</h3></li>
 <p>
-We hebben een identiteitsbewijs nodig om te verifieren dat u het bent.  
+We hebben een identiteitsbewijs nodig om te verifiëren dat u het bent. 
 </p><br>
 <li><h3>Uw bril</h3></li>
 <p>
-Alleen als u uw bril nodig heeft voor veraf (“tv-bril”). De bril is nodig om u zicht te meten. 
+Neem deze alleen mee als u uw bril nodig heeft voor veraf (tv-bril). De bril is nodig om uw zicht te meten.
 </p><br>
 <li><h3>Uw urine</h3></li>
 <p>
-Neem urine mee in een potje. U kan een potje bij de apotheek of drogist kopen. Als u geen urine meeneemt dan zal u moeten plassen in een potje tijdens de keuring en duurt de keuring langer. 
+Neem uw eigen urine mee in een potje. U kan een potje bij de apotheek of drogist kopen. Als u geen urine meeneemt, dan zal u tijdens de keuring moeten plassen in een potje. De keuring zal hierdoor langer duren.  
 </p><br>
 <li><h3>Medicatie overzicht</h3></li>
 <p>
-Indien u voor meer dan alleen een 75+ keuring of medische keuring komt neem dan uw medicatie-overzicht of medicijn doosjes mee (aan te vragen bij huisarts / apotheek)
+Indien u voor meer dan alleen een 75+-keuring of medische keuring komt, neem dan uw medicatieoverzicht of medicijndoosjes mee (aan te vragen bij huisarts/ apotheek).
 </p><br>
 <li><h3>Indien nodig, bloeddruk meting huisarts</h3></li>
 <p>
-Het is niet noodzakelijk een bloeddruk meting van de huisarts of thuis mee te nemen. Echter kan het wel zaken vergemakkelijken. Sommige mensen hebben namelijk een hoge bloeddruk 
-in de buurt van zorgpersoneel (de zogenaamde "witte-jassen hypertensie"). Dit kan leiden tot een langere tijdsduur van de keuring of aanvullende vragen van het CBR. 
+Het is niet noodzakelijk een bloeddrukmeting van de huisarts of thuis mee te nemen. Echter, het kan wel zaken vergemakkelijken. Sommige mensen hebben namelijk een hoge bloeddruk in de buurt van zorgpersoneel (de zogenaamde ‘witte-jassen hypertensie’). Dit kan ertoe leiden dat de keuring langer duurt of dat het CBR aanvullende vragen stelt.
 </p><br>
 </ul>
 """
 
 title6 = """Hoe krijg ik de uitslag? """
-text6 = """Vanaf het moment dat het keuringsrapport is ontvangen door het CBR is de status van uw aanvraag binnen één 
+text6 = """
+Vanaf het moment dat het keuringsrapport is ontvangen door het CBR is de status van uw aanvraag binnen één 
 week te zien in <u><a href="https://www.cbr.nl/nl/service/nl/artikel/inloggen-op-mijn-cbr-2.html"> Mijn CBR</a></u>. Bent u gezond en zijn er geen aanvullende vragen naar aanleiding van de keuring dan duurt het op basis van 
-onze ervaring een aantal dagen voordat het CBR reageert. Heeft het CBR extra vragen dan kan u een foto van de aanvullende vragen 
-mailen via onze beveiligde email platform zodat wij zo snel mogelijk de aanvullende informatie aan het CBR kunnen doorgeven.
+onze ervaring een aantal dagen voordat het CBR reageert. Heeft het CBR extra vragen dan kunt u de aanvullende vragen 
+mailen via onze beveiligde e-mail platform zodat wij zo snel mogelijk de aanvullende informatie aan het CBR kunnen doorgeven.
 
 <br>
 <br>
@@ -120,7 +119,8 @@ title1_inloop = """
 Datums inloopspreekuur
 """
 
-text1_inloop = """Op dit moment staan onderstaande inloopspreekuren gepland. Let op dat u niet altijd geholpen kan worden bij drukte. Als u zekerheid wilt maak dan een afspraak.
+text1_inloop = """
+Op dit moment staan onderstaande inloopspreekuren gepland. Houd er rekening mee dat in het geval van drukte, wij u niet altijd kunnen helpen. Als u gegarandeerd wilt zijn van een afspraak, dan raden wij u aan deze van tevoren bij ons in te plannen. 
 <br><br>
 <h3>
 Corkstraat 46, 3047AC Rotterdam Overschie:
@@ -171,8 +171,7 @@ Mijn keuringsverslag
 """
 
 text1_mijnkeuring= """
-Medische metingen die plaats vinden zijn uw eigendom, u heeft daarom altijd recht op inzage. Wij maken de inzage makkelijk voor u met Mijnkeuringsverslag. 
-Na een keuring kan u uw rapport via deze pagina opvragen. Via een beveilgde e-mail ontvangt u het rapport dat naar het CBR is gegaan na de keuring. 
+Medische metingen die plaatsvinden zijn uw eigendom. U heeft daarom altijd recht op inzage. Wij maken de inzage voor u makkelijk met Mijnkeuringsverslag. Na een keuring kan u uw rapport via deze pagina opvragen. Via een beveilgde e-mail ontvangt u het rapport dat na de keuring naar het CBR is verstuurd.
 """
 
 texts_mijnkeuring = {
@@ -184,9 +183,8 @@ title1b_aboutus = """
 Een betere vorm van zorg 
 """
 text1_aboutus = """
-Technologie staat vaak in de weg in plaats van dat het ons helpt. 
-Dit kan en moet anders. Wij zijn een team dat een betere vorm van zorg wil bieden. 
-Ons doel is om artsen en patienten dichter bij elkaar te brengen.
+Technologie staat ons vaak in de weg in plaats van dat het ons helpt. Dit kan en moet anders. Wij zijn een organisatie 
+die een betere vorm van zorg wil bieden. Ons doel is om artsen en patiënten dichter bij elkaar te brengen.
 <br><br>
 Ons team bestaat uit: 
 <br>
@@ -201,7 +199,7 @@ Bevordering van het welzijn
 """
 
 text2_aboutus = """
-We willen dat minder patienten en artsen afhankelijk worden van het huidige complexe en logge zorgsysteem. 
+We willen dat minder patiënten en artsen afhankelijk worden van het huidige complexe en logge zorgsysteem. 
 We geloven dat het democratiseren van de technische middelen die gezondheid bevorderen zal leiden tot kwalitatief betere zorg op de lange termijn.
 Hierbij staat privacy hoog in het vaandel. In tegenstelling tot vele andere concurrenten die rijbewijskeuringen doen
 maken wij gebruik van beveiligde en versleutelde digitale communicatie.  
@@ -216,12 +214,12 @@ Overzichtelijke management systemen
 """
 
 text3_aboutus = """
-Wil je bij ons komen werken als arts, stuur dan een bericht via onze contactpagina. We hebben een overzichtelijk boekingssysteem gemaakt door en voor artsen. Bij ons zijn er daarnaast geen verborgen overhead kosten! <br><br>
-Wil je helemaal zelf aan de slag, gebruik onze software. Je kan alles aanpassen voor jouw persoonlijke visie op verbetering van de zorg. Je hebt een ZorgDomein en ZorgMail account nodig voor de communicatie 
-en een Google Ads account zodat mensen jouw dienst kunnen vinden. De gedetailleerde instructies voor het lanceren van jouw website kan je <u><a href="https://github.com/KelvinKramp/rijX" target=_blank>hier<a></u> vinden. 
-Kom je er niet uit vraag ons om help.
+Wil je helemaal zelf aan de slag, gebruik dan onze software. Je kan alles aanpassen voor jouw persoonlijke visie op 
+verbetering van de zorg. Je hebt een ZorgDomein- en ZorgMail- account nodig voor de communicatie en daarnaast 
+een Google Ads-account, zodat mensen jouw dienst kunnen vinden. De gedetailleerde instructies voor het lanceren
+ van jouw website kan je <u><a href="https://github.com/KelvinKramp/rijX" target=_blank>hier<a></u> vinden. Kom je er niet uit? Vraag ons om hulp.
 <br><br>
-Door betere software sta je in direct contact met patienten op ale niveaus. Dit betekent voor patienten een veilige en moeiteloze afhandeling en voor jou minder omslachtigheid! 
+Door betere software sta je in direct contact met patiënten op ale niveaus. Dit betekent voor patiënten een veilige en moeiteloze afhandeling en voor jou minder omslachtigheid! 
 """
 
 texts_aboutus = {
@@ -246,22 +244,22 @@ title1b_inhoudkeuring = """
 text1_inhoudkeuring = """
 <h3>Tijdens de keuring</h3>
 <p>
-Tijdens de keuring wordt gekeken of iemand aan de normen voldoet om zelfstandig en veilig een voertuig te besturen. De arts beoordeelt de algemene lichamelijke en geestelijke conditie. Indien nodig wordt er gekeken naar specifieke onderdelen van de gezondheid zoals het functioneren van armen, benen of de wervelkolom. Daarnaast wordt de bloeddruk gemeten en het bloed of de urine gecontroleerd op diabetes. Bij de rijbewijskeuring test de arts ook de gezichtsscherpte (zonder en met eventuele bril of contactlenzen).
+Tijdens de keuring wordt gekeken of iemand aan de normen voldoet om zelfstandig en veilig een voertuig te besturen. De arts beoordeelt de algemene lichamelijke en geestelijke conditie. Indien nodig wordt gekeken naar specifieke onderdelen van de gezondheid, zoals het functioneren van de armen, benen of wervelkolom. Daarnaast wordt de bloeddruk gemeten en het bloed of de urine gecontroleerd op diabetes. Bij de rijbewijskeuring test de arts ook de gezichtsscherpte (zonder en met eventuele bril of contactlenzen).
 </p>
 <br>
 <h3>Medicatie</h3>
 <p>
-Neem een lijst met medicijnen mee als u deze gebruikt en u voor een keuring voor diabetes, nieren, psychiatrie, longen of overige ziekten komt. Als u komt voor een keuring nieren neem dan ook de restfunctie van de nieren mee. U kan een uitdraai hiervan vragen aan uw internist, nefroloog of huisarts.  
+Neem een lijst mee van de medicijnen die u gebruikt als u voor een keuring voor diabetes, nieren, psychiatrie, longen of overige ziekten komt. Als u komt voor een keuring van de nieren, neem dan ook de restfunctie van de nieren mee. U kan een uitdraai hiervan vragen aan uw internist, nefroloog of huisarts.  
 </p>
 <br>
 <h3>Bloeddruk</h3>
 <p>
-De bloeddruk kan hoger dan gewoonlijk zijn tijdens een keuring. Dit noemt met "witte-jassen hypertensie". U hoeft zich niet per se gespannen of gestresst te voelen om een hoge bloeddruk te hebben. Dit kan zich ook voordoen terwijl u zich niet gespannen voelt. De mate van stress die u ervaart is geen goede indicator voor de bloeddruk. Als u bekend bent met een hoge bloeddruk is het handig om thuismeting mee te nemen of een meting van de huisarts mee te nemen. De thuismetingen moeten wel zijn gedaan met een geijkte bloeddrukmeter. Dit betekent dat de bloeddrukmeter moet zijn gecontroleerd door de huisarts om te zien of er meetfouten in zitten. 
+De bloeddruk kan tijdens een keuring hoger zijn dan gewoonlijk. Dit noemt men ‘witte-jassen hypertensie’. U hoeft zich niet per se gespannen of gestrest te voelen om een hoge bloeddruk te hebben. Dit kan zich namelijk ook voordoen terwijl u zich niet gespannen voelt. De mate van stress die u ervaart is geen goede indicator voor de bloeddruk. Als u bekend bent met een hoge bloeddruk, is het handig om de thuismeting mee te nemen of een meting van de huisarts mee te nemen. De thuismetingen moeten wel zijn gedaan met een geijkte bloeddrukmeter. Dit betekent dat de bloeddrukmeter moet zijn gecontroleerd door de huisarts om te zien of er meetfouten in zitten. 
 </p>
 <br>
 <h3>Urine</h3>
 <p>
-De urine wordt onderzocht op suiker. Als u suikerziekte (diabetes) heeft dan plast u meer suiker uit dan normaal. Deze verhoogde hoeveelheid suiker in de urine kan terug worden gedetecteerd in de urine. 
+De urine wordt onderzocht op suiker. Als u suikerziekte (diabetes) heeft ,dan plast u meer suiker uit dan normaal. Deze verhoogde hoeveelheid suiker in de urine kan worden gedetecteerd in de urine.
 </p>
 <br>
 <br>
@@ -281,8 +279,7 @@ border-radius: 10px;"
 <br>
 <h3>Gezichtsscherpte</h3>
 <p>
-Tijdens de keuring wordt ook gekeken naar uw gezichtsscherpte. Er wordt een zogenaamde visuskaart op afstand gebruikt. Hieronder ziet u hoe het zicht wordt getest. U vertelt telkens waar de opening zit: boven, links, rechts of onder. 
-Als u boven de 0.5 scoort tijdens deze test dan is uw gezichtsscherpte voldoende voor het autorijden. Lager scoren dan de norm kan aan verschillende zaken liggen. Het kan zijn dat uw bril of lenzen niet goed zijn afgesteld, maar wat we ook vaak tegenkomen is staar. Dit is een aandoening die veel voorkomt bij ouderen en goed te behandelen is door een oogarts. Om te vermijden dat men afgekeurd wordt op een onvoldoende gezichtsvermogen kan men van tevoren naar een opticien gaan. 
+Tijdens de keuring wordt ook gekeken naar uw gezichtsscherpte. Er wordt een zogenaamde visuskaart op afstand gebruikt. Hieronder ziet u hoe het zicht wordt getest. U vertelt telkens waar de opening zit: boven, links, rechts of onder. Als u boven de 0.5 scoort tijdens deze test, dan is uw gezichtsscherpte voldoende om te mogen autorijden. Lager scoren dan de norm kan aan verschillende zaken liggen. Het kan zijn dat uw bril of lenzen niet goed zijn afgesteld, maar wat we ook vaak tegenkomen is staar. Dit is een aandoening die veel voorkomt bij ouderen en goed te behandelen is door een oogarts. Om te vermijden dat men wordt afgekeurd op een onvoldoende gezichtsvermogen, kan men van tevoren een oogmeting laten doen bij een opticien.
 </p>
 <br>
 <p>
