@@ -5,7 +5,7 @@ welcome_message_whatsapp = urllib.parse.quote(welcome_message_whatsapp, safe='')
 welcome_message_whatsapp = "https://wa.me/31683825634?text=" + welcome_message_whatsapp
 
 title1 = """
-Kundige artsen, korte lijnen, scherpe prijzen.
+Kundige artsen, korte lijntjes, scherpe prijzen.
 """
 text1 = """
 Een rijbewijskeuring voorbereiden kan ingewikkeld zijn. RijRotterdam is opgezet om u zo goed mogelijk door een rijbewijskeuring te begeleiden. 
@@ -216,9 +216,9 @@ Overzichtelijke management systemen
 """
 
 text3_aboutus = """
-Wil je bij ons komen werken als arts, stuur dan een bericht via onze contactpagina. We hebben een overzichtelijk boekingssysteem gemaakt door en voor artsen. Bij ons zijn er geen verborgen overhead kosten! <br><br>
+Wil je bij ons komen werken als arts, stuur dan een bericht via onze contactpagina. We hebben een overzichtelijk boekingssysteem gemaakt door en voor artsen. Bij ons zijn er daarnaast geen verborgen overhead kosten! <br><br>
 Wil je helemaal zelf aan de slag, gebruik onze software. Je kan alles aanpassen voor jouw persoonlijke visie op verbetering van de zorg. Je hebt een ZorgDomein en ZorgMail account nodig voor de communicatie 
-en een Google Ads account zodat mensen jouw dienst kunnen vinden. De instructies voor het lanceren van jouw website kan je <u><a href="https://github.com/KelvinKramp/rijX" target=_blank>hier<a></u> vinden. 
+en een Google Ads account zodat mensen jouw dienst kunnen vinden. De gedetailleerde instructies voor het lanceren van jouw website kan je <u><a href="https://github.com/KelvinKramp/rijX" target=_blank>hier<a></u> vinden. 
 Kom je er niet uit vraag ons om help.
 <br><br>
 Door betere software sta je in direct contact met patienten op ale niveaus. Dit betekent voor patienten een veilige en moeiteloze afhandeling en voor jou minder omslachtigheid! 
