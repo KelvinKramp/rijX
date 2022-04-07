@@ -288,7 +288,8 @@ def confirmation():
             "payment_link":payment_link, "BIG":BIG} # added extra data to form for future corrections if necessary
     send_mail(email, datetime_appointment=datetime_appointment, type_service=type_service.split("€")[0][:-1],address=address,
               worker=worker, BIG=BIG, payment_link=payment_link,attachment=None)
-                # remove euro sign from type service to prevent errors
+                # remove euro sign in type service to prevent errors
+    send_mail(os.environ.get("DEVELOPER"), subject="Nieuwe klant")
     df = get_from_db()
     df.to_csv("backup.csv")
     fe = Encryptor()
