@@ -33,7 +33,7 @@ def send_mail(recipient, subject=None, datetime_appointment=None, address=None, 
 
     # if subject in message, send normal mail
     if subject:
-        plain = message
+        plain = subject
         subject = subject
         part = MIMEText(plain, 'plain')
         msg = MIMEMultipart('alternative')
