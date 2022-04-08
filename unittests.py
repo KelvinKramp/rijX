@@ -68,6 +68,7 @@ class TestFeedbackApp(unittest.TestCase):
 
     def test_a_booking(self):
         x = requests.get('https://www.rijrotterdam.nl/booking')
+        time.sleep(5)
         print(x.status_code)
         self.assertTrue(x.status_code == 200)
         # driver.maximize_window()
