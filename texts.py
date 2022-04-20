@@ -126,18 +126,12 @@ Op dit moment staan onderstaande inloopspreekuren gepland. Houd er rekening mee 
 Corkstraat 46, 3047AC Rotterdam Overschie:
 </h3>
  <br>
- <p>
- - van 15:00 tot 16:00 op vrijdagmiddag 29 april.</p>
- <br>
   <p>
  - van 15:00 tot 16:00 op zaterdagmiddag 14 mei.</p>
  <br> <br>
  <h3>
 Kanaalweg 33 2903LR Capelle aan den IJssel:
 </h3>
- <br>
- <p>
- - van 15:00 tot 16:00 op donderdagmiddag 21 april.</p>
  <br>
   <p>
  - van 15:00 tot 16:00 op donderdagmiddag 12 mei.</p>
