@@ -1,5 +1,6 @@
 import urllib
 
+
 welcome_message_whatsapp = "Stuur een bericht naar RijRotterdam"
 welcome_message_whatsapp = urllib.parse.quote(welcome_message_whatsapp, safe='')
 welcome_message_whatsapp = "https://wa.me/31683825634?text=" + welcome_message_whatsapp
@@ -120,7 +121,10 @@ Datums inloopspreekuur
 """
 
 text1_inloop = """
-Op dit moment staan onderstaande inloopspreekuren gepland. Houd er rekening mee dat in het geval van drukte, wij u niet altijd kunnen helpen. Als u gegarandeerd wilt zijn van een afspraak, dan raden wij u aan deze van tevoren bij ons in te plannen. 
+Op dit moment staan onderstaande inloopspreekuren gepland. Houd er rekening mee dat in het geval van drukte, wij u niet altijd kunnen helpen. 
+Als u gegarandeerd wilt zijn van een afspraak dan raden wij u aan deze van tevoren bij ons in te plannen. 
+<u><a href="/prijzen">Klik hier<a></u> om de prijzen te bekijken. U kan na de keuring
+betalen contant of d.m.v. een Tikkie. 
 <br><br>
 <h3>
 Corkstraat 46, 3047AC Rotterdam Overschie:
@@ -144,7 +148,6 @@ Olympiaweg 4 3077 AL Rotterdam:
  <p>
  - Volgt.</p>
   <br> <br>
-
 <img
 src="/static/img/incarpackage_small.jpg"
 style="margin-bottom: 20px;   margin-left: auto;
@@ -179,8 +182,6 @@ Een betere vorm van zorg
 text1_aboutus = """
 Technologie staat ons vaak in de weg in plaats van dat het ons helpt. Dit kan en moet anders. Wij zijn een organisatie 
 die een betere vorm van zorg wil bieden. Ons doel is om artsen en patiënten dichter bij elkaar te brengen.
-<br><br>
-Ons team bestaat uit: 
 <br>
 """
 
@@ -303,3 +304,4 @@ Het gezichtsveld onderzoek bestaat uit een klein onderzoek waarbij de arts kijkt
 texts_inhoudkeuring = {
     "title1": title1_inhoudkeuring, "title1b": title1b_inhoudkeuring, "text1": text1_inhoudkeuring,
 }
+

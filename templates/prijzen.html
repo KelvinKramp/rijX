@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!-- Benefints Area -->
+    <section class="about-section-wrapper first_about_section_wrapper"  id="more" style="padding-top:10rem">
+      <section class="about-section special_changing_section" style="margin-top:10px">
+        <div class="about-section-right" style="display: inline-block;">
+          <div>
+            <h1>Prijzen</h1>
+            {% for i in text %}
+                <h3> {{i[1]}} </h3><br>
+            {% endfor %}
+          </div>
+<!--          <a href="#" class="learn_more_link">Lees meer</a>-->
+        </div>
+        <div class="about-section-right">
+
+          </div>
+        </div>
+      </section>
+              </section>
+
+{% endblock %}

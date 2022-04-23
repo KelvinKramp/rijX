@@ -198,6 +198,10 @@ def mijnverslag():
 def inhoudkeuring():
     return render_template('inhoudkeuring.html', nav_bar_items=nav_bar_items, page="Inhoud keuring", text=texts_inhoudkeuring)
 
+@secureApp.route('/prijzen')
+def prijzen():
+    return render_template('prijzen.html', nav_bar_items=nav_bar_items, page="Prijzen", text=list_services)
+
 
 @secureApp.route('/aboutus')
 def aboutus():
