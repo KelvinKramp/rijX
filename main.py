@@ -252,9 +252,10 @@ def booking():
     email = form.email.data
     phone_number = form.phone_number.data
     time=(str(dt.now(timezone.utc).day)+"-"+str(dt.now(timezone.utc).month)+"-"+str(dt.now(timezone.utc).year))
-
+    print("loading")
     if form.validate_on_submit():
-        # print("submitted")
+
+        print("submitted")
         id = form.location.data
         i = Slots.query.filter_by(id=id).first()
         session["id"] = i.id
@@ -272,6 +273,7 @@ def booking():
         create_appointment(location, datetime, first_name, last_name, birthdate, email, phone_number, time, id)
         session['email'] = email
         session['datetime'] = datetime
+        print(session)
         # redirect to confirmation page
         return redirect(url_for('confirmation'))
     return render_template('booking.html', form=form, nav_bar_items=nav_bar_items, address_list=address_list, page="Afspraak maken")
@@ -279,7 +281,8 @@ def booking():
 
 @app.route("/confirmation", methods=['GET', 'POST'])
 def confirmation():
-    # print(session["appointment"])
+    print(session["appointment"])
+    print("confirmation function")
     address = session["appointment"].split("|")[0]
     datetime_appointment = session["appointment"].split("|")[1]
     type_service = session["type_service"]
