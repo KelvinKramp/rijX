@@ -127,25 +127,25 @@ security = Security(secureApp, user_datastore)
 
 @secureApp.before_first_request
 def create_user():
-    if os.environ.get("FLASK_ENV") == "development":
         db.drop_all()
         db.create_all()
         email = os.environ.get('admin_email')
         password = os.environ.get('admin_password')
         user_datastore.create_user(email=email, password=password)
         db.session.commit()
-        import pandas as pd
-        df = pd.read_pickle("test_slots.pkl")
-        if "Users" in os.getcwd():
-            from sqlite3 import connect
-            con = connect("app.sqlite3")
-        else:
-            from sqlalchemy import create_engine
-            SQL_URI = os.environ.get('DATABASE_URL')
-            if SQL_URI and SQL_URI.startswith("postgres://"):
-                SQL_URI = SQL_URI.replace("postgres://", "postgresql://", 1)
-            con = create_engine(SQL_URI, echo=True)
-        df.to_sql("Slots", con=con, if_exists='append', index=False)
+        if os.environ.get("FLASK_ENV") == "development":
+            import pandas as pd
+            df = pd.read_pickle("test_slots.pkl")
+            if "Users" in os.getcwd():
+                from sqlite3 import connect
+                con = connect("app.sqlite3")
+            else:
+                from sqlalchemy import create_engine
+                SQL_URI = os.environ.get('DATABASE_URL')
+                if SQL_URI and SQL_URI.startswith("postgres://"):
+                    SQL_URI = SQL_URI.replace("postgres://", "postgresql://", 1)
+                con = create_engine(SQL_URI, echo=True)
+            df.to_sql("Slots", con=con, if_exists='append', index=False)
 
 
 
