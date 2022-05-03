@@ -183,8 +183,8 @@ title1b_aboutus = """
 Een betere vorm van zorg 
 """
 text1_aboutus = """
-Technologie staat ons vaak in de weg in plaats van dat het ons helpt. Dit kan en moet anders. Wij zijn een organisatie 
-die een betere vorm van zorg wil bieden. Ons doel is om artsen en patiënten dichter bij elkaar te brengen.
+Technologie staat ons vaak in de weg in plaats van dat het ons helpt. Dit kan en moet anders. 
+RijRotterdam wil een betere vorm van zorg bieden met als doel artsen en patiënten dichter bij elkaar te brengen.
 <br>
 """
 
@@ -204,7 +204,7 @@ maken wij gebruik van beveiligde en versleutelde digitale communicatie.
 """
 
 title3_aboutus = """
-Vacatures
+Werk
 """
 
 title3b_aboutus = """
@@ -214,10 +214,9 @@ Overzichtelijke management systemen
 text3_aboutus = """
 Wil je helemaal zelf aan de slag, gebruik dan onze software. Je kan alles aanpassen voor jouw persoonlijke visie op 
 verbetering van de zorg. Je hebt een ZorgDomein- en ZorgMail- account nodig voor de communicatie en daarnaast 
-een Google Ads-account, zodat mensen jouw dienst kunnen vinden. De gedetailleerde instructies voor het lanceren
- van jouw website kan je <u><a href="https://github.com/KelvinKramp/rijX" target=_blank>hier<a></u> vinden. Kom je er niet uit? Vraag ons om hulp.
-<br><br>
-Door betere software sta je in direct contact met patiënten op ale niveaus. Dit betekent voor patiënten een veilige en moeiteloze afhandeling en voor jou minder omslachtigheid! 
+een Google Ads-account, zodat mensen jouw dienst kunnen vinden. Door betere software kan je je werk efficientie
+optimaliseren en sta je in direct contact met patiënten op meerdere niveaus. 
+Dit betekent voor patiënten een veilige en moeiteloze afhandeling en voor jou minder omslachtigheid! 
 """
 
 texts_aboutus = {
