@@ -24,7 +24,7 @@ Waarom RijRotterdam?
 text2 = """
 We hebben gemerkt dat er bij andere keuringsbedrijven vaak onnodig veel geld wordt gevraagd voor een keuring. 
 Daarnaast zijn mensen meestal ook een bedrag kwijt aan regelzaken in de voorbereiding van een keuring. 
-Als zorgverleners vinden wij dit onterecht. RijRotterdam doet keuringen voor een eerlijke prijs. 
+Als zorgverleners denken wij dat dit beter kan. RijRotterdam doet keuringen voor een eerlijke prijs. 
 Van het geld dat u overhoudt, kunt u andere dingen doen die belangrijk zijn voor uw gezondheid &#128521;
 <br>
 <br>
