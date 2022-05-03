@@ -127,13 +127,13 @@ security = Security(secureApp, user_datastore)
 
 @secureApp.before_first_request
 def create_user():
-        db.drop_all()
-        db.create_all()
-        email = os.environ.get('admin_email')
-        password = os.environ.get('admin_password')
-        user_datastore.create_user(email=email, password=password)
-        db.session.commit()
         if os.environ.get("FLASK_ENV") == "development":
+            db.drop_all()
+            db.create_all()
+            email = os.environ.get('admin_email')
+            password = os.environ.get('admin_password')
+            user_datastore.create_user(email=email, password=password)
+            db.session.commit()
             import pandas as pd
             df = pd.read_pickle("test_slots.pkl")
             if "Users" in os.getcwd():
