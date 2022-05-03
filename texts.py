@@ -9,10 +9,10 @@ title1 = """
 Kundige artsen, korte lijntjes, scherpe prijzen.
 """
 text1 = """
-Wij bieden keuringen aan in en rond Rotterdam
+Wij bieden keuringen aan op locaties in en rond Rotterdam
 op werkdagen en in weekenden, overdag en 's avonds. U kunt bij ons terecht voor 75+ keuringen,
-groot rijbewijskeuringen, taxi/touringcarchauffeurskeuringen en thuiskeuringen. Bij onze BIG geregistreerde artsen bent u verzekerd van een betrouwbare 
-keuring en kan u goed voorbereid weer de weg op.
+groot rijbewijskeuringen, taxi/touringcarchauffeurskeuringen en thuiskeuringen. Onze BIG geregistreerde artsen
+ helpen u verder tegen een scherp tarief.
 <br>
 <br>
 """
@@ -22,9 +22,10 @@ Waarom RijRotterdam?
 """
 
 text2 = """
-We hebben gemerkt dat er vaak onnodig veel geld wordt gevraagd voor een keuring. Als jonge zorgverleners vinden we het onverantwoord om een groot bedrag te vragen voor een vaak korte keuring 
- zoals bij andere rijbewijskeuring organisaties gebeurd. Daarnaast zijn mensen meestal ook geld kwijt aan regelzaken in de voorbereiding van een keuring. 
-RijRotterdam doet keuringen voor een eerlijke prijs. Van het geld dat u overhoudt, kunt u andere dingen doen die belangrijk zijn voor uw gezondheid. 
+We hebben gemerkt dat er bij andere keuringsbedrijven vaak onnodig veel geld wordt gevraagd voor een keuring. 
+Daarnaast zijn mensen meestal ook een bedrag kwijt aan regelzaken in de voorbereiding van een keuring. 
+Als zorgverleners vinden wij dit onterecht. RijRotterdam doet keuringen voor een eerlijke prijs. 
+Van het geld dat u overhoudt, kunt u andere dingen doen die belangrijk zijn voor uw gezondheid &#128521;
 <br>
 <br>
 """

@@ -91,7 +91,7 @@ const NavigateNext = (e) => {
     BodyArea.querySelector(`.step${Steps.currentStep}`).style.display = "block";
     document.querySelector(
       `.header-form-area .mbl-step`
-    ).textContent = `Step ${Steps.currentStep}`;
+    ).textContent = `Stap ${Steps.currentStep}`;
   }
 
   if (Steps.currentStep == 2) {
