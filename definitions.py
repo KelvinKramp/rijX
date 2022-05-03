@@ -24,7 +24,7 @@ list_services = [("medisch","Medische keuring €35,00"),
                  ('groot', 'Rijbewijskeuring groot €50,00'),
                  ('taxipas', 'Rijbewijskeuring taxipas €50,00'),
                  ('touring', 'Rijbewijskeuring touringscarchauffeurs €50,00'),
-                 ('multiplekeuring', 'Meerdere keuringen €50,00'),
+                 ('multiplekeuring', 'Meerdere keuringen €60,00'),
                  ('thuiskeuring', 'Thuiskeuring €75,00'),
                  ]
 
@@ -37,13 +37,13 @@ landingpage_items = [
                      ]
 
 dict_payments_links = {
-                "medisch":"https://tikkie.me/pay/RijRdam/ucsqSFszXivucPSqxJgXKE",
-                '75+':'https://tikkie.me/pay/RijRdam/eVJuiK65iGQbP3NxSvb6Jb',
-                'groot': 'https://tikkie.me/pay/RijRdam/5Tw1pD5VhaqvxadXjT3VaZ',
-                'taxipas': 'https://tikkie.me/pay/RijRdam/uwY19wRbnunMdH6tPMsRuu',
-                'touring': 'https://tikkie.me/pay/RijRdam/oXz3nSdJDWknGvnfYJyqaH',
-                'multiplekeuring': 'https://tikkie.me/pay/RijRdam/66UkyC3CG5M6SnpdWpeEjg',
-                'thuiskeuring':'https://tikkie.me/pay/RijRdam/wwVEAfN8pkXKCzKXmokd2h'
+                "medisch":"https://tikkie.me/pay/RijRdam/8gkUyNgQJXNEAF1CQcGsW8",
+                '75+':'https://tikkie.me/pay/RijRdam/wm5wiYpJfHEdsREGXTJFFp',
+                'groot': 'https://tikkie.me/pay/RijRdam/hMRKVsFHDcuKS3tw1st74U',
+                'taxipas': 'https://tikkie.me/pay/RijRdam/sBQS2cbQ9Zvb7KGgD7j2Ca',
+                'touring': 'https://tikkie.me/pay/RijRdam/c5sU2J7vTDqH2uf5GwDy37',
+                'multiplekeuring': 'https://tikkie.me/pay/RijRdam/aQNsVnhG8K5dYjVpamWfpY',
+                'thuiskeuring':'https://tikkie.me/pay/RijRdam/kEjVHagTY7v6MXGdcjNsve'
                 }
 
 address_list = ['<h3>Rotterdam Overschie </h3> Corkstraat 46, 3047AC <br> <a href="https://goo.gl/maps/Juy8PXtUY1uZf5UK8" target=_blank>Klik hier voor de lokatie op de kaart</a> ',
