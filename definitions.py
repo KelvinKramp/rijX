@@ -28,10 +28,12 @@ list_services = [("medisch","Medische keuring €35,00"),
                  ('thuiskeuring', 'Thuiskeuring €75,00'),
                  ]
 
-landingpage_items = [{"item":"BIG geregistreerde artsen"},
-                    {"item":"Inzage in uw keuringsrapport"},
+landingpage_items = [
+                    {"item": "Weekend en avondkeuringen"},
+                    {"item": "Prijzen vanaf 35 euro"},
                     {"item":"Verbonden met Zorgdomein"},
-                    {"item":"Prijzen vanaf 35 euro"},
+                    {"item": "Inzage in uw keuringsrapport"},
+                    {"item":"BIG geregistreerde artsen"},
                      ]
 
 dict_payments_links = {

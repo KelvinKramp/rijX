@@ -3,3 +3,9 @@ https://www.sqlitetutorial.net/sqlite-python/sqlite-python-select/
 
 Why int in sql is converted to floats
 https://stackoverflow.com/questions/37796916/pandas-read-sql-integer-became-float
+
+<img
+src="/static/img/echtpaarauto_large.jpg"
+alt="rijrotterdamechtpaar"
+class="background-image"
+/>

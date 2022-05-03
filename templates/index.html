@@ -4,8 +4,10 @@
 
     <!-- Home First Section Wrapper -->
     <section class="home-section-outer">
+
       <section class="container home-section flex">
-        <div class="home-section-left">
+
+        <div class="home-section-left" style="width: 400px;  max-width: 800px;  margin: auto;">
           <div>
             <h1 class="">Rijbewijskeuringen in Rotterdam</h1>
                 <ul class="list-nobull">
@@ -16,33 +18,23 @@
                 </ul>
                 <br>
           </div>
-          <div class="home-buttons stagger animated__itsmain">
+          <div class="home-buttons stagger">
             <a href="{{url_for('booking')}}" class="">Maak direct een afspraak</a>
             <a href="#more" class="">Lees meer...</a>
           </div>
 
           <!-- Image In  Mobile View -->
-          <img
-            src="/static/img/echtpaar_small.jpg"
-            alt="rijrotterdamechtpaar"
-            class="mobile-image animated__femaledocmobile"
-          />
+
         </div>
 
         <!-- Image in Desktop View -->
-        <div class="home-section-right">
-          <img
-            src="/static/img/echtpaar_small.jpg"
-            alt="rijrotterdamechtpaar"
-            class=""
-          />
-        </div>
+
       </section>
     </section>
 
     <!-- Benefints Area -->
-    <section class="about-section-wrapper first_about_section_wrapper"  id="more" style="padding-top:10rem">
-      <section class="about-section" style="margin-top:10px">
+    <section class="about-section-wrapper first_about_section_wrapper"  id="more">
+      <section class="about-section" style="margin-top:100px">
         <div class="about-section-right" style="display: inline-block;">
           <div>
             <h1>{{text.title1}}</h1>

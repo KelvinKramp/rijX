@@ -111,7 +111,6 @@
           >
         </div>
         <nav class="second-col footer-col">
-          <li>Rijbewijskeuringen in Rotterdam</li>
                         {% for nav_bar_item in nav_bar_items %}
                             {% if page == nav_bar_item.title %}
                                 <li class="active"><a href={{url_for(nav_bar_item.url)}}>{{nav_bar_item.title}}</a></li>
@@ -120,28 +119,20 @@
                             {% endif %}
                         {% endfor %}
         </nav>
-        <nav class="third-col footer-col">
-          <li><a href="{{url_for('contact')}}">Contact</a></li>
+          <nav class="third-col footer-col">
             <li><a href="/static/files/AlgemeneVoorwaarden.pdf">Algemente voorwaarden</a></li>
           <li><a href="/static/files/PrivacyStatement.pdf">Privacy statement</a></li>
+              <br><br>
+        </nav>
+                    <nav class="third-col footer-col">
+              <div>Medical Progress</div>
+            <small>KVK 77359089</small><br>
+            <small>AGB 84058350</small><br>
+            <small>IBAN NL92ABNA0884505820</small><br>
+            <small>BTW-nummer NL003191397B73</small>
+              <br><br>
+        </nav>
 
-<!--          <li><a href= target="_blank">Whatsapp</a></li>-->
-<!--          <li><a href="mailto:info@rijkeuringrotterdam.nl">E-mail</a></li>-->
-<!--          <li><a href="/practice/contact">Practice Support</a></li>-->
-<!--          <li><a href="/practice/faq">Practice FAQ</a></li>-->
-        </nav>
-        <nav class="fourth-col footer-col" style="justify-content:right; text-align:right;">
-            <li>@2022 RijRotterdam</li>
-            <li></li>
-            <li>Onderdeel van Medical Progress</li>
-            <li>KVK 77359089</li>
-            <li>AGB 84058350</li>
-            <li>IBAN NL92ABNA0884505820</li>
-            <li>BTW-nummer NL003191397B73</li>
-<!--          <li>RijRotterdam</li>-->
-<!--          <li><a href="#">Algemente voorwaarden</a></li>-->
-<!--          <li><a href="#">Privacy statement</a></li>-->
-        </nav>
       </div>
     </footer>
 
