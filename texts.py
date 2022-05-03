@@ -9,9 +9,10 @@ title1 = """
 Kundige artsen, korte lijntjes, scherpe prijzen.
 """
 text1 = """
-Een rijbewijskeuring voorbereiden kan ingewikkeld zijn. RijRotterdam is opgezet om u zo goed mogelijk door een rijbewijskeuring te begeleiden. 
-Communicatie met ons betekent altijd direct contact met een kundige keuringsarts. Er zijn geen secretaresses en managers. 
-Door regelzaken te automatiseren en de management lagen eruit te halen kunnen we rompslomp voorkomen en tevens de prijs van een rijbewijskeuring verlagen.
+Wij bieden keuringen aan in en rond Rotterdam
+op werkdagen en in weekenden, overdag en 's avonds. U kunt bij ons terecht voor 75+ keuringen,
+groot rijbewijskeuringen, taxi/touringcarchauffeurskeuringen en thuiskeuringen. Bij onze BIG geregistreerde artsen bent u verzekerd van een betrouwbare 
+keuring en kan u goed voorbereid weer de weg op.
 <br>
 <br>
 """
@@ -21,7 +22,8 @@ Waarom RijRotterdam?
 """
 
 text2 = """
-We hebben gemerkt dat mensen onnodig veel geld kwijt zijn aan een keuring. Als zorgverleners vinden wij het onverantwoord om een relatief hoog bedrag te vragen voor een vaak korte rijbewijskeuring. 
+We hebben gemerkt dat er vaak onnodig veel geld wordt gevraagd voor een keuring. Als jonge zorgverleners vinden we het onverantwoord om een groot bedrag te vragen voor een vaak korte keuring 
+ zoals bij andere rijbewijskeuring organisaties gebeurd. Daarnaast zijn mensen meestal ook geld kwijt aan regelzaken in de voorbereiding van een keuring. 
 RijRotterdam doet keuringen voor een eerlijke prijs. Van het geld dat u overhoudt, kunt u andere dingen doen die belangrijk zijn voor uw gezondheid. 
 <br>
 <br>
