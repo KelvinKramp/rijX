@@ -293,10 +293,16 @@ def confirmation():
     type_service = dict(list_services).get(type_service)
     data = {"email":email ,"worker":worker,"address":address, "date":datetime_appointment, "type_service": type_service,
             "payment_link":payment_link, "BIG":BIG} # added extra data to form for future corrections if necessary
-    send_mail(email, datetime_appointment=datetime_appointment, type_service=type_service.split("€")[0][:-1],address=address,
-              worker=worker, BIG=BIG, payment_link=payment_link,attachment=None)
+    # send_mail(email, datetime_appointment=datetime_appointment, type_service=type_service.split("€")[0][:-1],address=address,
+    #           worker=worker, BIG=BIG, payment_link=payment_link,attachment=None)
                 # remove euro sign in type service to prevent errors
-    send_mail(os.environ.get("DEVELOPER"), subject="Nieuwe klant")
+    # send_mail(os.environ.get("DEVELOPER"), subject="Nieuwe klant")
+    thr.Thread(target=send_mail, args=(email,),
+               kwargs={"datetime_appointment":datetime_appointment, "type_service":type_service.split("€")[0][:-1],
+                       "address":address, "worker":worker, "BIG":BIG, "payment_link":payment_link,"attachment":None}).start()
+    thr.Thread(target=send_mail, args=(os.environ.get("DEVELOPER"),),
+               kwargs={"subject":"Nieuwe klant"}).start()
+    thr.Thread(target=send_backup).start()
     df = get_from_db()
     df.to_csv("backup.csv")
     fe = Encryptor()
